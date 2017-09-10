@@ -472,24 +472,14 @@
 
       
         
-          
-            <p>我目前已经学会的排序以及理解（会不断更新）</p>
-<p>先贴个交换函数：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">Swap</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> i,<span class="keyword">int</span> j)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">int</span> temp = A[i];</div><div class="line">    A[i] = A[j];</div><div class="line">    A[j] = temp;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><p>这是进大学后c语言课本上介绍的第一个排序，也是最简单，最容易理解的一个排序，顾名思义，就像冒泡一样，一次一次把最值往最后面放，完成排序。函数代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> n)</span></span></div><div class="line"><span class="function"></span>&#123; </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j = <span class="number">0</span>;j &lt; n - <span class="number">1</span>;j++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n - <span class="number">1</span> - j;i++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(A[i] &gt; A[i + <span class="number">1</span>])  <span class="comment">//从小到大排序 </span></div><div class="line">            &#123;</div><div class="line">                Swap(A,i,i + <span class="number">1</span>);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>冒泡排序是稳定的，因为即使有相同的数也不会打乱原来是次序，平均时间复杂度：O(n²)。</p>
-<h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><p>​    相比于相邻交换的冒牌排序，选择排序是通过从未排序的数据元素中选出最值放在该序列的起始位置，直到所有元素排完，同样需要循环两次，无法优化时间。代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">SelectionSort</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> n)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; n - <span class="number">1</span>;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> min = i;</div><div class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j = i + <span class="number">1</span>;j &lt; n;j++)</div><div class="line">        &#123;</div><div class="line">            <span class="keyword">if</span>(A[j] &lt; A[min])</div><div class="line">            &#123;</div><div class="line">                min = j;</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">if</span>(min != i)</div><div class="line">        &#123;</div><div class="line">            Swap(A,min,i);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>选择排序是不稳定的，因为如果有相同的数的话是可以改变原来次序的，平均时间复杂度：O(n²)。</p>
-<h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><p>​    看到这个方法，我的第一反应便是抓扑克牌，原理和抓牌原理一样，即，左手上的牌是已经排好序了的，将左手上的牌依次和抓到的牌比较，如果大于抓到的牌便把这张牌左移，然后插入抓到的牌。函数代码如下:</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">InsertionSort</span><span class="params">(<span class="keyword">int</span> A[],<span class="keyword">int</span> n)</span></span></div><div class="line"><span class="function"></span>&#123;  </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">1</span>;i &lt; n;i++)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> get = A[i];</div><div class="line">        <span class="keyword">int</span> j = i - <span class="number">1</span>;</div><div class="line">        <span class="keyword">while</span>(j &gt;= <span class="number">0</span> &amp;&amp; A[j] &gt; get)</div><div class="line">        &#123;</div><div class="line">            A[j + <span class="number">1</span>] = A[j];</div><div class="line">            j--;</div><div class="line">        &#125;</div><div class="line">        A[j + <span class="number">1</span>] = get;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>相同的牌不影响顺序，插入排序是稳定的，平均时间复杂度：O(n²)。</p>
-<h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>​    快速排序基于一种二分的思想，即以一个数为基准数，不断将数组二分，最终当所有基准数都归位后，排序也就完成了。快速排序之所以较快，是因为每次交换都是跳跃式的。函数代码如下：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> arr[],<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(left &gt; right) <span class="keyword">return</span>;</div><div class="line">    <span class="keyword">int</span> i,j,temp;</div><div class="line">    temp = arr[left];<span class="comment">//temp为基准数 </span></div><div class="line">    i = left;</div><div class="line">    j = right;</div><div class="line">    <span class="keyword">while</span>(i != j)</div><div class="line">    &#123;</div><div class="line">        <span class="comment">//基准数在左边，所以要从右边开始找 </span></div><div class="line">        <span class="keyword">while</span>(arr[j] &gt;= temp &amp;&amp; i &lt; j)j--;</div><div class="line">        <span class="comment">//再从左往右找 </span></div><div class="line">        <span class="keyword">while</span>(arr[i] &lt;= temp &amp;&amp; i &lt; j)i++;</div><div class="line">        <span class="comment">//如果没有相遇。就交换 </span></div><div class="line">        <span class="keyword">if</span>(i &lt; j) Swap(arr,i,j);</div><div class="line">    &#125;</div><div class="line">    arr[left] = arr[i];</div><div class="line">    arr[i] = temp;</div><div class="line"></div><div class="line">    quicksort(arr,left,i - <span class="number">1</span>);<span class="comment">//继续处理左边 </span></div><div class="line">    quicksort(arr,i + <span class="number">1</span>,right);<span class="comment">//继续处理右边 </span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>下面这两等会了再补充。</p>
-<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3>
-          
+          <p>我目前已经学会的排序以及理解（会不断更新）
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/10/关于排序/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -555,7 +545,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/10/hello-world/" itemprop="url">Hello World</a></h1>
+                <a class="post-title-link" href="/2017/09/10/hello-world/" itemprop="url">将Sublime配置成python环境</a></h1>
         
 
         <div class="post-meta">
@@ -606,18 +596,14 @@
 
       
         
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
+          <p>刚开始学python的时候，用的是python自带的IDLE.bat，总感觉太简陋，字体很小，也没有自动补全的东西，之前有段时间在写网页玩，一直用着Sublime text 3——这款轻量而且扩展性很强而且颜值高的编辑器，想着在St3上写python岂不是美滋滋了，
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/10/hello-world/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
