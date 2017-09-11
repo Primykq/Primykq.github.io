@@ -56,9 +56,21 @@
   
 
   
+    
+      
+    
+
+    
+  
 
   
 
+  
+    
+      
+    
+
+    
   
 
   
@@ -66,7 +78,7 @@
   
     
     
-    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
   
 
 
@@ -79,7 +91,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="windows," />
 
 
 
@@ -95,21 +107,18 @@
 
 
 
-<meta name="description" content="刚开始学python的时候，用的是python自带的IDLE.bat，总感觉太简陋，字体很小，也没有自动补全的东西，之前有段时间在写网页玩，一直用着Sublime text 3——这款轻量而且扩展性很强而且颜值高的编辑器，想着在St3上写python岂不是美滋滋了，">
+<meta name="description" content="昨天早上一起来，正愉快地折腾着，突然发现有些报错无论如何都解决不了，有的虽然影响不大但看起来很烦，搜索一波后发现其实是我c盘下中文路径搞的鬼，嗯，话不多说就是干。 搜了一会儿后发现这个世界上的误解还真多，居然有这么多人以为是改本地的管理员账号，毫不客气地给了一个”踩”。终于在知乎下面找到了一点眉目。（还是比百度强） 懒得传图，直接复制一下第一个答案：  假设原用户名为 小明，需改为 xiaomin">
+<meta name="keywords" content="windows">
 <meta property="og:type" content="article">
-<meta property="og:title" content="将Sublime配置成python环境">
-<meta property="og:url" content="http://yoursite.com/2017/09/10/将Sublime配置成pythona环境/index.html">
+<meta property="og:title" content="win10改掉C盘下的中文用户名">
+<meta property="og:url" content="http://yoursite.com/2017/09/11/改掉C盘下的中文用户名/index.html">
 <meta property="og:site_name" content="越努力、越幸运">
-<meta property="og:description" content="刚开始学python的时候，用的是python自带的IDLE.bat，总感觉太简陋，字体很小，也没有自动补全的东西，之前有段时间在写网页玩，一直用着Sublime text 3——这款轻量而且扩展性很强而且颜值高的编辑器，想着在St3上写python岂不是美滋滋了，">
+<meta property="og:description" content="昨天早上一起来，正愉快地折腾着，突然发现有些报错无论如何都解决不了，有的虽然影响不大但看起来很烦，搜索一波后发现其实是我c盘下中文路径搞的鬼，嗯，话不多说就是干。 搜了一会儿后发现这个世界上的误解还真多，居然有这么多人以为是改本地的管理员账号，毫不客气地给了一个”踩”。终于在知乎下面找到了一点眉目。（还是比百度强） 懒得传图，直接复制一下第一个答案：  假设原用户名为 小明，需改为 xiaomin">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/Sublime_python/pngFJ%25~L%29BW%5BIO7IAMGQYO%28A95.png">
-<meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/Sublime_python/png8X%28SXA_8D%5DWBRZHM%5D%5B%60SFPE.png">
-<meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/Sublime_python/pngN%291PZ5NR12%25%29~8%5BX7T%60%28GO6.png">
-<meta property="og:updated_time" content="2017-09-10T16:25:49.341Z">
+<meta property="og:updated_time" content="2017-09-11T05:15:31.996Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="将Sublime配置成python环境">
-<meta name="twitter:description" content="刚开始学python的时候，用的是python自带的IDLE.bat，总感觉太简陋，字体很小，也没有自动补全的东西，之前有段时间在写网页玩，一直用着Sublime text 3——这款轻量而且扩展性很强而且颜值高的编辑器，想着在St3上写python岂不是美滋滋了，">
-<meta name="twitter:image" content="http://osi0rl7bm.bkt.clouddn.com/Sublime_python/pngFJ%25~L%29BW%5BIO7IAMGQYO%28A95.png">
+<meta name="twitter:title" content="win10改掉C盘下的中文用户名">
+<meta name="twitter:description" content="昨天早上一起来，正愉快地折腾着，突然发现有些报错无论如何都解决不了，有的虽然影响不大但看起来很烦，搜索一波后发现其实是我c盘下中文路径搞的鬼，嗯，话不多说就是干。 搜了一会儿后发现这个世界上的误解还真多，居然有这么多人以为是改本地的管理员账号，毫不客气地给了一个”踩”。终于在知乎下面找到了一点眉目。（还是比百度强） 懒得传图，直接复制一下第一个答案：  假设原用户名为 小明，需改为 xiaomin">
 
 
 
@@ -139,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/10/将Sublime配置成pythona环境/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/11/改掉C盘下的中文用户名/"/>
 
 
 
 
 
-  <title>将Sublime配置成python环境 | 越努力、越幸运</title>
+  <title>win10改掉C盘下的中文用户名 | 越努力、越幸运</title>
   
 
 
@@ -282,7 +291,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/10/将Sublime配置成pythona环境/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/11/改掉C盘下的中文用户名/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Primykq">
@@ -299,7 +308,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">将Sublime配置成python环境</h1>
+          <h1 class="post-title" itemprop="name headline">win10改掉C盘下的中文用户名</h1>
         
 
         <div class="post-meta">
@@ -311,8 +320,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-10T21:19:53+08:00">
-                2017-09-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-11T12:45:06+08:00">
+                2017-09-11
               </time>
             
 
@@ -321,6 +330,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/环境/" itemprop="url" rel="index">
+                    <span itemprop="name">环境</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -349,27 +380,25 @@
       
 
       
-        <p>刚开始学python的时候，用的是python自带的IDLE.bat，总感觉太简陋，字体很小，也没有自动补全的东西，之前有段时间在写网页玩，一直用着Sublime text 3——这款轻量而且扩展性很强而且颜值高的编辑器，想着在St3上写python岂不是美滋滋了，<a id="more"></a>于是搜索了一波，最后发现了St3直接提供了一个强大的插件——Anaconda，可以将St3打造成一个python IDE。</p>
-<h4 id="下载好python和Sublime-text-3"><a href="#下载好python和Sublime-text-3" class="headerlink" title="下载好python和Sublime text 3"></a>下载好python和Sublime text 3</h4><h4 id="打开安装包管理工具（这个还不会的小白请自行百度，不太好截图），输入Install-Package，然后输入Anaconda，回车安装"><a href="#打开安装包管理工具（这个还不会的小白请自行百度，不太好截图），输入Install-Package，然后输入Anaconda，回车安装" class="headerlink" title="打开安装包管理工具（这个还不会的小白请自行百度，不太好截图），输入Install Package，然后输入Anaconda，回车安装"></a>打开安装包管理工具（这个还不会的小白请自行百度，不太好截图），输入Install Package，然后输入Anaconda，回车安装</h4><h4 id="保存文件名为-py后缀后就会发现写python会有高亮和自动补全了。"><a href="#保存文件名为-py后缀后就会发现写python会有高亮和自动补全了。" class="headerlink" title="保存文件名为.py后缀后就会发现写python会有高亮和自动补全了。"></a>保存文件名为.py后缀后就会发现写python会有高亮和自动补全了。</h4><h4 id="可能遇到的问题"><a href="#可能遇到的问题" class="headerlink" title="可能遇到的问题"></a>可能遇到的问题</h4><p><img src="http://osi0rl7bm.bkt.clouddn.com/Sublime_python/pngFJ%25~L%29BW%5BIO7IAMGQYO%28A95.png" alt=""></p>
-<p>用ST3一打开python文件就有这个问题，发现后面写着try to set the ‘swallow_startup_errors’ to ‘true’</p>
-<p>然后发现这个json的设置居然是在SublimeREPL里面而不是Anaconda。。。</p>
-<p>好吧不管了 先试试再说</p>
-<p>进入Preferences–package settings–&gt;SublimeRPEL–&gt;settings user</p>
-<p>键入： “swallow_startup_errors”: true,</p>
-<p>保存后重启。咦，那个报错好像真的没了诶。于是开心的在几个py文件直接切换试试，然后发现切太快这个错误还是有可能出来，具体原因不详，不过比之前好多了</p>
-<p>还有可能遇到这种情况：</p>
-<p><img src="http://osi0rl7bm.bkt.clouddn.com/Sublime_python/png8X%28SXA_8D%5DWBRZHM%5D%5B%60SFPE.png" alt=""></p>
-<p>大白框和小白点，猜想可能是因为python的缩进？</p>
-<p>（你自己喜欢的话就没关系，不用改了）</p>
-<p>我个人看着很不舒服，搜索后发现这个是默认开启的功能，点开Preferences-Pacakage Settings-Anaconda-Settings user</p>
-<p>加上如下一句：</p>
-<p><img src="http://osi0rl7bm.bkt.clouddn.com/Sublime_python/pngN%291PZ5NR12%25%29~8%5BX7T%60%28GO6.png" alt=""></p>
-<p>即可解决这个问题.</p>
-<p>然后就可以愉快地用St3写Python了。（ctrl + B 即可运行）</p>
-<p>嗯，故事就这么结束了么？当然没有</p>
-<p> 然后就遇到了第一个坑：<strong>Input无效</strong></p>
-<p> Sublime似乎无法完成input这种交互式命令</p>
-<p>解决方法请参考<a href="http://blog.csdn.net/u010223904/article/details/46354495" target="_blank" rel="external">此链接</a></p>
+        <p>昨天早上一起来，正愉快地折腾着，突然发现有些报错无论如何都解决不了，有的虽然影响不大但看起来很烦，搜索一波后发现其实是我c盘下中文路径搞的鬼，嗯，话不多说就是干。</p>
+<p>搜了一会儿后发现这个世界上的误解还真多，居然有这么多人以为是改本地的管理员账号，毫不客气地给了一个”踩”。终于在知乎下面找到了一点眉目。（还是比百度强）</p>
+<p>懒得传图，直接复制一下第一个答案：</p>
+<blockquote>
+<p>假设原用户名为 小明，需改为 xiaoming。</p>
+<p>1.先新建一个管理员账户，然后注销当前用户，以新建的管理员账户登录；</p>
+<p>2.重命名 c:\Users\小明 为 c:\Users\xiaoming；</p>
+<p>3.打开注册表编辑器（win+R 输入 regedit），定位到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList 的某一子项（S-1-5-21… 开头的），将“数据名称”为 ProfileImagePath 的“数值数据”内容 C:\Users\小明 改为 C:\Users\xiaoming ；</p>
+<p>4.改后以原账户登录并删除新建账户。</p>
+</blockquote>
+<p>咦，下面有80+评论，去瞄了一眼，虽然成功的人也有，但失败的也不少，我还是没有直接按照这个方法改，但大概思路已经清楚了，即临时存一下当前中文名下的东西，拿到改名权限后改掉中文名，再换回来。</p>
+<p>在下面的回答中找到了一位小姐姐的博客园链接，给链接的人称此方法很成功，嗯，大概说一下这个方法的步骤：</p>
+<h4 id="改注册表"><a href="#改注册表" class="headerlink" title="改注册表"></a>改注册表</h4><p>用win+r打开命令窗口，输入regedit，把系统注册表调出来，然后去这个地方</p>
+<p>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList   </p>
+<p>依次点开那些以S-1-5-开头的项，找到ProfileImagePath，把C：\Users\中文名  改成C：\Users\English name  记得把所有的Path都改掉，确认后关掉注册表。</p>
+<h4 id="改文件名"><a href="#改文件名" class="headerlink" title="改文件名"></a>改文件名</h4><p>打开cmd后发现依旧是中文名，这个当然，因为只是改完了注册表，文件权限还没转移，于是重启电脑。</p>
+<p>启动后发现壁纸什么的都不一样了，这是因为当前Users 已经变成了TEMP，即临时系统账户。这时候系统会提醒你无法连接到你的账户，嗯，因为你的注册表已经改了，<strong>点击隐藏</strong>， <strong>别点注销</strong>，。然后按ctrl + e 打开我的电脑，找到C：\Users\中文名，修改文件名，点击给予权限。然后重启电脑就大功告成啦</p>
+<h4 id="可能有的问题"><a href="#可能有的问题" class="headerlink" title="可能有的问题"></a>可能有的问题</h4><p>更改之前就已经安装的软件可能依旧会显示中文路径，如果不报错的话就没关系，（强迫症选手请重装软件）。其他的问题好像没了，那个小姐姐还给了测试。</p>
+<p>这是<a href="http://www.cnblogs.com/XiHongYan/p/6271056.html" target="_blank" rel="external">小姐姐的文章链接</a></p>
 
       
     </div>
@@ -385,6 +414,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/windows/" rel="tag"># windows</a>
+          
+        </div>
+      
 
       
       
@@ -394,15 +429,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/09/10/最大和子序列/" rel="next" title="最大和子序列">
+                <i class="fa fa-chevron-left"></i> 最大和子序列
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/10/关于排序/" rel="prev" title="关于排序">
-                关于排序 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -482,14 +517,32 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
           
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
 
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
           
 
         </nav>
@@ -521,7 +574,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#下载好python和Sublime-text-3"><span class="nav-number">1.</span> <span class="nav-text">下载好python和Sublime text 3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#打开安装包管理工具（这个还不会的小白请自行百度，不太好截图），输入Install-Package，然后输入Anaconda，回车安装"><span class="nav-number">2.</span> <span class="nav-text">打开安装包管理工具（这个还不会的小白请自行百度，不太好截图），输入Install Package，然后输入Anaconda，回车安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#保存文件名为-py后缀后就会发现写python会有高亮和自动补全了。"><span class="nav-number">3.</span> <span class="nav-text">保存文件名为.py后缀后就会发现写python会有高亮和自动补全了。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可能遇到的问题"><span class="nav-number">4.</span> <span class="nav-text">可能遇到的问题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#改注册表"><span class="nav-number">1.</span> <span class="nav-text">改注册表</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#改文件名"><span class="nav-number">2.</span> <span class="nav-text">改文件名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#可能有的问题"><span class="nav-number">3.</span> <span class="nav-text">可能有的问题</span></a></li></ol></div>
             
 
           </div>
