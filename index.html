@@ -290,7 +290,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/11/改掉C盘下的中文用户名/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/11/win10改掉C盘下的中文用户名/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Primykq">
@@ -309,7 +309,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/11/改掉C盘下的中文用户名/" itemprop="url">win10改掉C盘下的中文用户名</a></h1>
+                <a class="post-title-link" href="/2017/09/11/win10改掉C盘下的中文用户名/" itemprop="url">win10改掉C盘下的中文用户名</a></h1>
         
 
         <div class="post-meta">
@@ -382,28 +382,14 @@
 
       
         
-          
-            <p>昨天早上一起来，正愉快地折腾着，突然发现有些报错无论如何都解决不了，有的虽然影响不大但看起来很烦，搜索一波后发现其实是我c盘下中文路径搞的鬼，嗯，话不多说就是干。</p>
-<p>搜了一会儿后发现这个世界上的误解还真多，居然有这么多人以为是改本地的管理员账号，毫不客气地给了一个”踩”。终于在知乎下面找到了一点眉目。（还是比百度强）</p>
-<p>懒得传图，直接复制一下第一个答案：</p>
-<blockquote>
-<p>假设原用户名为 小明，需改为 xiaoming。</p>
-<p>1.先新建一个管理员账户，然后注销当前用户，以新建的管理员账户登录；</p>
-<p>2.重命名 c:\Users\小明 为 c:\Users\xiaoming；</p>
-<p>3.打开注册表编辑器（win+R 输入 regedit），定位到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList 的某一子项（S-1-5-21… 开头的），将“数据名称”为 ProfileImagePath 的“数值数据”内容 C:\Users\小明 改为 C:\Users\xiaoming ；</p>
-<p>4.改后以原账户登录并删除新建账户。</p>
-</blockquote>
-<p>咦，下面有80+评论，去瞄了一眼，虽然成功的人也有，但失败的也不少，我还是没有直接按照这个方法改，但大概思路已经清楚了，即临时存一下当前中文名下的东西，拿到改名权限后改掉中文名，再换回来。</p>
-<p>在下面的回答中找到了一位小姐姐的博客园链接，给链接的人称此方法很成功，嗯，大概说一下这个方法的步骤：</p>
-<h4 id="改注册表"><a href="#改注册表" class="headerlink" title="改注册表"></a>改注册表</h4><p>用win+r打开命令窗口，输入regedit，把系统注册表调出来，然后去这个地方</p>
-<p>HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\ProfileList   </p>
-<p>依次点开那些以S-1-5-开头的项，找到ProfileImagePath，把C：\Users\中文名  改成C：\Users\English name  记得把所有的Path都改掉，确认后关掉注册表。</p>
-<h4 id="改文件名"><a href="#改文件名" class="headerlink" title="改文件名"></a>改文件名</h4><p>打开cmd后发现依旧是中文名，这个当然，因为只是改完了注册表，文件权限还没转移，于是重启电脑。</p>
-<p>启动后发现壁纸什么的都不一样了，这是因为当前Users 已经变成了TEMP，即临时系统账户。这时候系统会提醒你无法连接到你的账户，嗯，因为你的注册表已经改了，<strong>点击隐藏</strong>， <strong>别点注销</strong>，。然后按ctrl + e 打开我的电脑，找到C：\Users\中文名，修改文件名，点击给予权限。然后重启电脑就大功告成啦</p>
-<h4 id="可能有的问题"><a href="#可能有的问题" class="headerlink" title="可能有的问题"></a>可能有的问题</h4><p>更改之前就已经安装的软件可能依旧会显示中文路径，如果不报错的话就没关系，（强迫症选手请重装软件）。其他的问题好像没了，那个小姐姐还给了测试。</p>
-<p>这是<a href="http://www.cnblogs.com/XiHongYan/p/6271056.html" target="_blank" rel="external">小姐姐的文章链接</a></p>
-
-          
+          <p>昨天早上一起来，正愉快地折腾着，突然发现有些报错无论如何都解决不了，有的虽然影响不大但看起来很烦，搜索一波后发现其实是我c盘下中文路径搞的鬼，
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/09/11/win10改掉C盘下的中文用户名/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
