@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="越努力、越幸运">
 <meta property="og:description" content="我目前已经学会的排序以及理解（会不断更新）">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-11T12:35:50.220Z">
+<meta property="og:updated_time" content="2017-09-11T16:11:53.018Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于排序">
 <meta name="twitter:description" content="我目前已经学会的排序以及理解（会不断更新）">
@@ -395,7 +395,10 @@
 <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><p>​    快速排序基于一种二分的思想，即以一个数为基准数，不断将数组二分，最终当所有基准数都归位后，排序也就完成了。快速排序之所以较快，是因为每次交换都是跳跃式的。函数代码如下：(千万注意下标是<strong>从0开始的</strong> )</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">quicksort</span><span class="params">(<span class="keyword">int</span> arr[],<span class="keyword">int</span> left,<span class="keyword">int</span> right)</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(left &gt; right) <span class="keyword">return</span>;</div><div class="line">    <span class="keyword">int</span> i,j,temp;</div><div class="line">    temp = arr[left];<span class="comment">//temp为基准数 </span></div><div class="line">    i = left;</div><div class="line">    j = right;</div><div class="line">    <span class="keyword">while</span>(i != j)</div><div class="line">    &#123;</div><div class="line">        <span class="comment">//基准数在左边，所以要从右边开始找 </span></div><div class="line">        <span class="keyword">while</span>(arr[j] &gt;= temp &amp;&amp; i &lt; j)j--;</div><div class="line">        <span class="comment">//再从左往右找 </span></div><div class="line">        <span class="keyword">while</span>(arr[i] &lt;= temp &amp;&amp; i &lt; j)i++;</div><div class="line">        <span class="comment">//如果没有相遇。就交换 </span></div><div class="line">        <span class="keyword">if</span>(i &lt; j) Swap(arr,i,j);</div><div class="line">    &#125;</div><div class="line">    arr[left] = arr[i];</div><div class="line">    arr[i] = temp;</div><div class="line"></div><div class="line">    quicksort(arr,left,i - <span class="number">1</span>);<span class="comment">//继续处理左边 </span></div><div class="line">    quicksort(arr,i + <span class="number">1</span>,right);<span class="comment">//继续处理右边 </span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这两个等我会了再写233333</p>
-<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3>
+<h3 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h3><p>归并排序的原理是分治法，简单点说就是把一个序列拆成多个子序列，将子序列排好序后，再将其合并为一个序列。归并排序的效率也比较可观，达到了o(NlogN)。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergeArray</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> first, <span class="keyword">int</span> mid, <span class="keyword">int</span> last, <span class="keyword">int</span> temp[])</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">	<span class="keyword">int</span> i = first, j = mid + <span class="number">1</span>;</div><div class="line">	<span class="keyword">int</span> m = mid, n = last, k = <span class="number">0</span>;</div><div class="line"></div><div class="line">	<span class="keyword">while</span>(i &lt;= m &amp;&amp; j &lt;= n)</div><div class="line">	&#123;</div><div class="line">		<span class="keyword">if</span>(a[i] &lt;= a[j]) temp[k++] = a[i++];</div><div class="line">		<span class="keyword">else</span> temp[k++] = a[j++];</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">while</span>(i &lt;= m) temp[k++] = a[i++];</div><div class="line">	<span class="keyword">while</span>(j &lt;= n) temp[k++] = a[j++];</div><div class="line">	<span class="keyword">for</span>(i = <span class="number">0</span>;i &lt; k;i++) a[first + i] = temp[i];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">mergeSort</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> first, <span class="keyword">int</span> last, <span class="keyword">int</span> temp[])</span></span></div><div class="line"><span class="function"></span>&#123;</div><div class="line">    <span class="keyword">if</span>(first &lt; last)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">int</span> mid = (first + last) / <span class="number">2</span>;</div><div class="line">        mergeSort(a, first, mid, temp);<span class="comment">//处理左边 </span></div><div class="line">        mergeSort(a, mid + <span class="number">1</span>,last, temp);<span class="comment">//处理右边 </span></div><div class="line">        mergeArray(a, first, mid, last, temp);<span class="comment">//合并 </span></div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="堆排序"><a href="#堆排序" class="headerlink" title="堆排序"></a>堆排序</h3>
       
     </div>
     
@@ -561,7 +564,7 @@
           <div class="links-of-blogroll motion-element links-of-blogroll-inline">
             <div class="links-of-blogroll-title">
               <i class="fa  fa-fw fa-globe"></i>
-              各路大神
+              各路大佬
             </div>
             <ul class="links-of-blogroll-list">
               
@@ -570,7 +573,7 @@
                 </li>
               
                 <li class="links-of-blogroll-item">
-                  <a href="https://www.rexskz.info/" title="Skywalker_Z" target="_blank">Skywalker_Z</a>
+                  <a href="https://blog.rexskz.info/" title="Skywalker_Z" target="_blank">Skywalker_Z</a>
                 </li>
               
                 <li class="links-of-blogroll-item">
