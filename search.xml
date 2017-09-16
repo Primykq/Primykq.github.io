@@ -14,7 +14,7 @@
   <entry>
     <title><![CDATA[python爬虫初体验]]></title>
     <url>%2F2017%2F09%2F11%2Fpython%E7%88%AC%E8%99%AB%E5%88%9D%E4%BD%93%E9%AA%8C%2F</url>
-    <content type="text"><![CDATA[python基础部分看了一遍后，感觉需要找点乐子，于是想到去学一点爬虫批量抓图片，嘿嘿嘿 先介绍一下python的两大利器(库)：requests和re(emmmm，可别以为后面那个是前者的缩写，其实半毛钱关系都没有)。requests库有多厉害呢？简单地说就是python 的http库，可以帮开发人员省很多代码，具体有多厉害呢？戳这里 。而re库则是regexp的缩写，python提供了相当强大的正则表达式引擎，很大程度上简化了python代码，稍微详细一点的介绍在这里 。好了以下是正文 获取网页12345import requestsheader = &#123;'User-Agent':'xxx'&#125;url='https://www.xxxxx'r = requests.get(url,headers = header)txt = r.txt 先引入 requests模块，然后header是用来伪造浏览器UA的，用Chrom的话直接去开发者工具那找一下自己的Request Headers就好，url则是要抓取的网页地址，传入这两个参数给.get函数后，就能拿到初步结果 解析图片嗯，别忘了自己是来抠图的，上面那个函数写完后，一个print(text)出来的却是一大坨HTML，这当然不是我要的，去网上找了一下发现Python还有个叫Beautiful Soup的东西(→_→我第一反应是煲汤)，这个库是用来解析HTML结构的，看了几眼觉得有点复杂，这时候想起了正则大法，图片链接不都是有明显特征的嘛，于是考虑正则。匹配以https://开头以.jpg类结尾的，并作最短匹配，然后全部累塞进数组。 12345678910jpg = re.compile(r'https://[^\s]*?\.jpg')jpeg = re.compile(r'https://[^\s]*?\.jpeg')gif = re.compile(r'https://[^\s]*?\.gif')png = re.compile(r'https://[^\s]*?\.png')imgs=[]imgs+=jpg.findall(txt)imgs+=jpeg.findall(txt)imgs+=gif.findall(txt)imgs+=png.findall(txt) 下载图片request用来存储get的url，判断状态码是否正常，如果正常就写入文件。 12345678910def download(url): request = requests.get(url) if req.status_code == requests.codes.ok: name = url.split('/')[-1] f = open("./"+name,'wb') f.write(req.content) f.close() return True else: return False 写好下载函数后就可以写循环来挨个下载了 12345678errors = []for img_url in imgs: if download(img_url): print("download :"+img_url) else: errors.append(img_url)print("error urls:")print(errors) 还可以设置一个urls数组，同时下载多个网页的图，download函数也可以加个文件夹名，这样就可以了。 最后我干了什么呢？上个图，自己体会 以上代码需要优化，直接用的话还有些不完善，需要根据实际的网站来调整。 ###多说一句 ​ 想起一位厉害小姐姐的训示：少年的你的梦想应该是拯救世界，怎么能每天爬一些日韩女人啊爆照贴妹子什么的。 ​ (逃：]]></content>
+    <content type="text"><![CDATA[python基础部分看了一遍后，感觉需要找点乐子，于是想到去学一点爬虫批量抓图片，嘿嘿嘿 先介绍一下python的两大利器(库)：requests和re(emmmm，可别以为后面那个是前者的缩写，其实半毛钱关系都没有)。requests库有多厉害呢？简单地说就是python 的http库，可以帮开发人员省很多代码，具体有多厉害呢？戳这里 。而re库则是regexp的缩写，python提供了相当强大的正则表达式引擎，很大程度上简化了python代码，稍微详细一点的介绍在这里 。好了以下是正文 获取网页12345import requestsheader = &#123;'User-Agent':'xxx'&#125;url='https://www.xxxxx'r = requests.get(url,headers = header)txt = r.text 先引入 requests模块，然后header是用来伪造浏览器UA的，用Chrom的话直接去开发者工具那找一下自己的Request Headers就好，url则是要抓取的网页地址，传入这两个参数给.get函数后，就能拿到初步结果 解析图片嗯，别忘了自己是来抠图的，上面那个函数写完后，一个print(text)出来的却是一大坨HTML，这当然不是我要的，去网上找了一下发现Python还有个叫Beautiful Soup的东西(→_→我第一反应是煲汤)，这个库是用来解析HTML结构的，看了几眼觉得有点复杂，这时候想起了正则大法，图片链接不都是有明显特征的嘛，于是考虑正则。匹配以https://开头以.jpg类结尾的，并作最短匹配，然后全部累塞进数组。 12345678910jpg = re.compile(r'https://[^\s]*?\.jpg')jpeg = re.compile(r'https://[^\s]*?\.jpeg')gif = re.compile(r'https://[^\s]*?\.gif')png = re.compile(r'https://[^\s]*?\.png')imgs=[]imgs+=jpg.findall(txt)imgs+=jpeg.findall(txt)imgs+=gif.findall(txt)imgs+=png.findall(txt) 下载图片request用来存储get的url，判断状态码是否正常，如果正常就写入文件。 12345678910def download(url): request = requests.get(url) if req.status_code == requests.codes.ok: name = url.split('/')[-1] f = open("./"+name,'wb') f.write(req.content) f.close() return True else: return False 写好下载函数后就可以写循环来挨个下载了 12345678errors = []for img_url in imgs: if download(img_url): print("download :"+img_url) else: errors.append(img_url)print("error urls:")print(errors) 还可以设置一个urls数组，同时下载多个网页的图，download函数也可以加个文件夹名，这样就可以了。 最后我干了什么呢？上个图，自己体会 以上代码需要优化，直接用的话还有些不完善，需要根据实际的网站来调整。 多说一句​ 想起一位厉害小姐姐的训示：少年的你的梦想应该是拯救世界，怎么能每天爬一些日韩女人啊爆照贴妹子什么的。 ​ (逃：]]></content>
       <categories>
         <category>爬虫</category>
       </categories>
@@ -63,8 +63,8 @@
         <category>环境</category>
       </categories>
       <tags>
-        <tag>python</tag>
         <tag>Sublime</tag>
+        <tag>python</tag>
       </tags>
   </entry>
 </search>

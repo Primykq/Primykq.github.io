@@ -112,11 +112,11 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="python爬虫初体验">
 <meta property="og:url" content="http://yoursite.com/2017/09/11/python爬虫初体验/index.html">
-<meta property="og:site_name" content="越努力、越幸运">
+<meta property="og:site_name" content="越努力丶越幸运">
 <meta property="og:description" content="python基础部分看了一遍后，感觉需要找点乐子，于是想到去学一点爬虫批量抓图片，嘿嘿嘿">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E8%99%AB%E5%88%9D%E4%BD%93%E9%AA%8C.png">
-<meta property="og:updated_time" content="2017-09-14T01:06:21.882Z">
+<meta property="og:updated_time" content="2017-09-16T07:09:30.224Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python爬虫初体验">
 <meta name="twitter:description" content="python基础部分看了一遍后，感觉需要找点乐子，于是想到去学一点爬虫批量抓图片，嘿嘿嘿">
@@ -156,7 +156,7 @@
 
 
 
-  <title>python爬虫初体验 | 越努力、越幸运</title>
+  <title>python爬虫初体验 | 越努力丶越幸运</title>
   
 
 
@@ -186,7 +186,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">越努力、越幸运</span>
+        <span class="site-title">越努力丶越幸运</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -336,7 +336,7 @@
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="越努力、越幸运">
+      <meta itemprop="name" content="越努力丶越幸运">
     </span>
 
     
@@ -418,7 +418,7 @@
       
         <p>python基础部分看了一遍后，感觉需要找点乐子，于是想到去学一点爬虫批量抓图片，嘿嘿嘿<a id="more"></a></p>
 <p>先介绍一下python的两大利器(库)：requests和re(emmmm，可别以为后面那个是前者的缩写，其实半毛钱关系都没有)。requests库有多厉害呢？简单地说就是python 的http库，可以帮开发人员省很多代码，具体有多厉害呢？<a href="http://docs.python-requests.org/zh_CN/latest/index.html" target="_blank" rel="external">戳这里</a> 。而re库则是regexp的缩写，python提供了相当强大的正则表达式引擎，很大程度上简化了python代码，稍微详细一点的介绍在<a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143193331387014ccd1040c814dee8b2164bb4f064cff000" target="_blank" rel="external">这里</a> 。好了以下是正文</p>
-<h3 id="获取网页"><a href="#获取网页" class="headerlink" title="获取网页"></a>获取网页</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line">header = &#123;<span class="string">'User-Agent'</span>:<span class="string">'xxx'</span>&#125;</div><div class="line">url=<span class="string">'https://www.xxxxx'</span></div><div class="line">r = requests.get(url,headers = header)</div><div class="line">txt = r.txt</div></pre></td></tr></table></figure>
+<h3 id="获取网页"><a href="#获取网页" class="headerlink" title="获取网页"></a>获取网页</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line">header = &#123;<span class="string">'User-Agent'</span>:<span class="string">'xxx'</span>&#125;</div><div class="line">url=<span class="string">'https://www.xxxxx'</span></div><div class="line">r = requests.get(url,headers = header)</div><div class="line">txt = r.text</div></pre></td></tr></table></figure>
 <p>先引入 requests模块，然后header是用来伪造浏览器UA的，用Chrom的话直接去开发者工具那找一下自己的Request Headers就好，url则是要抓取的网页地址，传入这两个参数给.get函数后，就能拿到初步结果</p>
 <h3 id="解析图片"><a href="#解析图片" class="headerlink" title="解析图片"></a>解析图片</h3><p>嗯，别忘了自己是来抠图的，上面那个函数写完后，一个print(text)出来的却是一大坨HTML，这当然不是我要的，去网上找了一下发现Python还有个叫Beautiful Soup的东西(→_→我第一反应是煲汤)，这个库是用来解析HTML结构的，看了几眼觉得有点复杂，这时候想起了正则大法，图片链接不都是有明显特征的嘛，于是考虑正则。匹配以<a href="https://开头以.jpg类结尾的，并作最短匹配，然后全部累塞进数组。" target="_blank" rel="external">https://开头以.jpg类结尾的，并作最短匹配，然后全部累塞进数组。</a></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">jpg = re.compile(<span class="string">r'https://[^\s]*?\.jpg'</span>)</div><div class="line">jpeg = re.compile(<span class="string">r'https://[^\s]*?\.jpeg'</span>)</div><div class="line">gif = re.compile(<span class="string">r'https://[^\s]*?\.gif'</span>)</div><div class="line">png = re.compile(<span class="string">r'https://[^\s]*?\.png'</span>)</div><div class="line"></div><div class="line">imgs=[]</div><div class="line">imgs+=jpg.findall(txt)</div><div class="line">imgs+=jpeg.findall(txt)</div><div class="line">imgs+=gif.findall(txt)</div><div class="line">imgs+=png.findall(txt)</div></pre></td></tr></table></figure>
@@ -430,8 +430,7 @@
 <p>最后我干了什么呢？上个图，自己体会</p>
 <p><img src="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E8%99%AB%E5%88%9D%E4%BD%93%E9%AA%8C.png" alt=""></p>
 <p>以上代码需要优化，直接用的话还有些不完善，需要根据实际的网站来调整。</p>
-<p>###多说一句</p>
-<p>​    想起一位厉害小姐姐的训示：少年的你的梦想应该是拯救世界，怎么能每天爬一些日韩女人啊爆照贴妹子什么的。</p>
+<h3 id="多说一句"><a href="#多说一句" class="headerlink" title="多说一句"></a>多说一句</h3><p>​    想起一位厉害小姐姐的训示：少年的你的梦想应该是拯救世界，怎么能每天爬一些日韩女人啊爆照贴妹子什么的。</p>
 <p>​    (逃：</p>
 
       
@@ -638,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取网页"><span class="nav-number">1.</span> <span class="nav-text">获取网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析图片"><span class="nav-number">2.</span> <span class="nav-text">解析图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载图片"><span class="nav-number">3.</span> <span class="nav-text">下载图片</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取网页"><span class="nav-number">1.</span> <span class="nav-text">获取网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析图片"><span class="nav-number">2.</span> <span class="nav-text">解析图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载图片"><span class="nav-number">3.</span> <span class="nav-text">下载图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多说一句"><span class="nav-number">4.</span> <span class="nav-text">多说一句</span></a></li></ol></div>
             
 
           </div>
