@@ -107,23 +107,23 @@
 
 
 
-<meta name="description" content="在中国大学MOOC那发现了python的爬虫专题系列，简直就像捡到了宝一样，先来总结下第一周课的内容">
+<meta name="description" content="在中国大学MOOC那发现了python的爬虫专题系列，可以说是非常非常开心了">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python爬虫系统学习笔记">
 <meta property="og:url" content="http://yoursite.com/2017/09/16/python爬虫系统学习笔记/index.html">
 <meta property="og:site_name" content="越努力 越幸运">
-<meta property="og:description" content="在中国大学MOOC那发现了python的爬虫专题系列，简直就像捡到了宝一样，先来总结下第一周课的内容">
+<meta property="og:description" content="在中国大学MOOC那发现了python的爬虫专题系列，可以说是非常非常开心了">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E8%99%AB%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%93%8D%E4%BD%9C%E7%AC%A61.png">
 <meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E8%99%AB%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%93%8D%E4%BD%9C%E7%AC%A62.png">
 <meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E8%99%AB%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E5%87%BD%E6%95%B0.png">
 <meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E8%99%AB%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/match%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%B1%9E%E6%80%A7.png">
 <meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/match%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95.png">
-<meta property="og:updated_time" content="2017-09-19T08:05:42.802Z">
+<meta property="og:updated_time" content="2017-09-19T13:42:41.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="python爬虫系统学习笔记">
-<meta name="twitter:description" content="在中国大学MOOC那发现了python的爬虫专题系列，简直就像捡到了宝一样，先来总结下第一周课的内容">
+<meta name="twitter:description" content="在中国大学MOOC那发现了python的爬虫专题系列，可以说是非常非常开心了">
 <meta name="twitter:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E8%99%AB%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/%E6%93%8D%E4%BD%9C%E7%AC%A61.png">
 
 
@@ -195,7 +195,7 @@
       </a>
     </div>
       
-        <p class="site-subtitle">No_Excuse</p>
+        <p class="site-subtitle">曾与全世界为敌</p>
       
   </div>
 
@@ -420,7 +420,7 @@
       
 
       
-        <p>在中国大学MOOC那发现了python的爬虫专题系列，简直就像捡到了宝一样，先来总结下第一周课的内容<a id="more"></a></p>
+        <p>在中国大学MOOC那发现了python的爬虫专题系列，可以说是非常非常开心了<a id="more"></a></p>
 <h1 id="Requests库入门"><a href="#Requests库入门" class="headerlink" title="Requests库入门"></a>Requests库入门</h1><p>​    在前两次的爬虫体验里面已经用到了这个牛X的库，现在开始对它进行系统点的学习（emmm，个人不是很喜欢看文档，喜欢视频），嵩天老师讲的超级好，之前python入门也看过一点他的视频，感觉超级赞。废话貌似说的有点多。。。。</p>
 <h2 id="Requests库安装及七个基本方法"><a href="#Requests库安装及七个基本方法" class="headerlink" title="Requests库安装及七个基本方法"></a>Requests库安装及七个基本方法</h2><p>​    python提供了安装包管理工具pip，有点类似于Sublime text的Package Control，pip安装的时候注意版本的兼容，建议选择源码编译安装，解压的个人觉得容易出问题，具体请自行百度。有了pip以后就简单了，打开cmd直接输入键入命令pip install requests(此处针对的是windows环境，mac什么的应该更加方便就不说了)。然后检查一下是否已经成功安装。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line">r = requests.get(<span class="string">"http://www.baidu.com"</span>)</div><div class="line">print(r.status_code)</div><div class="line">print(r.text)</div></pre></td></tr></table></figure>
