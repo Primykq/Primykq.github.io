@@ -91,7 +91,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="python,爬虫," />
+  <meta name="keywords" content="CTF," />
 
 
 
@@ -107,20 +107,18 @@
 
 
 
-<meta name="description" content="python基础部分看了一遍后，感觉需要找点乐子，于是想到去学一点爬虫批量抓图片，嘿嘿嘿">
-<meta name="keywords" content="python,爬虫">
+<meta name="description" content="​    看到不错的分享，直接码在自己博客上比较方便(其实是chrome不想加那么多的书签QAQ，CTF方面的学习资料会继续在这补)。">
+<meta name="keywords" content="CTF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="python爬虫初体验">
-<meta property="og:url" content="http://yoursite.com/2017/09/11/python爬虫初体验/index.html">
+<meta property="og:title" content="CTF传送门">
+<meta property="og:url" content="http://yoursite.com/2017/09/29/CTF传送门/index.html">
 <meta property="og:site_name" content="越努力 越幸运">
-<meta property="og:description" content="python基础部分看了一遍后，感觉需要找点乐子，于是想到去学一点爬虫批量抓图片，嘿嘿嘿">
+<meta property="og:description" content="​    看到不错的分享，直接码在自己博客上比较方便(其实是chrome不想加那么多的书签QAQ，CTF方面的学习资料会继续在这补)。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E8%99%AB%E5%88%9D%E4%BD%93%E9%AA%8C.png">
-<meta property="og:updated_time" content="2017-09-28T00:40:41.377Z">
+<meta property="og:updated_time" content="2017-09-28T16:24:15.866Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="python爬虫初体验">
-<meta name="twitter:description" content="python基础部分看了一遍后，感觉需要找点乐子，于是想到去学一点爬虫批量抓图片，嘿嘿嘿">
-<meta name="twitter:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E8%99%AB%E5%88%9D%E4%BD%93%E9%AA%8C.png">
+<meta name="twitter:title" content="CTF传送门">
+<meta name="twitter:description" content="​    看到不错的分享，直接码在自己博客上比较方便(其实是chrome不想加那么多的书签QAQ，CTF方面的学习资料会继续在这补)。">
 
 
 
@@ -150,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/11/python爬虫初体验/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/29/CTF传送门/"/>
 
 
 
 
 
-  <title>python爬虫初体验 | 越努力 越幸运</title>
+  <title>CTF传送门 | 越努力 越幸运</title>
   
 
 
@@ -327,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/11/python爬虫初体验/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/29/CTF传送门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Primykq">
@@ -344,7 +342,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">python爬虫初体验</h1>
+          <h1 class="post-title" itemprop="name headline">CTF传送门</h1>
         
 
         <div class="post-meta">
@@ -356,8 +354,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-11T19:22:46+08:00">
-                2017-09-11
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-29T00:12:19+08:00">
+                2017-09-29
               </time>
             
 
@@ -379,8 +377,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/开发/" itemprop="url" rel="index">
-                    <span itemprop="name">开发</span>
+                  <a href="/categories/安全/" itemprop="url" rel="index">
+                    <span itemprop="name">安全</span>
                   </a>
                 </span>
 
@@ -416,22 +414,45 @@
       
 
       
-        <p>python基础部分看了一遍后，感觉需要找点乐子，于是想到去学一点爬虫批量抓图片，嘿嘿嘿<a id="more"></a></p>
-<p>先介绍一下python的两大利器(库)：requests和re(emmmm，可别以为后面那个是前者的缩写，其实半毛钱关系都没有)。requests库有多厉害呢？简单地说就是python 的http库，可以帮开发人员省很多代码，具体有多厉害呢？<a href="http://docs.python-requests.org/zh_CN/latest/index.html" target="_blank" rel="external">戳这里</a> 。而re库则是regexp的缩写，python提供了相当强大的正则表达式引擎，很大程度上简化了python代码，稍微详细一点的介绍在<a href="https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/00143193331387014ccd1040c814dee8b2164bb4f064cff000" target="_blank" rel="external">这里</a> 。好了以下是正文</p>
-<h3 id="获取网页"><a href="#获取网页" class="headerlink" title="获取网页"></a>获取网页</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line">header = &#123;<span class="string">'User-Agent'</span>:<span class="string">'xxx'</span>&#125;</div><div class="line">url=<span class="string">'https://www.xxxxx'</span></div><div class="line">r = requests.get(url,headers = header)</div><div class="line">txt = r.text</div></pre></td></tr></table></figure>
-<p>先引入 requests模块，然后header是用来伪造浏览器UA的，用Chrom的话直接去开发者工具那找一下自己的Request Headers就好，url则是要抓取的网页地址，传入这两个参数给.get函数后，就能拿到初步结果</p>
-<h3 id="解析图片"><a href="#解析图片" class="headerlink" title="解析图片"></a>解析图片</h3><p>嗯，别忘了自己是来抠图的，上面那个函数写完后，一个print(text)出来的却是一大坨HTML，这当然不是我要的，去网上找了一下发现Python还有个叫Beautiful Soup的东西(→_→我第一反应是煲汤)，这个库是用来解析HTML结构的，看了几眼觉得有点复杂，这时候想起了正则大法，图片链接不都是有明显特征的嘛，于是考虑正则。匹配以<a href="https://开头以.jpg类结尾的，并作最短匹配，然后全部累塞进数组。" target="_blank" rel="external">https://开头以.jpg类结尾的，并作最短匹配，然后全部累塞进数组。</a></p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">jpg = re.compile(<span class="string">r'https://[^\s]*?\.jpg'</span>)</div><div class="line">jpeg = re.compile(<span class="string">r'https://[^\s]*?\.jpeg'</span>)</div><div class="line">gif = re.compile(<span class="string">r'https://[^\s]*?\.gif'</span>)</div><div class="line">png = re.compile(<span class="string">r'https://[^\s]*?\.png'</span>)</div><div class="line"></div><div class="line">imgs=[]</div><div class="line">imgs+=jpg.findall(txt)</div><div class="line">imgs+=jpeg.findall(txt)</div><div class="line">imgs+=gif.findall(txt)</div><div class="line">imgs+=png.findall(txt)</div></pre></td></tr></table></figure>
-<h3 id="下载图片"><a href="#下载图片" class="headerlink" title="下载图片"></a>下载图片</h3><p>request用来存储get的url，判断状态码是否正常，如果正常就写入文件。   </p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">download</span><span class="params">(url)</span>:</span></div><div class="line">    request = requests.get(url)</div><div class="line">    <span class="keyword">if</span> req.status_code == requests.codes.ok:</div><div class="line">        name = url.split(<span class="string">'/'</span>)[<span class="number">-1</span>]</div><div class="line">        f = open(<span class="string">"./"</span>+name,<span class="string">'wb'</span>)</div><div class="line">        f.write(req.content)</div><div class="line">        f.close()</div><div class="line">        <span class="keyword">return</span> <span class="keyword">True</span></div><div class="line">    <span class="keyword">else</span>:</div><div class="line">        <span class="keyword">return</span> <span class="keyword">False</span></div></pre></td></tr></table></figure>
-<p>写好下载函数后就可以写循环来挨个下载了</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">errors = []</div><div class="line"><span class="keyword">for</span> img_url <span class="keyword">in</span> imgs:</div><div class="line">	<span class="keyword">if</span> download(img_url):</div><div class="line">   		 print(<span class="string">"download :"</span>+img_url)</div><div class="line">	<span class="keyword">else</span>:</div><div class="line">  		 errors.append(img_url)</div><div class="line">print(<span class="string">"error urls:"</span>)</div><div class="line">print(errors)</div></pre></td></tr></table></figure>
-<p>还可以设置一个urls数组，同时下载多个网页的图，download函数也可以加个文件夹名，这样就可以了。</p>
-<p>最后我干了什么呢？上个图，自己体会</p>
-<p><img src="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E8%99%AB%E5%88%9D%E4%BD%93%E9%AA%8C.png" alt=""></p>
-<p>以上代码需要优化，直接用的话还有些不完善，需要根据实际的网站来调整。</p>
-<h3 id="多说一句"><a href="#多说一句" class="headerlink" title="多说一句"></a>多说一句</h3><p>​    想起一位厉害小姐姐的训示：少年的你的梦想应该是拯救世界，怎么能每天爬一些日韩女人啊爆照贴妹子什么的。</p>
-<p>​    (逃：</p>
+        <p>​    看到不错的分享，直接码在自己博客上比较方便(其实是chrome不想加那么多的书签QAQ，CTF方面的学习资料会继续在这补)。<a id="more"></a>不过有的貌似挂了，比如我挺喜欢的IDF实验室</p>
+<p><a href="http://edu.gooann.com/" target="_blank" rel="external">http://edu.gooann.com/</a> 谷安网校<br><a href="http://www.jikexueyuan.com/" target="_blank" rel="external">http://www.jikexueyuan.com/</a> 极客学院<br><a href="http://www.hetianlab.com/" target="_blank" rel="external">http://www.hetianlab.com/</a> 合天<br><a href="http://www.moonsos.com/" target="_blank" rel="external">http://www.moonsos.com/</a> 米安网<br><a href="http://www.ichunqiu.com/" target="_blank" rel="external">http://www.ichunqiu.com/</a> i 春秋<br><a href="http://www.honyaedu.com/" target="_blank" rel="external">http://www.honyaedu.com/</a> -红亚<br><a href="http://www.baimaoxueyuan.com/" target="_blank" rel="external">http://www.baimaoxueyuan.com/</a> 白帽学院<br><a href="http://www.simplexue.com/ctf/index" target="_blank" rel="external">http://www.simplexue.com/ctf/index</a> 西普学院<br><a href="http://www.imooc.com/course/list" target="_blank" rel="external">http://www.imooc.com/course/list</a> 慕课<br><a href="http://www.secbox.cn/" target="_blank" rel="external">http://www.secbox.cn/</a> 安全盒子<br><a href="http://www.freebuf.com/" target="_blank" rel="external">http://www.freebuf.com/</a> freebuf<br><a href="http://bobao.360.cn/" target="_blank" rel="external">http://bobao.360.cn/</a> 360安全播报<br><a href="http://www.wooyun.org/" target="_blank" rel="external">http://www.wooyun.org/</a> 乌云<br><a href="http://drops.wooyun.org/" target="_blank" rel="external">http://drops.wooyun.org/</a> 乌云知识库<br><a href="http://wiki.wooyun.org/" target="_blank" rel="external">http://wiki.wooyun.org/</a> WooYun WiKi<br><a href="https://www.91ri.org/" target="_blank" rel="external">https://www.91ri.org/</a> 91ri<br><a href="https://www.t00ls[.NET](http://lib.csdn.net/base/dotnet)/tools" target="_blank" rel="external">https://www.t00ls[.NET](http://lib.csdn.net/base/dotnet)/tools</a><br><a href="http://www.ijiandao.com/" target="_blank" rel="external">http://www.ijiandao.com/</a> 爱尖刀<br><a href="http://www.secwk.com/article/index.html" target="_blank" rel="external">http://www.secwk.com/article/index.html</a> 威客众测<br><a href="http://bluereader.org/" target="_blank" rel="external">http://bluereader.org/</a> 深蓝阅读<br><a href="http://www.shentou.org/" target="_blank" rel="external">http://www.shentou.org/</a> 黑客安全军火库<br><a href="http://netsecurity.51cto.com/" target="_blank" rel="external">http://netsecurity.51cto.com/</a> 51cto<br><a href="http://security.csdn.net/" target="_blank" rel="external">http://security.csdn.net/</a> csdn<br><a href="http://www.80sec.com/" target="_blank" rel="external">http://www.80sec.com/</a> 80sec team<br><a href="https://security.alibaba.com/blog.htm?spm=0.0.0.0.knOqaI" target="_blank" rel="external">https://security.alibaba.com/blog.htm?spm=0.0.0.0.knOqaI</a> 阿里巴巴安全响应中心<br><a href="http://security.tencent.com/index.[PHP](http://lib.csdn.net/base/php)/blog" target="_blank" rel="external">http://security.tencent.com/index.[PHP](http://lib.csdn.net/base/php)/blog</a> 腾讯安全应急响应中心 博客<br><a href="http://security.360.cn/blog" target="_blank" rel="external">http://security.360.cn/blog</a> 360安全应急响应中心 博客<br><a href="http://sec.baidu.com/index.php?research/list" target="_blank" rel="external">http://sec.baidu.com/index.php?research/list</a> 百度安全应急响应中心 博客</p>
+<hr>
+<p>博客推荐<br><a href="http://security.tencent.com/index.php/blog" target="_blank" rel="external">http://security.tencent.com/index.php/blog</a><br><a href="http://217.logdown.com/" target="_blank" rel="external">http://217.logdown.com/</a> 217<br><a href="http://www.blue-lotus.net" target="_blank" rel="external">http://www.blue-lotus.net</a> blue-lotus 蓝莲花<br><a href="http://blog.0ops.net/" target="_blank" rel="external">http://blog.0ops.net/</a> 0ops<br><a href="http://le4f.net/" target="_blank" rel="external">http://le4f.net/</a> e4f<br><a href="http://www.programlife.net/" target="_blank" rel="external">http://www.programlife.net/</a> 代码疯子<br><a href="http://www.hackdog.me/" target="_blank" rel="external">http://www.hackdog.me/</a> redrain’blog<br><a href="http://www.syjzwjj.com/" target="_blank" rel="external">http://www.syjzwjj.com/</a> 俊杰<br><a href="http://syclover.sinaapp.com/" target="_blank" rel="external">http://syclover.sinaapp.com/</a> 三叶草安全小组<br><a href="http://appleu0.sinaapp.com/" target="_blank" rel="external">http://appleu0.sinaapp.com/</a> appleU0大大<br><a href="http://bl4ck.in/" target="_blank" rel="external">http://bl4ck.in/</a> tomato表哥<br><a href="http://www.sco4x0.com/" target="_blank" rel="external">http://www.sco4x0.com/</a> 4叔叔<br><a href="http://laterain.sinaapp.com/" target="_blank" rel="external">http://laterain.sinaapp.com/</a> 白神<br><a href="http://0nly3nd.sinaapp.com/" target="_blank" rel="external">http://0nly3nd.sinaapp.com/</a> 0nly3nd<br><a href="http://hijacks.in/" target="_blank" rel="external">http://hijacks.in/</a> LateRain’blog<br><a href="http://www.waitalone.cn/" target="_blank" rel="external">http://www.waitalone.cn/</a> 独自等待<br><a href="http://evilcos.me/" target="_blank" rel="external">http://evilcos.me/</a> 余弦<br><a href="http://www.moonsec.com/" target="_blank" rel="external">http://www.moonsec.com/</a> 暗月<br><a href="http://www.cnblogs.com/xuanhun/" target="_blank" rel="external">http://www.cnblogs.com/xuanhun/</a> 玄魂<br><a href="https://www.leavesongs.com/" target="_blank" rel="external">https://www.leavesongs.com/</a> 离别歌<br><a href="http://huaidan.org/" target="_blank" rel="external">http://huaidan.org/</a> 鬼仔<br><a href="http://www.03sec.com/" target="_blank" rel="external">http://www.03sec.com/</a> sky的自留地<br><a href="http://joychou.org/" target="_blank" rel="external">http://joychou.org/</a> jc老师<br><a href="http://www.unhonker.com/" target="_blank" rel="external">http://www.unhonker.com/</a> 90’s blog<br><a href="http://www1.taosay.net/" target="_blank" rel="external">http://www1.taosay.net/</a> 道哥的黑板报<br><a href="http://blog.knownsec.com/" target="_blank" rel="external">http://blog.knownsec.com/</a> 知道创于<br><a href="http://www.sadk.org/" target="_blank" rel="external">http://www.sadk.org/</a> 焠安<br><a href="http://www.cnseay.com/" target="_blank" rel="external">http://www.cnseay.com/</a> seay’blog<br><a href="http://blog.aptsec.net/" target="_blank" rel="external">http://blog.aptsec.net/</a> AptSec Team<br><a href="http://lcx.cc/" target="_blank" rel="external">http://lcx.cc/</a> 网络安全研究中心<br><a href="http://www.kali.org.cn/" target="_blank" rel="external">http://www.kali.org.cn/</a> kali中文网<br><a href="http://xiao106347.blog.163.com/" target="_blank" rel="external">http://xiao106347.blog.163.com/</a> xiao106347 kali折腾<br>更多大家推荐</p>
+<hr>
+<p>渗透:<br><a href="http://www.wooyun.org/" target="_blank" rel="external">http://www.wooyun.org/</a> 乌云<br><a href="http://bbs.blackbap.org/" target="_blank" rel="external">http://bbs.blackbap.org/</a> 习科<br><a href="http://www.1937cn.net/" target="_blank" rel="external">http://www.1937cn.net/</a> 1937<br><a href="http://forum.cnsec.org/" target="_blank" rel="external">http://forum.cnsec.org/</a> 暗组<br><a href="http://www.k33nteam.org/" target="_blank" rel="external">http://www.k33nteam.org/</a> keen team<br><a href="http://forum.eviloctal.com/" target="_blank" rel="external">http://forum.eviloctal.com/</a> 邪恶八进制<br><a href="http://www.evil0x.com/" target="_blank" rel="external">http://www.evil0x.com/</a> 邪恶十六进制<br><a href="http://www.myhack58.com/" target="_blank" rel="external">http://www.myhack58.com/</a> 黑吧安全吧<br><a href="http://www.cnhonkerarmy.com/" target="_blank" rel="external">http://www.cnhonkerarmy.com/</a> 中国红客 红盟<br><a href="http://www.chinahacker.com/" target="_blank" rel="external">http://www.chinahacker.com/</a> 中国黑客联盟<br><a href="http://www.hxhack.com/" target="_blank" rel="external">http://www.hxhack.com/</a> 华夏黑客联盟<br><a href="http://www.heikexiehui.com/" target="_blank" rel="external">http://www.heikexiehui.com/</a> 中国黑客协会官网<br><a href="http://www.hackbase.com/" target="_blank" rel="external">http://www.hackbase.com/</a> 黑基<br><a href="http://www.2cto.com/" target="_blank" rel="external">http://www.2cto.com/</a> 红黑联盟<br><a href="http://bbs.2cto.com/" target="_blank" rel="external">http://bbs.2cto.com/</a> 红黑联盟论坛<br><a href="http://www.hackwd.com/" target="_blank" rel="external">http://www.hackwd.com/</a><br><a href="http://www.heishou.com.cn/" target="_blank" rel="external">http://www.heishou.com.cn/</a> 黑手安全网<br><a href="https://www.sitedirsec.com/" target="_blank" rel="external">https://www.sitedirsec.com/</a> 非安全中国网<br><a href="http://www.zatokasztuki.com/" target="_blank" rel="external">http://www.zatokasztuki.com/</a> 学生技术联盟</p>
+<hr>
+<p>逆向<br><a href="http://www.52pojie.cn/" target="_blank" rel="external">http://www.52pojie.cn/</a> 吾爱破解<br><a href="http://bbs.pediy.com/" target="_blank" rel="external">http://bbs.pediy.com/</a> 看雪论坛<br>一蓑烟雨貌似被关了，逆向方面了解不多，问问表哥们吧( ?? ω ?? )y</p>
+<hr>
+<p>编程<br><a href="http://www.he11oworld.com/" target="_blank" rel="external">http://www.he11oworld.com/</a> hello word<br><a href="http://www.w3school.com.cn/" target="_blank" rel="external">http://www.w3school.com.cn/</a> w3school<br><a href="http://www.runoob.com/" target="_blank" rel="external">http://www.runoob.com/</a> 菜鸟<br><a href="http://www.51zxw.net/" target="_blank" rel="external">http://www.51zxw.net/</a><br><a href="https://github.com/" target="_blank" rel="external">https://github.com/</a><br><a href="http://navisec-[Git](http://lib.csdn.net/base/git).qiniudn.com/" target="_blank" rel="external">http://navisec-[Git](http://lib.csdn.net/base/git).qiniudn.com/</a><br><a href="http://c.biancheng.net/cpp/" target="_blank" rel="external">http://c.biancheng.net/cpp/</a><br><a href="http://www.liaoxuefeng.com/" target="_blank" rel="external">http://www.liaoxuefeng.com/</a><br><a href="http://www.php100.com/" target="_blank" rel="external">http://www.php100.com/</a><br><a href="https://ruby-china.org/wiki" target="_blank" rel="external">https://ruby-china.org/wiki</a><br><a href="http://bbs.csdn.net/forums/[Java](http://lib.csdn.net/base/javaee)/" target="_blank" rel="external">http://bbs.csdn.net/forums/[Java](http://lib.csdn.net/base/javaee)/</a><br><a href="http://outofmemory.cn/tutorial/" target="_blank" rel="external">http://outofmemory.cn/tutorial/</a></p>
+<hr>
+<p>书籍<br><a href="http://zhuanlan.zhihu.com/Evi1m0/19706178" target="_blank" rel="external">http://zhuanlan.zhihu.com/Evi1m0/19706178</a> Evi1m0: 书籍推荐<br><a href="http://www.douban.com/doulist/3339701/" target="_blank" rel="external">http://www.douban.com/doulist/3339701/</a> 信息安全必读书单<br><a href="http://www.douban.com/doulist/1363865/" target="_blank" rel="external">http://www.douban.com/doulist/1363865/</a> 信息安全经典书籍<br><a href="http://www.zhihu.com/question/21390646" target="_blank" rel="external">http://www.zhihu.com/question/21390646</a><br><a href="http://my.oschina.net/bluefly/blog/335409?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">http://my.oschina.net/bluefly/blog/335409?utm_source=tuicool&amp;utm_medium=referral</a> Web安全核心书单<br>连载<br>《安全参考》<a href="http://www.douban.com/group/topic/72383272/" target="_blank" rel="external">http://www.douban.com/group/topic/72383272/</a> (2013年第一期–2015年第一期)全集<br>《书安》(更新中)<br><a href="http://www.secbox.cn/hacker/8205.html" target="_blank" rel="external">http://www.secbox.cn/hacker/8205.html</a> 书安SecBook 第一期《icloud <a href="http://lib.csdn.net/base/ios" target="_blank" rel="external">iOS</a>安全大揭秘》<br><a href="http://www.secbox.cn/hacker/7366.html" target="_blank" rel="external">http://www.secbox.cn/hacker/7366.html</a> 书安SecBook 第二期《信息安全攻防赛》<br>渗透实战文章可以看看里的杨凡(<a href="http://blog.sina.com.cn/s/articlelist_1758675673_4_1.html" target="_blank" rel="external">http://blog.sina.com.cn/s/articlelist_1758675673_4_1.html</a>)<br>和法克文章（<a href="http://pan.baidu.com/share/link?shareid=249629&amp;uk=2198816663）" target="_blank" rel="external">http://pan.baidu.com/share/link?shareid=249629&amp;uk=2198816663）</a></p>
+<hr>
+<p>工具(黑软有分风险，最好在虚拟机里搞)<br>ftp://222.18.158.199/(校园网内网可以访问，不仅仅只有工具哦，有许多总结，各方面的)<br><a href="http://forum.cnsec.org/thread-94330-1-1.html" target="_blank" rel="external">http://forum.cnsec.org/thread-94330-1-1.html</a> 2015暗组工具包（渗透）<br><a href="http://bbs.secbox.cn/thread-196-1-1.html" target="_blank" rel="external">http://bbs.secbox.cn/thread-196-1-1.html</a> 2015_安全盒子工具包<br><a href="http://www.secbox.cn/hacker/tools/3552.html" target="_blank" rel="external">http://www.secbox.cn/hacker/tools/3552.html</a> 法客论坛2015工具包-第三版<br><a href="http://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=388015" target="_blank" rel="external">http://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=388015</a> 吾爱破解工具包 2015/7/22（逆向）<br><a href="http://down.52pojie.cn/" target="_blank" rel="external">http://down.52pojie.cn/</a> 爱盘 – 在线破解工具包，教程，<br><a href="http://www.52pojie.cn/thread-341238-1-1.html" target="_blank" rel="external">http://www.52pojie.cn/thread-341238-1-1.html</a> 吾爱破解论坛专用破解虚拟机<br>ctf常用工具包请看<a href="http://tieba.baidu.com/p/3933947157里面群文件" target="_blank" rel="external">http://tieba.baidu.com/p/3933947157里面群文件</a></p>
+<hr>
+<p>其他<br><a href="http://www.zhihu.com/topic/19558642" target="_blank" rel="external">http://www.zhihu.com/topic/19558642</a> 黑客知乎话题<br><a href="http://www.zhihu.com/topic/20011446" target="_blank" rel="external">http://www.zhihu.com/topic/20011446</a> ctf知乎话题<br><a href="http://www.zhihu.com/topic/19561983" target="_blank" rel="external">http://www.zhihu.com/topic/19561983</a> 信息安全知乎话题<br><a href="http://zhuanlan.zhihu.com/evilcos/19961466" target="_blank" rel="external">http://zhuanlan.zhihu.com/evilcos/19961466</a> 余弦知乎专栏</p>
+<hr>
+<hr>
+<hr>
+<p>CTF方面<br><a href="http://blog.idf.cn/2015/02/ctf-field-guide/" target="_blank" rel="external">http://blog.idf.cn/2015/02/ctf-field-guide/</a><br><a href="http://tieba.baidu.com/p/3933947157" target="_blank" rel="external">http://tieba.baidu.com/p/3933947157</a> ctf大全<br><a href="https://ctftime.org/event/list/upcoming" target="_blank" rel="external">https://ctftime.org/event/list/upcoming</a> 各种CTF赛事预告<br>(ps:国内各个高校或企业举办的比赛请进<a href="http://tieba.baidu.com/p/3933947157里面的群" target="_blank" rel="external">http://tieba.baidu.com/p/3933947157里面的群</a>)</p>
+<hr>
+<p>平时ctf练习</p>
+<p>ctf逆向:<br><a href="http://reversing.kr/" target="_blank" rel="external">http://reversing.kr/</a><br><a href="http://pwnable.kr/" target="_blank" rel="external">http://pwnable.kr/</a><br><a href="http://exploit-exercises.com/" target="_blank" rel="external">http://exploit-exercises.com/</a><br><a href="http://overthewire.org" target="_blank" rel="external">http://overthewire.org</a><br><a href="http://security.cs.rpi.edu/courses/binexp-spring2015/" target="_blank" rel="external">http://security.cs.rpi.edu/courses/binexp-spring2015/</a> bin 干货区<br><a href="http://www.52pojie.cn/forum-67-1.html" target="_blank" rel="external">http://www.52pojie.cn/forum-67-1.html</a> 『2014CrackMe大赛』</p>
+<p>SQL:<br><a href="https://github.com/Audi-1/sqli-labs" target="_blank" rel="external">https://github.com/Audi-1/sqli-labs</a><br><a href="http://redtiger.labs.overthewire.org/" target="_blank" rel="external">http://redtiger.labs.overthewire.org/</a></p>
+<p>ctf XSS:<br><a href="http://prompt.ml/" target="_blank" rel="external">http://prompt.ml/</a><br><a href="http://xss.pkav.net/xss/" target="_blank" rel="external">http://xss.pkav.net/xss/</a><br><a href="http://www.doscn.org/xss/" target="_blank" rel="external">http://www.doscn.org/xss/</a><br><a href="http://xss-quiz.int21h.jp/" target="_blank" rel="external">http://xss-quiz.int21h.jp/</a><br><a href="http://escape.alf.nu/" target="_blank" rel="external">http://escape.alf.nu/</a></p>
+<p>ctf综合练习：</p>
+<p><a href="http://hackinglab.cn/" target="_blank" rel="external">http://hackinglab.cn/</a> 网络信息安全攻防学习平台<br><a href="http://captf.com/" target="_blank" rel="external">http://captf.com/</a> ctf题目<br><a href="http://cafebabe.cc/nazo/" target="_blank" rel="external">http://cafebabe.cc/nazo/</a> 脑洞开发，与ctf只有那么一点关系，有85关了( ?? ω ?? )y<br><a href="http://1111.segmentfault.com/" target="_blank" rel="external">http://1111.segmentfault.com/</a> 光棍节程序员闯关秀<br><a href="http://www.helloisa.com/test/" target="_blank" rel="external">http://www.helloisa.com/test/</a><br><a href="http://www.fj543.com/hack/" target="_blank" rel="external">http://www.fj543.com/hack/</a> 黑客丛林之旅<br><a href="http://monyer.com/game/game1//" target="_blank" rel="external">http://monyer.com/game/game1//</a> 梦之光芒的小游戏<br><a href="http://oj.xctf.org.cn/" target="_blank" rel="external">http://oj.xctf.org.cn/</a> XCTF_OJ练习平台<br><a href="http://hackgame.blackbap.org/" target="_blank" rel="external">http://hackgame.blackbap.org/</a> 习科黑客游戏<br><a href="http://ctf.3sec.cn/" target="_blank" rel="external">http://ctf.3sec.cn/</a> Jlu.CTF<br><a href="http://www.baimaoxueyuan.com/ctf" target="_blank" rel="external">http://www.baimaoxueyuan.com/ctf</a> 白帽学院ctf挑战赛<br><a href="http://www.ichunqiu.com/tiaozhans" target="_blank" rel="external">http://www.ichunqiu.com/tiaozhans</a> i春秋ctf挑战<br><a href="http://ctf.idf.cn/" target="_blank" rel="external">http://ctf.idf.cn/</a> idf 实验室<br><a href="http://ctf.moonsos.com/pentest/index.php" target="_blank" rel="external">http://ctf.moonsos.com/pentest/index.php</a> 米安网ctf<br><a href="http://www.hetianlab.com/CTFrace.html" target="_blank" rel="external">http://www.hetianlab.com/CTFrace.html</a> 合天ctf<br><a href="http://www.shiyanbar.com/ctf/index" target="_blank" rel="external">http://www.shiyanbar.com/ctf/index</a> 实验吧(前名西普学院）<br><a href="http://hkyx.myhack58.com/" target="_blank" rel="external">http://hkyx.myhack58.com/</a> 黑吧安全网-红客闯关游戏<br><a href="http://202.108.211.5/" target="_blank" rel="external">http://202.108.211.5/</a> 实训竞赛系统</p>
+<p>国外比较好的几个综合练习平台<br><a href="http://www.wechall.net" target="_blank" rel="external">http://www.wechall.net</a><br><a href="http://insight-labs.org/" target="_blank" rel="external">http://insight-labs.org/</a><br><a href="http://wargame.kr/" target="_blank" rel="external">http://wargame.kr/</a><br><a href="http://canyouhack.it/" target="_blank" rel="external">http://canyouhack.it/</a><br><a href="http://hackit.sinaapp.com/" target="_blank" rel="external">http://hackit.sinaapp.com/</a><br><a href="http://webhacking.kr/" target="_blank" rel="external">http://webhacking.kr/</a><br><a href="http://fun.coolshell.cn/" target="_blank" rel="external">http://fun.coolshell.cn/</a><br><a href="http://ringzer0team.com/challenge" target="_blank" rel="external">http://ringzer0team.com/challenge</a><br><a href="https://backdoor.sdslabs.co/" target="_blank" rel="external">https://backdoor.sdslabs.co/</a><br><a href="http://smashthestack.org/" target="_blank" rel="external">http://smashthestack.org/</a> 漏洞利用练习网站</p>
+<p>ctf writeup(WP):<br>直接百度:writeup(一边看一边总结，有道笔记，印象笔记什么的，最好能复现)<br>另外乌云和360安全播报上有些WP<br><a href="http://drops.wooyun.org/?s=writeup&amp;submit=%E6%90%9C%E7%B4%A2" target="_blank" rel="external">http://drops.wooyun.org/?s=writeup&amp;submit=%E6%90%9C%E7%B4%A2</a><br><a href="http://bobao.360.cn/ctf/" target="_blank" rel="external">http://bobao.360.cn/ctf/</a><br><a href="https://github.com/ctfs/" target="_blank" rel="external">https://github.com/ctfs/</a> 各种 writeup<br><a href="http://sec.yka.me/" target="_blank" rel="external">http://sec.yka.me/</a> CTF Writeup Summary<br><a href="https://ctf-team.vulnhub.com/" target="_blank" rel="external">https://ctf-team.vulnhub.com/</a> Write Ups</p>
+<p>​    <strong>原地址：</strong> <a href="http://blog.csdn.net/ida0918/article/details/52730662" target="_blank" rel="external">链接1</a></p>
+<p>A方向：</p>
+<p>RE for Beginners<br>IDA Pro权威指南<br>揭秘家庭路由器0day漏洞挖掘技术<br>自己定操作系统<br>黑客攻防技术宝典：系统实战篇 有各种系统的逆向讲解</p>
+<p>B方向：</p>
+<p>Web应用安全权威指南 最推荐小白，宏观web安全<br>Web前端黑客技术揭秘<br>黑客秘籍——渗透测试实用指南<br>黑客攻防技术宝典 web实战篇 web安全的所有核心基础点，有挑战性，最常规，最全，学好会直线上升<br>代码审计：企业级web代码安全架构</p>
+<p><strong>入门—-从基础题目出发（推荐资源）</strong>：</p>
+<p><a href="http://ctf.idf.cn" target="_blank" rel="external">http://ctf.idf.cn</a> !!!首推 idf实验室：题目非常基础，只1个点<br>www.ichunqiu.com 有线下决赛题目复现<br><a href="http://oj.xctf.org.cn/xctf" target="_blank" rel="external">http://oj.xctf.org.cn/xctf</a> 题库网站，历年题，练习场，比较难<br>www.wechall.net/challs !!!!!!非常入门的国外ctf题库，很多国内都是从这里刷题成长起来的<br><a href="http://canyouhack.it/" target="_blank" rel="external">http://canyouhack.it/</a> 国外，入门，有移动安全<br><a href="https://microcorruption.com/login" target="_blank" rel="external">https://microcorruption.com/login</a> A方向 密码，逆向酷炫游戏代<br>http：//smashthestack.org A方向，简洁，国外，wargames，过关<br><a href="http://overthewire.ofg/wargames/" target="_blank" rel="external">http://overthewire.ofg/wargames/</a> ！！！！推荐A方向 国内资料多，老牌wargame<br>https：//exploit-exercises.com A方向 老牌wargame，国内资料多<br><a href="http://pawnable.kr/play.php" target="_blank" rel="external">http://pawnable.kr/play.php</a> pwn类游乐场，不到100题<br><a href="http://ctf.moonsoscom/pentest/index.php" target="_blank" rel="external">http://ctf.moonsoscom/pentest/index.php</a> B方向 米安的Web漏洞靶场，基础，核心知识点<br>http：//prompt.ml/0 B方向 国外的xss测试<br><a href="http://redtiger.labs.overthewire.org/" target="_blank" rel="external">http://redtiger.labs.overthewire.org/</a> B方向 国外sql注入挑战网站，10关，过关的形式 不同的注入，循序渐近地练习</p>
+<p><strong>工具：</strong><br><a href="https://github.com/truongkma/ctf-tools" target="_blank" rel="external">https://github.com/truongkma/ctf-tools</a><br><a href="https://github.com/Plkachu/v0lt" target="_blank" rel="external">https://github.com/Plkachu/v0lt</a><br><a href="https://github.com/zardus/ctf-tools" target="_blank" rel="external">https://github.com/zardus/ctf-tools</a><br><a href="https://github.com/TUCTF/Tools" target="_blank" rel="external">https://github.com/TUCTF/Tools</a></p>
+<p><strong>这是原链接</strong> ：<a href="http://www.cnblogs.com/arsense/p/6815295.html" target="_blank" rel="external">链接2</a>。 </p>
+<p>​    </p>
 
       
     </div>
@@ -449,9 +470,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/python/" rel="tag"># python</a>
-          
-            <a href="/tags/爬虫/" rel="tag"># 爬虫</a>
+            <a href="/tags/CTF/" rel="tag"># CTF</a>
           
         </div>
       
@@ -464,8 +483,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/11/win10改掉C盘下的中文用户名/" rel="next" title="win10改掉C盘下的中文用户名">
-                <i class="fa fa-chevron-left"></i> win10改掉C盘下的中文用户名
+              <a href="/2017/09/26/IT创新区招新酱油记/" rel="next" title="IT创新区招新酱油记">
+                <i class="fa fa-chevron-left"></i> IT创新区招新酱油记
               </a>
             
           </div>
@@ -473,10 +492,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/14/爬取网易云热评/" rel="prev" title="爬取网易云热评">
-                爬取网易云热评 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -528,17 +543,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
@@ -629,22 +635,6 @@
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取网页"><span class="nav-number">1.</span> <span class="nav-text">获取网页</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解析图片"><span class="nav-number">2.</span> <span class="nav-text">解析图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#下载图片"><span class="nav-number">3.</span> <span class="nav-text">下载图片</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多说一句"><span class="nav-number">4.</span> <span class="nav-text">多说一句</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
