@@ -115,17 +115,17 @@
 <meta property="og:site_name" content="The harder,the luckier">
 <meta property="og:description" content="爬取网易云热评，用python上手真心简单，怪不得有人总说“人生苦短，我用python“。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/1.png">
-<meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/2.png">
-<meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/3.png">
-<meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/4.png">
-<meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/5.png">
-<meta property="og:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/6.png">
-<meta property="og:updated_time" content="2017-09-28T00:49:07.422Z">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk3ymlp29pj30oh08igln.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk3ymt1w8zj30kb0bgmxg.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk3yn2lbr9j30lg0cu3yl.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk3yncne8uj31e20kpwh4.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk3yncne8uj31e20kpwh4.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk3ynp2z2nj31e30k8q5j.jpg">
+<meta property="og:updated_time" content="2017-10-02T08:03:13.949Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="爬取网易云热评">
 <meta name="twitter:description" content="爬取网易云热评，用python上手真心简单，怪不得有人总说“人生苦短，我用python“。">
-<meta name="twitter:image" content="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/1.png">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk3ymlp29pj30oh08igln.jpg">
 
 
 
@@ -337,7 +337,7 @@
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Primykq">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="http://osi0rl7bm.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.jpg">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk3yohuj0ij30v90kuaep.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -424,20 +424,20 @@
         <p>爬取网易云热评，用python上手真心简单，怪不得有人总说“人生苦短，我用python“。<a id="more"></a> </p>
 <p>​    爬网页数据的话一般是解析html的结构，这种适合抓取html里面多种元素的情况，而我只是想看个热评而已，可以另辟蹊径：直接搞到评论的API，然后获取json返回，最后解析就行了。((￣▽￣)~所以说很简单咦)</p>
 <h1 id="找到API"><a href="#找到API" class="headerlink" title="找到API"></a>找到API</h1><p>​    打开网易云网页版，输入自己想抓取热评的歌曲，然后用开发者工具，输入comments就能找到评论API的url了，点response就能看到json格式的评论了。</p>
-<p><img src="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/1.png" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006OSALLgy1fk3ymlp29pj30oh08igln.jpg" alt=""></p>
 <p>那个数字代表的应该就是这首歌的id了，后面有一个叫csrf_tocken的参数，显示为空，那就不管它了。请求方式依然是post，然后表单那里还有两个加密过的参数，分别是params和encSecKey，一开始以为是每首歌都会对应这么一个参数，后来发现并不是，刷新了页面后却发现这个参数变了，可能是对应评论页码加密的？</p>
-<p><img src="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/2.png" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006OSALLgy1fk3ymt1w8zj30kb0bgmxg.jpg" alt=""></p>
 <h1 id="获取json"><a href="#获取json" class="headerlink" title="获取json"></a>获取json</h1><p>​    再一次慨叹一下python库的强大，不信？那你看代码长度咯。</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">import</span> json</div><div class="line"></div><div class="line">url = <span class="string">'http://music.163.com/weapi/v1/resource/comments/R_SO_4_63650?csrf_token='</span></div><div class="line">param = &#123;<span class="string">'params'</span>:<span class="string">''</span>, <span class="string">'encSecKey'</span>:<span class="string">''</span>&#125;</div><div class="line">r = requests.post(url, param)</div><div class="line">data = r.text <span class="comment">#拿到json</span></div></pre></td></tr></table></figure>
 <p>这样就拿到评论的json格式了(PS：那两个参数实在是太长了，贴出来看的我不舒服，写的时候自行粘贴上去就好)。</p>
 <h1 id="解析json"><a href="#解析json" class="headerlink" title="解析json"></a>解析json</h1><p>拿到了json后自然要解析一波，python的json库可以很轻易地帮我们解决这个问题。首先从开发者工具那直接复制json，拿到这里<a href="http://www.bejson.com/" target="_blank" rel="external">在线json校验格式化工具</a>,看一下json的具体形式(直接那么长一串简直反人类没法看)。</p>
-<p><img src="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/3.png" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006OSALLgy1fk3yn2lbr9j30lg0cu3yl.jpg" alt=""></p>
 <p>舒服多了23333。主要信息有nickname，content，likedCount把这三个拎出来就差不多了。(id, 内容, 点赞量)json库不会用的话去查一下就好，上手很容易的，然后直接解析后打印就好了。(就一页热评，懒得写入文件了。)稍微完整的代码：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> requests</div><div class="line"><span class="keyword">import</span> json</div><div class="line"></div><div class="line">url = <span class="string">'http://music.163.com/weapi/v1/resource/comments/R_SO_4_63650?csrf_token='</span></div><div class="line">param = &#123;<span class="string">'params'</span>:<span class="string">''</span>, <span class="string">'encSecKey'</span>:<span class="string">''</span>&#125;</div><div class="line">r = requests.post(url, param)</div><div class="line">data = r.text <span class="comment">#拿到json</span></div><div class="line">jsOb = json.loads(data)</div><div class="line">hotComments = jsOb[<span class="string">'hotComments'</span>]</div><div class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(len(hotComments)):</div><div class="line">	user_nickname = hotComments[i][<span class="string">'user'</span>][<span class="string">'nickname'</span>]</div><div class="line">	likedCount = hotComments[i][<span class="string">'likedCount'</span>]</div><div class="line">	content = hotComments[i][<span class="string">'content'</span>]</div><div class="line"></div><div class="line">	print(<span class="string">'评论'</span>,str(i+<span class="number">1</span>),<span class="string">' 用户名:'</span>,user_nickname,<span class="string">'喜		   欢：'</span>,str(likedCount))</div><div class="line">	print(<span class="string">'-----------------------------'</span>)</div><div class="line">	print(content)</div></pre></td></tr></table></figure>
 <p>这样就OK咯。贴一下我抓的《独家记忆》第一页热评。</p>
-<p><img src="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/4.png" alt=""></p>
-<p><img src="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/5.png" alt=""></p>
-<p><img src="http://osi0rl7bm.bkt.clouddn.com/%E7%88%AC%E5%8F%96%E7%BD%91%E6%98%93%E4%BA%91%E7%83%AD%E8%AF%84/6.png" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006OSALLgy1fk3yncne8uj31e20kpwh4.jpg" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006OSALLgy1fk3yncne8uj31e20kpwh4.jpg" alt=""></p>
+<p><img src="https://ws1.sinaimg.cn/large/006OSALLgy1fk3ynp2z2nj31e30k8q5j.jpg" alt=""></p>
 <p>emmmmm，后期再更新一下抓全部评论和整个歌单的热评好了。不过那样数据会比较大，时间相应也挺长的，不太敢多开线程加快速度，怕触发反爬虫机制ip被封了就GG了。</p>
 
       
@@ -551,7 +551,7 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <img class="site-author-image" itemprop="image"
-              src="http://osi0rl7bm.bkt.clouddn.com/%E5%A4%B4%E5%83%8F.jpg"
+              src="https://ws1.sinaimg.cn/large/006OSALLgy1fk3yohuj0ij30v90kuaep.jpg"
               alt="Primykq" />
           
             <p class="site-author-name" itemprop="name">Primykq</p>
