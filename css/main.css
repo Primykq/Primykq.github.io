@@ -1819,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff6221;
+  background: #627950;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2985,4 +2985,27 @@ pre {
 code,
 pre {
   border: 1px solid #d6d6d6;
+}
+.post {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 25px;
+  -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.5);
+  -moz-box-shadow: 0 0 5px rgba(202,203,204,0.5);
+}
+body {
+  background: url("/images/big-background.jpg") no-repeat;
+/* 背景图垂直、水平均居中 */
+  background-position: center center;
+/* 当内容高度大于图片高度时，背景图像的位置相对于viewport固定 */
+  background-attachment: fixed;
+/* 让背景图基于容器大小伸缩 */
+  background-size: cover;
+/* 设置背景颜色，背景图加载过程中会显示背景色 */
+  background-color: #293227;
+}
+.content-wrap,
+.sidebar-inner,
+.header-inner {
+  background: url("/images/big-background.jpg");
 }
