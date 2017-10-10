@@ -1819,7 +1819,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #732246;
+  background: #e7ff04;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3008,4 +3008,30 @@ body {
 .sidebar-inner,
 .header-inner {
   background: url("/images/allbg.jpg");
+}
+.post-header h2 {
+  color: #a50ad5;
+}
+.posts-expand .post-title {
+  font-size: 30px;
+}
+.posts-expand .post-title {
+  font-size: 26px;
+  text-align: center;
+  word-break: break-word;
+  font-weight: 400;
+}
+h1 {
+  color: #f43838;
+  font-size: 24px;
+}
+.post-body h2 {
+  color: #24820e;
+  font-size: 21px;
+}
+.content h3 {
+  color: #ed5a2c;
+}
+h3 {
+  font-size: 18px;
 }
