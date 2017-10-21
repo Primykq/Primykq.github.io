@@ -3,52 +3,9 @@
 
 
     
-    
-  <url>
-    <loc>http://primykq.top/2017/10/08/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E4%B8%96%E5%AE%89%E6%9D%AF%E9%85%B1%E6%B2%B9%E8%AE%B0/</loc>
-    <lastmod>2017-10-10T16:06:22.819Z</lastmod>
-    <data>
-        <display>
-        <title>第四届世安杯酱油记</title>
-        <pubTime>2017-10-08T12:19:13.000Z</pubTime>
-        
-        <tag>CTF</tag>
-         
-         
-           
-             
-              <breadCrumb title="安全" url="http://yoursite.com/categories/%E5%AE%89%E5%85%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://primykq.top/2017/09/16/python%E7%88%AC%E8%99%AB%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2017-10-10T06:48:10.918Z</lastmod>
-    <data>
-        <display>
-        <title>python爬虫系统学习笔记</title>
-        <pubTime>2017-09-16T15:09:09.000Z</pubTime>
-        
-        <tag>python</tag>
-         
-        <tag>爬虫</tag>
-         
-         
-           
-             
-              <breadCrumb title="开发" url="http://yoursite.com/categories/%E5%BC%80%E5%8F%91/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
   <url>
     <loc>http://primykq.top/2017/10/03/hexo%E5%8D%9A%E5%AE%A2%E5%8A%A0https%20&&%20google%E6%94%B6%E5%BD%95/</loc>
-    <lastmod>2017-10-03T11:48:11.387Z</lastmod>
+    <lastmod>2017-10-21T16:36:02.991Z</lastmod>
     <data>
         <display>
         <title>hexo博客加https && google收录</title>
@@ -66,6 +23,71 @@
            
              
               <breadCrumb title="环境" url="http://yoursite.com/categories/%E7%8E%AF%E5%A2%83/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://primykq.top/2017/10/22/%E6%88%91%E5%B0%B1%E6%98%AF%E6%83%B3%E8%AF%95%E8%AF%95%E8%BF%99%E4%B8%AA%E7%AB%9E%E8%B5%9B%E7%9A%84%E5%90%8D%E5%AD%97%E7%A9%B6%E7%AB%9F%E8%83%BD%E6%89%93%E5%A4%9A%E9%95%BF%E5%A4%9A%E9%95%BF%E5%A4%9A%E9%95%BF-nuaactf-WriteUp/</loc>
+    <lastmod>2017-10-21T16:35:52.089Z</lastmod>
+    <data>
+        <display>
+        <title>我就是想试试这个竞赛的名字究竟能打多长多长多长-nuaactf-WriteUp</title>
+        <pubTime>2017-10-21T16:29:35.000Z</pubTime>
+        
+        <tag>CTF</tag>
+         
+        <tag>nuaa</tag>
+         
+         
+           
+             
+              <breadCrumb title="安全" url="http://yoursite.com/categories/%E5%AE%89%E5%85%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://primykq.top/2017/10/08/%E7%AC%AC%E5%9B%9B%E5%B1%8A%E4%B8%96%E5%AE%89%E6%9D%AF%E9%85%B1%E6%B2%B9%E8%AE%B0/</loc>
+    <lastmod>2017-10-21T16:29:05.589Z</lastmod>
+    <data>
+        <display>
+        <title>第四届世安杯酱油记</title>
+        <pubTime>2017-10-08T12:19:13.000Z</pubTime>
+        
+        <tag>CTF</tag>
+         
+         
+           
+             
+              <breadCrumb title="安全" url="http://yoursite.com/categories/%E5%AE%89%E5%85%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://primykq.top/2017/09/16/python%E7%88%AC%E8%99%AB%E7%B3%BB%E7%BB%9F%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2017-10-10T06:48:10.918Z</lastmod>
+    <data>
+        <display>
+        <title>python爬虫系统学习笔记</title>
+        <pubTime>2017-09-16T15:09:09.000Z</pubTime>
+        
+        <tag>python</tag>
+         
+        <tag>爬虫</tag>
+         
+         
+           
+             
+              <breadCrumb title="开发" url="http://yoursite.com/categories/%E5%BC%80%E5%8F%91/"/>
           
         </display>
     </data>

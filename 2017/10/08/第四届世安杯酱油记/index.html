@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="Primykq-&gt;Blog">
 <meta property="og:description" content="​    给21号的校赛练练手。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-10T16:06:22.819Z">
+<meta property="og:updated_time" content="2017-10-21T16:29:05.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="第四届世安杯酱油记">
 <meta name="twitter:description" content="​    给21号的校赛练练手。">
@@ -414,7 +414,7 @@
       
 
       
-        <p>​    给21号的校赛练练手。<a id="more"></a> <code>@kurum</code> 主攻web，<code>@a-lie-Z</code> 主要负责misc和steganography，我试了下有思路的题，下面是我找到的flag（emmm，为什么不说是我做出来的题呢？）<code>@a-lie-Z</code> 做的题：<a href="http://qrzbing.cn/2017/CTF_WriteUp171008.html#more" target="_blank" rel="external">传送门</a> </p>
+        <p>​    给21号的校赛练练手。<a id="more"></a> <code>@kurum</code> 主攻web，<code>@a-lie-Z</code> 主要负责misc和steganography，我试了下有思路的题，下面是我找到的flag（emmm，为什么不说是我做出来的题呢？）<code>@a-lie-Z</code> 做的题：<a href="http://qrzbing.cn/2017/CTF_WriteUp171008.html#more" target="_blank" rel="external">传送门</a> ，以及 <code>@kurum</code> 做的题：<a href="http://blog.nightmare.xin/test/" target="_blank" rel="external">传送门</a> </p>
 <h1 id="ctf入门级题目"><a href="#ctf入门级题目" class="headerlink" title="ctf入门级题目"></a>ctf入门级题目</h1><p>​    戳进去看发现有源码，放一下php代码：</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">isset</span> ($_GET[<span class="string">'password'</span>])) &#123;</div><div class="line">    <span class="keyword">if</span> (ereg (<span class="string">"^[a-zA-Z0-9]+$"</span>, $_GET[<span class="string">'password'</span>]) === <span class="keyword">FALSE</span>)</div><div class="line">        <span class="keyword">echo</span> <span class="string">'&lt;p class="alert"&gt;You password must be alphanumeric&lt;/p&gt;'</span>;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (strpos ($_GET[<span class="string">'password'</span>], <span class="string">'--'</span>) !== <span class="keyword">FALSE</span>)</div><div class="line">        <span class="keyword">die</span>($flag);</div><div class="line">    <span class="keyword">else</span></div><div class="line">        <span class="keyword">echo</span> <span class="string">'&lt;p class="alert"&gt;Invalid password&lt;/p&gt;'</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>​    第一个if要求password 必须为数字和字母，第二个if要求子串中得有”–”，看上去有点矛盾，而输入数组会使ereg函数发生错误，返回false，因此可以通过第一个if，而字符数组同样会使得strpos函数出错返回Null，与严格的FALSE不符，这样就能通过第二个if判断。于是构造url 为 </p>
@@ -497,6 +497,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2017/10/22/我就是想试试这个竞赛的名字究竟能打多长多长多长-nuaactf-WriteUp/" rel="prev" title="我就是想试试这个竞赛的名字究竟能打多长多长多长-nuaactf-WriteUp">
+                我就是想试试这个竞赛的名字究竟能打多长多长多长-nuaactf-WriteUp <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -575,7 +579,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-count">12</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -597,7 +601,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-count">11</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -645,6 +649,10 @@
               
                 <li class="links-of-blogroll-item">
                   <a href="https://www.d4rk7r4c3r.cn/" title="d4rk7r4c3r" target="_blank">d4rk7r4c3r</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.nightmare.xin/" title="kurumi" target="_blank">kurumi</a>
                 </li>
               
             </ul>
