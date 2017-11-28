@@ -117,7 +117,7 @@
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLly1flc18clx45j30oy0b2dfq.jpg">
 <meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLly1flc622dv3oj30oa04zjrr.jpg">
-<meta property="og:updated_time" content="2017-11-13T11:36:17.373Z">
+<meta property="og:updated_time" content="2017-11-28T15:42:11.535Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mirages-CTF writeup">
 <meta name="twitter:description" content="​    这次的比赛分为3周，学长说第一周的挺基础，适合我们练手，正好最近离散停课，计算方法也没开，时间还算充足，就进坑了。虽说是个人赛，但实际上是和小队成员开黑做的23333。做出来的题基本是上是web和misc，re。。。。不会，先好好学学汇编以及计算机系统再说。在这稍微总结一下web和misc">
@@ -418,71 +418,35 @@
 
       
         <p>​    这次的比赛分为3周，学长说第一周的挺基础，适合我们练手，正好最近离散停课，计算方法也没开，时间还算充足，就进坑了。虽说是个人赛，但实际上是和小队成员开黑做的23333。做出来的题基本是上是web和misc，re。。。。不会，先好好学学汇编以及计算机系统再说。在这稍微总结一下web和misc<a id="more"></a></p>
-<h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="Web第一步"><a href="#Web第一步" class="headerlink" title="Web第一步"></a>Web第一步</h2><p>打开链接就看到了这么一句话。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">一看你就不是组织的人,不用组织的ip，还想进组织的网站。</div></pre></td></tr></table></figure>
-<p>23333，意思很明显了，伪造ip。刚开始纳闷了会儿，他们组织的ip到底是啥呀我也不知道哇，然后看到了这个链接的title上写着：110.110.110.110</p>
-<p>好吧，修改一下X-Forwarded-For，刷新。</p>
-<p>然后是另一句话：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">I like Iphone X. Why don&apos;t you use it?</div></pre></td></tr></table></figure>
-<p>伪造ua。。。注意这里有个坑，很多人还去搜了Iphone X的ua，其实不用，直接写Iphone X就OK了，题目给了Hint：简体中文。说的就是这个。</p>
-<p>再刷新。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Actually, I&apos;m Chinese,I don&apos;t want to hear any other language</div></pre></td></tr></table></figure>
-<p>还要改语言。。。一开始我直接改成了Chinese，发现没反应，于是换成了zh-CN，可以了。</p>
-<p>再刷新</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">Not a local login. Do you want flag?</div></pre></td></tr></table></figure>
-<p>改host….</p>
+<h1 id="web"><a href="#web" class="headerlink" title="web"></a>web</h1><h2 id="Web第一步"><a href="#Web第一步" class="headerlink" title="Web第一步"></a>Web第一步</h2><p>打开链接就看到了这么一句话：一看你就不是组织的人,不用组织的ip，还想进组织的网站。23333，意思很明显了，伪造ip。刚开始纳闷了会儿，他们组织的ip到底是啥呀我也不知道哇，然后看到了这个链接的title上写着：110.110.110.110。好吧，修改一下X-Forwarded-For，刷新。然后是另一句话：I like Iphone X. Why don’t you use it? 伪造ua。。。注意这里有个坑，很多人还去搜了Iphone X的ua，其实不用，直接写Iphone X就OK了，题目给了Hint：简体中文。说的就是这个。再刷新：Actually, I’m Chinese,I don’t want to hear any other language。还要改语言。。。一开始我直接改成了Chinese，发现没反应，于是换成了zh-CN，可以了。再刷新：Not a local login. Do you want flag?  改host….其实就是改请求头而已，干嘛还要改4次，有毒。</p>
 <p><img src="https://ws1.sinaimg.cn/large/006OSALLly1flc18clx45j30oy0b2dfq.jpg" alt=""></p>
-<p>其实就是改请求头而已，干嘛还要改4次，有毒，拿到flag</p>
 <p><code>flag:mctf{_Wh01e_FamilY}</code></p>
-<h2 id="PHP加密"><a href="#PHP加密" class="headerlink" title="PHP加密"></a>PHP加密</h2><p>题目：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">加油吧，骚年，莫名其妙的字符串，必有其来源</div></pre></td></tr></table></figure>
-<p>打开链接一看，发现是一串base64.</p>
+<h2 id="PHP加密"><a href="#PHP加密" class="headerlink" title="PHP加密"></a>PHP加密</h2><p>题目：加油吧，骚年，莫名其妙的字符串，必有其来源 。打开链接一看，发现是一串base64.</p>
 <p><code>fTdydHtWOV9gaG5VXDJqPHcxPFxhbHRVfDdpPUV5TlxdQ2hpVWA=</code></p>
-<p>直接解一下试试</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#125;\7arltt&#123;UV|97_i`=hEnyUN\\2]jC&lt;hwi1U&lt;`</div></pre></td></tr></table></figure>
-<p>果然还有一段加密函数。</p>
-<p><code>kurumi</code>扫了下后说有源码，顺便丢给了我们。</p>
+<p>直接解密显然不对，应该还有一段加密函数。@kurumi扫了下后说有源码，顺便丢给了我们。</p>
 <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;?php</span></div><div class="line">$flag = <span class="string">'flag&#123;********************************&#125;'</span>;</div><div class="line">$flag= strrev($flag);</div><div class="line">$key = <span class="string">'*'</span>;</div><div class="line"><span class="keyword">for</span>($i=<span class="number">0</span>;$i&lt;strlen($flag);$i++)</div><div class="line">&#123;</div><div class="line">	$str[$i] = ord($flag[$i])+ord($key)*$i;</div><div class="line">	<span class="keyword">while</span>($str[$i]&gt;<span class="number">125</span>)</div><div class="line">	&#123;</div><div class="line">		$str[$i] = $str[$i]<span class="number">-78</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">$out = <span class="string">""</span>;</div><div class="line"><span class="keyword">for</span>($i=<span class="number">0</span>;$i&lt;strlen($flag);$i=$i+<span class="number">2</span>)</div><div class="line">&#123;</div><div class="line">	$out = $out.chr($str[$i]);</div><div class="line">&#125;</div><div class="line"><span class="keyword">for</span>($i=<span class="number">1</span>;$i&lt;strlen($flag);$i=$i+<span class="number">2</span>)</div><div class="line">&#123;</div><div class="line">	$out = $out.chr($str[$i]);</div><div class="line">&#125;</div><div class="line"><span class="keyword">echo</span> base64_encode($out);</div><div class="line"><span class="meta">?&gt;</span></div></pre></td></tr></table></figure>
 <p>加密流程大概就是，先逆转，然后遍历，令str这个数组的每一位等于对应位置上字符的ascii码值加上下标乘以42，如果这个数值大于125，就减78，直到小于等于125为止，然后再把str这个数组的偶数下标位抽出来，插到后面。大概就是把abcdef变成acebdf这样。</p>
-<p>脚本写来写去还是有问题，最后没能跑出来QAQ，借鉴了队友<code>@kurumi</code>的脚本：</p>
+<p>脚本写来写去还是有问题，最后没能跑出来QAQ，借鉴了队友@kurumi的脚本：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">import</span> base64</div><div class="line"><span class="keyword">import</span> sys</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">decrypto</span><span class="params">(out, key)</span>:</span></div><div class="line">    t = base64.b64decode(out)</div><div class="line">    <span class="comment">#print [ord(x) for x in t]</span></div><div class="line"></div><div class="line">    a = t[:(len(t)+<span class="number">1</span>)/<span class="number">2</span>]</div><div class="line">    b = t[(len(t)+<span class="number">1</span>)/<span class="number">2</span>:]</div><div class="line">    t = <span class="string">''</span></div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(min(len(a), len(b))):</div><div class="line">        t += a[<span class="number">0</span>]</div><div class="line">        t += b[<span class="number">0</span>]</div><div class="line">        a = a[<span class="number">1</span>:]</div><div class="line">        b = b[<span class="number">1</span>:]</div><div class="line">    <span class="keyword">if</span> a:</div><div class="line">        t += a[<span class="number">0</span>]</div><div class="line">    <span class="keyword">if</span> b:</div><div class="line">        t += b[<span class="number">0</span>]</div><div class="line"></div><div class="line">    t = [ord(x) <span class="keyword">for</span> x <span class="keyword">in</span> t]</div><div class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(len(t)):</div><div class="line">        <span class="keyword">while</span> t[i] &lt; i * <span class="number">42</span>:</div><div class="line">            t[i] += <span class="number">78</span></div><div class="line">        t[i] -= i * <span class="number">42</span></div><div class="line">        <span class="keyword">if</span> <span class="keyword">not</span> <span class="number">32</span> &lt;= t[i] &lt;= <span class="number">126</span>:</div><div class="line">            t[i] += <span class="number">78</span></div><div class="line">    <span class="keyword">print</span> <span class="string">''</span>.join([chr(x) <span class="keyword">for</span> x <span class="keyword">in</span> t])[::<span class="number">-1</span>]</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></div><div class="line">    decrypto(<span class="string">'fTdydHtWOV9gaG5VXDJqPHcxPFxhbHRVfDdpPUV5TlxdQ2hpVWA='</span>, <span class="number">42</span>)</div><div class="line">main()</div></pre></td></tr></table></figure>
 <p>虽然可能会有点不精确，但最后修正一下就行了。。。(一开始有点死脑筋，但这题应该是可以直接恢复的，逻辑和算法太菜了哎)</p>
 <p><code>flag{e20ad328b0aa23210c57c48ac8b6f112}</code></p>
-<h2 id="忘记密码"><a href="#忘记密码" class="headerlink" title="忘记密码"></a>忘记密码</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">忘了童年的QQ账号以及密码！！</div></pre></td></tr></table></figure>
-<p>这题的title也有提示，md5，而且源码里边也有提示：密码全是字母</p>
-<p>一开始以为是md5碰撞，爆破什么的也试过。</p>
-<p>最后学长发现，这TM就是一个php弱类型比较。</p>
-<p>找纯数字和纯大写字母的md5值为0e开头的即可。</p>
+<h2 id="忘记密码"><a href="#忘记密码" class="headerlink" title="忘记密码"></a>忘记密码</h2><p>忘了童年的QQ账号以及密码！！这题的title也有提示，md5，而且源码里边也有提示：密码全是字母。一开始以为是md5碰撞，爆破什么的也试过。最后学长发现，这TM就是一个php弱类型比较。找纯数字和纯大写字母的md5值为0e开头的即可。</p>
 <p><code>flag:MCTF{Md5_1s_So_SaD}</code></p>
-<h2 id="喵喵喵"><a href="#喵喵喵" class="headerlink" title="喵喵喵"></a>喵喵喵</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">喜欢撸猫就一起来吧</div></pre></td></tr></table></figure>
-<p>title为：听说猫喜欢机器人</p>
-<p>显然是robots协议，看一下，果然有源码</p>
+<h2 id="喵喵喵"><a href="#喵喵喵" class="headerlink" title="喵喵喵"></a>喵喵喵</h2><p>喜欢撸猫就一起来吧。title为：听说猫喜欢机器人。显然是robots协议，看一下，果然有源码：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">&lt;html&gt;</div><div class="line">&lt;head&gt;</div><div class="line">&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=gbk&quot;&gt;</div><div class="line">&lt;title&gt;听说猫喜欢机器人&lt;/title&gt;</div><div class="line">&lt;/head&gt;</div><div class="line">&lt;body&gt;</div><div class="line">&lt;img src=&quot;./aabbcc.jpg&quot;&gt;</div><div class="line">&lt;/body&gt;</div><div class="line">&lt;/html&gt;</div><div class="line">&lt;?php</div><div class="line">$flag=&apos;********&apos;;</div><div class="line">if (isset ($_GET[&apos;cat&apos;])) &#123;</div><div class="line">        if (ereg (&quot;^[0-9b-f]+$&quot;, $_GET[&apos;cat&apos;]) === FALSE)</div><div class="line">            echo &apos;喵喵好像特别喜欢小写字母和数字&apos;;</div><div class="line">        else if ($_GET[&apos;cat&apos;]==0)</div><div class="line">            &#123;</div><div class="line">                 if(strpos ($_GET[&apos;cat&apos;], &apos;miaomiao&apos;) !==FALSE)</div><div class="line">             &#123;   </div><div class="line">            die(&apos;Flag: &apos;.$flag);</div><div class="line">               &#125;</div><div class="line">        else</div><div class="line">          &#123;  echo &apos;&lt;p&gt;好像必须要喵喵呢&lt;/p&gt;&apos;;&#125;</div><div class="line">       &#125;</div><div class="line">    else</div><div class="line">&#123;echo &apos;&lt;p&gt;喵喵迷路了&lt;/p&gt;&apos;;&#125;</div><div class="line">    &#125;</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
-<p>传入一个cat，先检测是否在0-9和b-f范围内，再判断是否为零，发现这里是弱类比较，只有两个等号，显然可以用0e绕，然后还要有miaomiao，也就是要有a，那就00截断吧。大概就是这样了</p>
-<p>构造url：<code>http://116.196.124.92:32769?cat=0e2333%00miaomiao</code></p>
+<p>传入一个cat，先检测是否在0-9和b-f范围内，再判断是否为零，发现这里是弱类比较，只有两个等号，显然可以用0e绕，然后还要有miaomiao，也就是要有a，那就00截断吧。大概就是这样了构造url：<a href="http://116.196.124.92:32769?cat=0e2333%00miaomiao" target="_blank" rel="external">http://116.196.124.92:32769?cat=0e2333%00miaomiao</a></p>
 <p><code>flag:mctf{you_get_ereg}</code></p>
 <h2 id="phpbest"><a href="#phpbest" class="headerlink" title="phpbest!!!"></a>phpbest!!!</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">php是世界上最好的语言！谁说不是我跟谁急！</div></pre></td></tr></table></figure>
-<p>还加了个网易云链接：当初就不该学php。有闲情的话去听听吧23333</p>
-<p>这次的title为：Secure Hash Algorithm</p>
-<p>又是Hash？？</p>
-<p>而且有这么一句：</p>
-<p><code>这货不是SQL，我绝对不骗人。</code></p>
-<p>要求输入name 和 pass来登录，试了下注入，好吧，真的不是</p>
-<p>根据前面几题的经验，title提示都是有用的，于是开始考虑php的弱类型，用0e也不对。然后直接post数据，用数组试试，。。。！！！！过了？？？？</p>
+<p>还加了个网易云链接：当初就不该学php。有闲情的话去听听吧23333。这次的title为：Secure Hash Algorithm又是Hash？？而且有这么一句：<code>这货不是SQL，我绝对不骗人。</code>要求输入name 和 pass来登录，试了下注入，好吧，真的不是。根据前面几题的经验，title提示都是有用的，于是开始考虑php的弱类型，用0e也不对。然后直接post数据，用数组试试，。。。！！！！过了？？？？</p>
 <p>name[]=2&amp;pass[]=3</p>
 <p><code>flag:mctf{This_is_the_fulage}</code></p>
-<h2 id="投身黑产的b佬1"><a href="#投身黑产的b佬1" class="headerlink" title="投身黑产的b佬1"></a>投身黑产的b佬1</h2><p>题目类似于一个老虎机，抽到05555就有flag</p>
-<p>hint: bp真好用。</p>
-<p>直接用bp碰撞拿到flag。</p>
+<h2 id="投身黑产的b佬1"><a href="#投身黑产的b佬1" class="headerlink" title="投身黑产的b佬1"></a>投身黑产的b佬1</h2><p>题目类似于一个老虎机，抽到05555就有flag，hint: bp真好用，直接用bp碰撞拿到flag。</p>
 <p><code>flag:{Good_luck_Boy!}</code></p>
 <p>(万一是个妹子呢2333333</p>
-<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="这有flag"><a href="#这有flag" class="headerlink" title="这有flag"></a>这有flag</h2><p>下载下来是一张图片</p>
-<p>Hint: 萌新温馨提示：使用二进制工具（010 editor, winhex）来查看文件/你听过base64吗</p>
-<p>。。。这提示约等于wp了吧。。。。16进制打开末尾有base64串，解密即可</p>
+<h1 id="Misc"><a href="#Misc" class="headerlink" title="Misc"></a>Misc</h1><h2 id="这有flag"><a href="#这有flag" class="headerlink" title="这有flag"></a>这有flag</h2><p>下载下来是一张图片，Hint: 萌新温馨提示：使用二进制工具（010 editor, winhex）来查看文件/你听过base64吗。。。这提示约等于wp了吧。。。。16进制打开末尾有base64串，解密即可</p>
 <p><code>flag:MCTF{th1s_ls_fL4g}</code></p>
-<h2 id="这有flag？"><a href="#这有flag？" class="headerlink" title="这有flag？"></a>这有flag？</h2><p>还是图片</p>
-<p>用stegesolve看一下，emmmm，没什么用，LSB也没有什么</p>
-<p>binwalk分析一下</p>
+<h2 id="这有flag？"><a href="#这有flag？" class="headerlink" title="这有flag？"></a>这有flag？</h2><p>还是图片，用stegesolve看一下，emmmm，没什么用，LSB也没有什么，binwalk分析一下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">DECIMAL       HEXADECIMAL     DESCRIPTION</div><div class="line">--------------------------------------------------------------------------------</div><div class="line">0             0x0             JPEG image data, EXIF standard</div><div class="line">12            0xC             TIFF image data, big-endian, offset of first image directory: 8</div><div class="line">13446         0x3486          Zip archive data, at least v2.0 to extract, compressed size: 17, uncompressed size: 15, name: flag.txt</div><div class="line">13591         0x3517          End of Zip archive</div></pre></td></tr></table></figure>
 <p>有压缩包，<code>foremost 2.jpg</code> ，直接解压那个zip包，发现里面有flag.txt，打开得到flag</p>
 <p><code>flag:MCTF{Real_F1Ag}</code></p>
@@ -492,12 +456,7 @@
 <p><code>flag:MCTF{Hhhh_g0t_1t}</code></p>
 <h2 id="签到题"><a href="#签到题" class="headerlink" title="签到题"></a>签到题</h2><p>加群，群相册有二维码，关注公众号发送flag即可。</p>
 <p><code>falg:MCTF{We1c0me_2_MCTF}</code></p>
-<h2 id="这有flag？？？"><a href="#这有flag？？？" class="headerlink" title="这有flag？？？"></a>这有flag？？？</h2><p>这个150分的题，本来脑洞还有点大的，但后来放了这么一个hint：</p>
-<p>Hint: 萌新温馨提示：LSB/plaintext</p>
-<p>莫非是出题人怕被打？</p>
-<p>嗯哼？</p>
-<p>下载下来是一张图片和一个hint文件，而且hint没有后缀</p>
-<p>LSB嘛，把图片提取一下，发现有个zip压缩包，改后缀，解压走起，有密码？？？？试试是不是伪加密，然而并不是。哎，它都已经给了提示了。。。明文攻击（然而我们做的时候并没有，还是<code>qrzbing</code> 提示我做出来的）看一下加密包，里面有flag.txt和一张图片，然后转而分析hint文件，binwalk一下。</p>
+<h2 id="这有flag？？？"><a href="#这有flag？？？" class="headerlink" title="这有flag？？？"></a>这有flag？？？</h2><p>这个150分的题，本来脑洞还有点大的，但后来放了这么一个Hint: 萌新温馨提示：LSB/plaintext莫非是出题人怕被打？嗯哼？下载下来是一张图片和一个hint文件，而且hint没有后缀。LSB嘛，把图片提取一下，发现有个zip压缩包，改后缀，解压走起，有密码？？？？试试是不是伪加密，然而并不是。哎，它都已经给了提示了。。。明文攻击（然而我们做的时候并没有，还是<code>qrzbing</code> 提示我做出来的）看一下加密包，里面有flag.txt和一张图片，然后转而分析hint文件，binwalk一下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">binwalk hint</div><div class="line"></div><div class="line">DECIMAL       HEXADECIMAL     DESCRIPTION</div><div class="line">--------------------------------------------------------------------------------</div><div class="line">0             0x0             Zip archive data, at least v2.0 to extract, compressed size: 346, uncompressed size: 1312, name: [Content_Types].xml</div><div class="line">915           0x393           Zip archive data, at least v2.0 to extract, compressed size: 239, uncompressed size: 590, name: _rels/.rels</div><div class="line">1715          0x6B3           Zip archive data, at least v2.0 to extract, compressed size: 244, uncompressed size: 817, name: word/_rels/document.xml.rels</div><div class="line">2281          0x8E9           Zip archive data, at least v2.0 to extract, compressed size: 854, uncompressed size: 2973, name: word/document.xml</div><div class="line">3182          0xC6E           Zip archive data, at least v2.0 to extract, compressed size: 1761, uncompressed size: 8398, name: word/theme/theme1.xml</div><div class="line">4994          0x1382          Zip archive data, at least v2.0 to extract, compressed size: 1337, uncompressed size: 3725, name: word/settings.xml</div><div class="line">6378          0x18EA          Zip archive data, at least v2.0 to extract, compressed size: 501, uncompressed size: 1444, name: word/fontTable.xml</div><div class="line">6927          0x1B0F          Zip archive data, at least v2.0 to extract, compressed size: 295, uncompressed size: 655, name: word/webSettings.xml</div><div class="line">7272          0x1C68          Zip archive data, at least v2.0 to extract, compressed size: 364, uncompressed size: 711, name: docProps/app.xml</div><div class="line">7946          0x1F0A          Zip archive data, at least v2.0 to extract, compressed size: 385, uncompressed size: 757, name: docProps/core.xml</div><div class="line">8642          0x21C2          Zip archive data, at least v2.0 to extract, compressed size: 2904, uncompressed size: 29103, name: word/styles.xml</div><div class="line">11591         0x2D47          Zip archive data, at least v2.0 to extract, compressed size: 11906, uncompressed size: 12427, name: docProps/key.xml</div><div class="line">24346         0x5F1A          End of Zip archive</div></pre></td></tr></table></figure>
 <p>又是一个zip包，改后缀打开，注意到docProps目录下有个key.xml，而且还是2017.10.22修改过的，很明显了，然后分析一下这个key.xml，发现它是一张图片，那么很显然，明文攻击的已知文件就在这了。压缩，直接爆，1分钟不到就爆开了，打开flag.txt，发现里面是这样的：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">VSBmaW5kIG1lLHRoZW4gSSdsbCBnaXZlIHUgbXkgZmxhZzpNQ1RGe0xTQl8mJl9wbEBpblRleHR9LkRvIHUgdGhpbmsgaXMgaXQgc28gZnVja2luZyBlZ2c/bGFpIGRhIHdvIHlhIGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaGhoaA==</div></pre></td></tr></table></figure>
@@ -505,13 +464,12 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">U find me,then I&apos;ll give u my flag:MCTF&#123;LSB_&amp;&amp;_pl@inText&#125;.Do u think is it so fucking egg?lai da wo ya hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh</div></pre></td></tr></table></figure>
 <p>看到了吗？lai da wo ya。。。丫的以为我不敢吗？</p>
 <p><code>flag:MCTF{LSB_&amp;&amp;_pl@inText}</code></p>
-<h2 id="这有flag-ex"><a href="#这有flag-ex" class="headerlink" title="这有flag-ex"></a>这有flag-ex</h2><p>本来Hint给的是Water，可能出题人觉得太隐晦了，后来就直接改成了水印。。</p>
-<p> 我也不是很懂盲水印这玩意儿，google了一波，在github上找到了这段脚本，装上python的一些第三方库后跑一个命令就OK了。<a href="https://github.com/chishaxie/BlindWaterMark" target="_blank" rel="external">参考链接</a></p>
+<h2 id="这有flag-ex"><a href="#这有flag-ex" class="headerlink" title="这有flag-ex"></a>这有flag-ex</h2><p>本来Hint给的是Water，可能出题人觉得太隐晦了，后来就直接改成了水印。。我也不是很懂盲水印这玩意儿，google了一波，在github上找到了这段脚本，装上python的一些第三方库后跑一个命令就OK了。<a href="https://github.com/chishaxie/BlindWaterMark" target="_blank" rel="external">参考链接</a></p>
 <p>（PS：感觉这200分的题比150分的好做，如果都不给Hint的话。</p>
 <p><code>flag:MCTF{W4T3RMark_1s_c00l}</code></p>
-<p>来一波霸气的图片5连</p>
+<p>最后来一波霸气的图片5连</p>
 <p><img src="https://ws1.sinaimg.cn/large/006OSALLly1flc622dv3oj30oa04zjrr.jpg" alt=""></p>
-<p>话说还是好好学数据机构离散和数电，其余时间写写python，看看二进制，刷刷英语好了，太菜了，肝不动。</p>
+<p>话说还是好好学数据机构离散和数电，其余时间写写python，看看二进制，刷刷英语好了，太菜了，肝不动、肝不动。</p>
 
       
     </div>
