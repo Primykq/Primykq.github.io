@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+      
+    
+
+    
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Monda:300,300italic,400,400italic,700,700italic|Roboto Slab:300,300italic,400,400italic,700,700italic|Lobster Two:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="bomblab，csapp," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.2" />
+
+
+
+
+
+
+<meta name="description" content="​    废话不多说，开始。">
+<meta name="keywords" content="bomblab，csapp">
+<meta property="og:type" content="article">
+<meta property="og:title" content="bomblab-再相遇">
+<meta property="og:url" content="http://yoursite.com/2017/12/02/bomblab-再相遇/index.html">
+<meta property="og:site_name" content="Primykq-&gt;Blog">
+<meta property="og:description" content="​    废话不多说，开始。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLly1fm2fm2j6q4j30gr05q0sl.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLly1fm2g5nmjbuj30al075a9v.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLly1fm2e90fpi3j30fm06ijra.jpg">
+<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLly1fm2ec8pikdj30mo0cvq42.jpg">
+<meta property="og:updated_time" content="2017-12-02T07:27:31.361Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="bomblab-再相遇">
+<meta name="twitter:description" content="​    废话不多说，开始。">
+<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006OSALLly1fm2fm2j6q4j30gr05q0sl.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/12/02/bomblab-再相遇/"/>
+
+
+
+
+
+  <title>bomblab-再相遇 | Primykq->Blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Primykq->Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">一个人的兵荒马乱</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            认识我
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            时间轴
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/12/02/bomblab-再相遇/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Primykq">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk3yohuj0ij30v90kuaep.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Primykq->Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">bomblab-再相遇</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-02T14:08:43+08:00">
+                2017-12-02
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/日常/" itemprop="url" rel="index">
+                    <span itemprop="name">日常</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>​    废话不多说，开始。<a id="more"></a></p>
+<h1 id="phase-1"><a href="#phase-1" class="headerlink" title="phase_1"></a>phase_1</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">(gdb) disassemble phase_1</div><div class="line">Dump of assembler code for function phase_1:</div><div class="line">   0x0000000000400f2d <span class="tag">&lt;<span class="name">+0</span>&gt;</span>:     sub    $0x8,%rsp</div><div class="line">   0x0000000000400f31 <span class="tag">&lt;<span class="name">+4</span>&gt;</span>:     mov    $0x4026f0,%esi</div><div class="line">   0x0000000000400f36 <span class="tag">&lt;<span class="name">+9</span>&gt;</span>:     callq  0x401472 <span class="tag">&lt;<span class="name">strings_not_equal</span>&gt;</span></div><div class="line">   0x0000000000400f3b <span class="tag">&lt;<span class="name">+14</span>&gt;</span>:    test   %eax,%eax</div><div class="line">   0x0000000000400f3d <span class="tag">&lt;<span class="name">+16</span>&gt;</span>:    je     0x400f44 <span class="tag">&lt;<span class="name">phase_1+23</span>&gt;</span></div><div class="line">   0x0000000000400f3f <span class="tag">&lt;<span class="name">+18</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000400f44 <span class="tag">&lt;<span class="name">+23</span>&gt;</span>:    add    $0x8,%rsp</div><div class="line">   0x0000000000400f48 <span class="tag">&lt;<span class="name">+27</span>&gt;</span>:    retq</div><div class="line">End of assembler dump.</div></pre></td></tr></table></figure>
+<p>直接看一下0x4026f0字符串就可以：</p>
+<p><code>(gdb) x/s 0x4026f0</code><br><code>0x4026f0:       &quot;I am just a renegade hockey mom.&quot;</code></p>
+<h1 id="phase-2"><a href="#phase-2" class="headerlink" title="phase_2"></a>phase_2</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">(gdb) disassemble phase_2</div><div class="line">Dump of assembler code for function phase_2:</div><div class="line">   0x0000000000400f49 <span class="tag">&lt;<span class="name">+0</span>&gt;</span>:     push   %rbp</div><div class="line">   0x0000000000400f4a <span class="tag">&lt;<span class="name">+1</span>&gt;</span>:     push   %rbx</div><div class="line">   0x0000000000400f4b <span class="tag">&lt;<span class="name">+2</span>&gt;</span>:     sub    $0x28,%rsp</div><div class="line">   0x0000000000400f4f <span class="tag">&lt;<span class="name">+6</span>&gt;</span>:     mov    %fs:0x28,%rax</div><div class="line">   0x0000000000400f58 <span class="tag">&lt;<span class="name">+15</span>&gt;</span>:    mov    %rax,0x18(%rsp)</div><div class="line">   0x0000000000400f5d <span class="tag">&lt;<span class="name">+20</span>&gt;</span>:    xor    %eax,%eax</div><div class="line">   0x0000000000400f5f <span class="tag">&lt;<span class="name">+22</span>&gt;</span>:    mov    %rsp,%rsi</div><div class="line">   0x0000000000400f62 <span class="tag">&lt;<span class="name">+25</span>&gt;</span>:    callq  0x401777 <span class="tag">&lt;<span class="name">read_six_numbers</span>&gt;</span></div><div class="line">   0x0000000000400f67 <span class="tag">&lt;<span class="name">+30</span>&gt;</span>:    cmpl   $0x0,(%rsp)</div><div class="line">   0x0000000000400f6b <span class="tag">&lt;<span class="name">+34</span>&gt;</span>:    jns    0x400f72 <span class="tag">&lt;<span class="name">phase_2+41</span>&gt;</span></div><div class="line">   0x0000000000400f6d <span class="tag">&lt;<span class="name">+36</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000400f72 <span class="tag">&lt;<span class="name">+41</span>&gt;</span>:    mov    %rsp,%rbp</div><div class="line">   0x0000000000400f75 <span class="tag">&lt;<span class="name">+44</span>&gt;</span>:    mov    $0x1,%ebx</div><div class="line">   0x0000000000400f7a <span class="tag">&lt;<span class="name">+49</span>&gt;</span>:    mov    %ebx,%eax</div><div class="line">   0x0000000000400f7c <span class="tag">&lt;<span class="name">+51</span>&gt;</span>:    add    0x0(%rbp),%eax</div><div class="line">   0x0000000000400f7f <span class="tag">&lt;<span class="name">+54</span>&gt;</span>:    cmp    %eax,0x4(%rbp)</div><div class="line">   0x0000000000400f82 <span class="tag">&lt;<span class="name">+57</span>&gt;</span>:    je     0x400f89 <span class="tag">&lt;<span class="name">phase_2+64</span>&gt;</span></div><div class="line">   0x0000000000400f84 <span class="tag">&lt;<span class="name">+59</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000400f89 <span class="tag">&lt;<span class="name">+64</span>&gt;</span>:    add    $0x1,%ebx</div><div class="line">   0x0000000000400f8c <span class="tag">&lt;<span class="name">+67</span>&gt;</span>:    add    $0x4,%rbp</div><div class="line">   0x0000000000400f90 <span class="tag">&lt;<span class="name">+71</span>&gt;</span>:    cmp    $0x6,%ebx</div><div class="line">   0x0000000000400f93 <span class="tag">&lt;<span class="name">+74</span>&gt;</span>:    jne    0x400f7a <span class="tag">&lt;<span class="name">phase_2+49</span>&gt;</span></div><div class="line">---Type <span class="tag">&lt;<span class="name">return</span>&gt;</span> to continue, or q <span class="tag">&lt;<span class="name">return</span>&gt;</span> to quit---</div><div class="line">   0x0000000000400f95 <span class="tag">&lt;<span class="name">+76</span>&gt;</span>:    mov    0x18(%rsp),%rax</div><div class="line">   0x0000000000400f9a <span class="tag">&lt;<span class="name">+81</span>&gt;</span>:    xor    %fs:0x28,%rax</div><div class="line">   0x0000000000400fa3 <span class="tag">&lt;<span class="name">+90</span>&gt;</span>:    je     0x400faa <span class="tag">&lt;<span class="name">phase_2+97</span>&gt;</span></div><div class="line">   0x0000000000400fa5 <span class="tag">&lt;<span class="name">+92</span>&gt;</span>:    callq  0x400b90 <span class="tag">&lt;<span class="name">__stack_chk_fail@plt</span>&gt;</span></div><div class="line">   0x0000000000400faa <span class="tag">&lt;<span class="name">+97</span>&gt;</span>:    add    $0x28,%rsp</div><div class="line">   0x0000000000400fae <span class="tag">&lt;<span class="name">+101</span>&gt;</span>:   pop    %rbx</div><div class="line">   0x0000000000400faf <span class="tag">&lt;<span class="name">+102</span>&gt;</span>:   pop    %rbp</div><div class="line">   0x0000000000400fb0 <span class="tag">&lt;<span class="name">+103</span>&gt;</span>:   retq</div><div class="line">End of assembler dump.</div></pre></td></tr></table></figure>
+<p>输入是6个数，从<code>0x400f93 &lt;+74&gt;:    jne    0x400f7a &lt;phase_2+49&gt;</code> 知道主逻辑是个循环，第一个数是必须是0，第二个数必须是1，开始以为是等差数列，然后发现中间还有个+1的过程，所以这个数列的公差是等差数列，那么正确答案是：0 1 3 6 10 15.</p>
+<h1 id="phase-3"><a href="#phase-3" class="headerlink" title="phase_3"></a>phase_3</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">(gdb) disassemble phase_3</div><div class="line">Dump of assembler code for function phase_3:</div><div class="line">   0x0000000000400fb1 <span class="tag">&lt;<span class="name">+0</span>&gt;</span>:     sub    $0x28,%rsp</div><div class="line">   0x0000000000400fb5 <span class="tag">&lt;<span class="name">+4</span>&gt;</span>:     mov    %fs:0x28,%rax</div><div class="line">   0x0000000000400fbe <span class="tag">&lt;<span class="name">+13</span>&gt;</span>:    mov    %rax,0x18(%rsp)</div><div class="line">   0x0000000000400fc3 <span class="tag">&lt;<span class="name">+18</span>&gt;</span>:    xor    %eax,%eax</div><div class="line">   0x0000000000400fc5 <span class="tag">&lt;<span class="name">+20</span>&gt;</span>:    lea    0x14(%rsp),%r8</div><div class="line">   0x0000000000400fca <span class="tag">&lt;<span class="name">+25</span>&gt;</span>:    lea    0xf(%rsp),%rcx</div><div class="line">   0x0000000000400fcf <span class="tag">&lt;<span class="name">+30</span>&gt;</span>:    lea    0x10(%rsp),%rdx</div><div class="line">   0x0000000000400fd4 <span class="tag">&lt;<span class="name">+35</span>&gt;</span>:    mov    $0x40273e,%esi</div><div class="line">   0x0000000000400fd9 <span class="tag">&lt;<span class="name">+40</span>&gt;</span>:    callq  0x400c40 <span class="tag">&lt;<span class="name">__isoc99_sscanf@plt</span>&gt;</span></div><div class="line">   0x0000000000400fde <span class="tag">&lt;<span class="name">+45</span>&gt;</span>:    cmp    $0x2,%eax</div><div class="line">   0x0000000000400fe1 <span class="tag">&lt;<span class="name">+48</span>&gt;</span>:    jg     0x400fe8 <span class="tag">&lt;<span class="name">phase_3+55</span>&gt;</span></div><div class="line">   0x0000000000400fe3 <span class="tag">&lt;<span class="name">+50</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000400fe8 <span class="tag">&lt;<span class="name">+55</span>&gt;</span>:    cmpl   $0x7,0x10(%rsp，</div><div class="line">   0x0000000000400fed <span class="tag">&lt;<span class="name">+60</span>&gt;</span>:    ja     0x4010ef <span class="tag">&lt;<span class="name">phase_3+318</span>&gt;</span></div><div class="line">   0x0000000000400ff3 <span class="tag">&lt;<span class="name">+66</span>&gt;</span>:    mov    0x10(%rsp),%eax</div><div class="line">   0x0000000000400ff7 <span class="tag">&lt;<span class="name">+70</span>&gt;</span>:    jmpq   *0x402750(,%rax,8)</div><div class="line">   0x0000000000400ffe <span class="tag">&lt;<span class="name">+77</span>&gt;</span>:    mov    $0x66,%eax</div><div class="line">   0x0000000000401003 <span class="tag">&lt;<span class="name">+82</span>&gt;</span>:    cmpl   $0xde,0x14(%rsp)</div><div class="line">   0x000000000040100b <span class="tag">&lt;<span class="name">+90</span>&gt;</span>:    je     0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x0000000000401011 <span class="tag">&lt;<span class="name">+96</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000401016 <span class="tag">&lt;<span class="name">+101</span>&gt;</span>:   mov    $0x66,%eax</div><div class="line">   0x000000000040101b <span class="tag">&lt;<span class="name">+106</span>&gt;</span>:   jmpq   0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">---Type <span class="tag">&lt;<span class="name">return</span>&gt;</span> to continue, or q <span class="tag">&lt;<span class="name">return</span>&gt;</span> to quit---</div><div class="line">   0x0000000000401020 <span class="tag">&lt;<span class="name">+111</span>&gt;</span>:   mov    $0x74,%eax</div><div class="line">   0x0000000000401025 <span class="tag">&lt;<span class="name">+116</span>&gt;</span>:   cmpl   $0x288,0x14(%rsp)</div><div class="line">   0x000000000040102d <span class="tag">&lt;<span class="name">+124</span>&gt;</span>:   je     0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x0000000000401033 <span class="tag">&lt;<span class="name">+130</span>&gt;</span>:   callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000401038 <span class="tag">&lt;<span class="name">+135</span>&gt;</span>:   mov    $0x74,%eax</div><div class="line">   0x000000000040103d <span class="tag">&lt;<span class="name">+140</span>&gt;</span>:   jmpq   0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x0000000000401042 <span class="tag">&lt;<span class="name">+145</span>&gt;</span>:   mov    $0x76,%eax</div><div class="line">   0x0000000000401047 <span class="tag">&lt;<span class="name">+150</span>&gt;</span>:   cmpl   $0x149,0x14(%rsp)</div><div class="line">   0x000000000040104f <span class="tag">&lt;<span class="name">+158</span>&gt;</span>:   je     0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x0000000000401055 <span class="tag">&lt;<span class="name">+164</span>&gt;</span>:   callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x000000000040105a <span class="tag">&lt;<span class="name">+169</span>&gt;</span>:   mov    $0x76,%eax</div><div class="line">   0x000000000040105f <span class="tag">&lt;<span class="name">+174</span>&gt;</span>:   jmpq   0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x0000000000401064 <span class="tag">&lt;<span class="name">+179</span>&gt;</span>:   mov    $0x62,%eax</div><div class="line">   0x0000000000401069 <span class="tag">&lt;<span class="name">+184</span>&gt;</span>:   cmpl   $0x2a7,0x14(%rsp)</div><div class="line">   0x0000000000401071 <span class="tag">&lt;<span class="name">+192</span>&gt;</span>:   je     0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x0000000000401077 <span class="tag">&lt;<span class="name">+198</span>&gt;</span>:   callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x000000000040107c <span class="tag">&lt;<span class="name">+203</span>&gt;</span>:   mov    $0x62,%eax</div><div class="line">   0x0000000000401081 <span class="tag">&lt;<span class="name">+208</span>&gt;</span>:   jmp    0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x0000000000401083 <span class="tag">&lt;<span class="name">+210</span>&gt;</span>:   mov    $0x73,%eax</div><div class="line">   0x0000000000401088 <span class="tag">&lt;<span class="name">+215</span>&gt;</span>:   cmpl   $0xc6,0x14(%rsp)</div><div class="line">   0x0000000000401090 <span class="tag">&lt;<span class="name">+223</span>&gt;</span>:   je     0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x0000000000401092 <span class="tag">&lt;<span class="name">+225</span>&gt;</span>:   callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000401097 <span class="tag">&lt;<span class="name">+230</span>&gt;</span>:   mov    $0x73,%eax</div><div class="line">---Type <span class="tag">&lt;<span class="name">return</span>&gt;</span> to continue, or q <span class="tag">&lt;<span class="name">return</span>&gt;</span> to quit---</div><div class="line">   0x000000000040109c <span class="tag">&lt;<span class="name">+235</span>&gt;</span>:   jmp    0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x000000000040109e <span class="tag">&lt;<span class="name">+237</span>&gt;</span>:   mov    $0x63,%eax</div><div class="line">   0x00000000004010a3 <span class="tag">&lt;<span class="name">+242</span>&gt;</span>:   cmpl   $0x398,0x14(%rsp)</div><div class="line">   0x00000000004010ab <span class="tag">&lt;<span class="name">+250</span>&gt;</span>:   je     0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x00000000004010ad <span class="tag">&lt;<span class="name">+252</span>&gt;</span>:   callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x00000000004010b2 <span class="tag">&lt;<span class="name">+257</span>&gt;</span>:   mov    $0x63,%eax</div><div class="line">   0x00000000004010b7 <span class="tag">&lt;<span class="name">+262</span>&gt;</span>:   jmp    0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x00000000004010b9 <span class="tag">&lt;<span class="name">+264</span>&gt;</span>:   mov    $0x67,%eax</div><div class="line">   0x00000000004010be <span class="tag">&lt;<span class="name">+269</span>&gt;</span>:   cmpl   $0x1a5,0x14(%rsp)</div><div class="line">   0x00000000004010c6 <span class="tag">&lt;<span class="name">+277</span>&gt;</span>:   je     0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x00000000004010c8 <span class="tag">&lt;<span class="name">+279</span>&gt;</span>:   callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x00000000004010cd <span class="tag">&lt;<span class="name">+284</span>&gt;</span>:   mov    $0x67,%eax</div><div class="line">   0x00000000004010d2 <span class="tag">&lt;<span class="name">+289</span>&gt;</span>:   jmp    0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x00000000004010d4 <span class="tag">&lt;<span class="name">+291</span>&gt;</span>:   mov    $0x67,%eax</div><div class="line">   0x00000000004010d9 <span class="tag">&lt;<span class="name">+296</span>&gt;</span>:   cmpl   $0x109,0x14(%rsp)</div><div class="line">   0x00000000004010e1 <span class="tag">&lt;<span class="name">+304</span>&gt;</span>:   je     0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x00000000004010e3 <span class="tag">&lt;<span class="name">+306</span>&gt;</span>:   callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x00000000004010e8 <span class="tag">&lt;<span class="name">+311</span>&gt;</span>:   mov    $0x67,%eax</div><div class="line">   0x00000000004010ed <span class="tag">&lt;<span class="name">+316</span>&gt;</span>:   jmp    0x4010f9 <span class="tag">&lt;<span class="name">phase_3+328</span>&gt;</span></div><div class="line">   0x00000000004010ef <span class="tag">&lt;<span class="name">+318</span>&gt;</span>:   callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x00000000004010f4 <span class="tag">&lt;<span class="name">+323</span>&gt;</span>:   mov    $0x71,%eax</div><div class="line">   0x00000000004010f9 <span class="tag">&lt;<span class="name">+328</span>&gt;</span>:   cmp    0xf(%rsp),%al</div><div class="line">   0x00000000004010fd <span class="tag">&lt;<span class="name">+332</span>&gt;</span>:   je     0x401104 <span class="tag">&lt;<span class="name">phase_3+339</span>&gt;</span></div><div class="line">---Type <span class="tag">&lt;<span class="name">return</span>&gt;</span> to continue, or q <span class="tag">&lt;<span class="name">return</span>&gt;</span> to quit---</div><div class="line">   0x00000000004010ff <span class="tag">&lt;<span class="name">+334</span>&gt;</span>:   callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000401104 <span class="tag">&lt;<span class="name">+339</span>&gt;</span>:   mov    0x18(%rsp),%rax</div><div class="line">   0x0000000000401109 <span class="tag">&lt;<span class="name">+344</span>&gt;</span>:   xor    %fs:0x28,%rax</div><div class="line">   0x0000000000401112 <span class="tag">&lt;<span class="name">+353</span>&gt;</span>:   je     0x401119 <span class="tag">&lt;<span class="name">phase_3+360</span>&gt;</span></div><div class="line">   0x0000000000401114 <span class="tag">&lt;<span class="name">+355</span>&gt;</span>:   callq  0x400b90 <span class="tag">&lt;<span class="name">__stack_chk_fail@plt</span>&gt;</span></div><div class="line">   0x0000000000401119 <span class="tag">&lt;<span class="name">+360</span>&gt;</span>:   add    $0x28,%rsp</div><div class="line">   0x000000000040111d <span class="tag">&lt;<span class="name">+364</span>&gt;</span>:   retq</div><div class="line">End of assembler dump.</div></pre></td></tr></table></figure>
+<p>首先看一下输入格式：</p>
+<p><code>(gdb) x/s 0x40273e</code><br><code>0x40273e:       &quot;%d %c %d&quot;</code>  </p>
+<p>这里疯狂跳转，而且到处写着explode_bomb，仔细看一下其实就是个case语句，比方说如果输入的第一个数是0，那么就把第三个数和0xde比较，即222，不想等就爆炸，即第三个数为222，再把第二个和0x66，比较，第二个是字符型，转成字符就是f，一个答案：0 f 222.</p>
+<h1 id="phase-4"><a href="#phase-4" class="headerlink" title="phase_4"></a>phase_4</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line">(gdb) disassemble phase_4</div><div class="line">Dump of assembler code for function phase_4:</div><div class="line">   0x0000000000401151 <span class="tag">&lt;<span class="name">+0</span>&gt;</span>:     sub    $0x18,%rsp</div><div class="line">   0x0000000000401155 <span class="tag">&lt;<span class="name">+4</span>&gt;</span>:     mov    %fs:0x28,%rax</div><div class="line">   0x000000000040115e <span class="tag">&lt;<span class="name">+13</span>&gt;</span>:    mov    %rax,0x8(%rsp)</div><div class="line">   0x0000000000401163 <span class="tag">&lt;<span class="name">+18</span>&gt;</span>:    xor    %eax,%eax</div><div class="line">   0x0000000000401165 <span class="tag">&lt;<span class="name">+20</span>&gt;</span>:    lea    0x4(%rsp),%rcx</div><div class="line">   0x000000000040116a <span class="tag">&lt;<span class="name">+25</span>&gt;</span>:    mov    %rsp,%rdx</div><div class="line">   0x000000000040116d <span class="tag">&lt;<span class="name">+28</span>&gt;</span>:    mov    $0x4029ed,%esi</div><div class="line">   0x0000000000401172 <span class="tag">&lt;<span class="name">+33</span>&gt;</span>:    callq  0x400c40 <span class="tag">&lt;<span class="name">__isoc99_sscanf@plt</span>&gt;</span></div><div class="line">   0x0000000000401177 <span class="tag">&lt;<span class="name">+38</span>&gt;</span>:    cmp    $0x2,%eax</div><div class="line">   0x000000000040117a <span class="tag">&lt;<span class="name">+41</span>&gt;</span>:    jne    0x401182 <span class="tag">&lt;<span class="name">phase_4+49</span>&gt;</span></div><div class="line">   0x000000000040117c <span class="tag">&lt;<span class="name">+43</span>&gt;</span>:    cmpl   $0xe,(%rsp)</div><div class="line">   0x0000000000401180 <span class="tag">&lt;<span class="name">+47</span>&gt;</span>:    jbe    0x401187 <span class="tag">&lt;<span class="name">phase_4+54</span>&gt;</span></div><div class="line">   0x0000000000401182 <span class="tag">&lt;<span class="name">+49</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000401187 <span class="tag">&lt;<span class="name">+54</span>&gt;</span>:    mov    $0xe,%edx</div><div class="line">   0x000000000040118c <span class="tag">&lt;<span class="name">+59</span>&gt;</span>:    mov    $0x0,%esi</div><div class="line">   0x0000000000401191 <span class="tag">&lt;<span class="name">+64</span>&gt;</span>:    mov    (%rsp),%edi</div><div class="line">   0x0000000000401194 <span class="tag">&lt;<span class="name">+67</span>&gt;</span>:    callq  0x40111e <span class="tag">&lt;<span class="name">func4</span>&gt;</span></div><div class="line">   0x0000000000401199 <span class="tag">&lt;<span class="name">+72</span>&gt;</span>:    cmp    $0x1b,%eax</div><div class="line">   0x000000000040119c <span class="tag">&lt;<span class="name">+75</span>&gt;</span>:    jne    0x4011a5 <span class="tag">&lt;<span class="name">phase_4+84</span>&gt;</span></div><div class="line">   0x000000000040119e <span class="tag">&lt;<span class="name">+77</span>&gt;</span>:    cmpl   $0x1b,0x4(%rsp)</div><div class="line">   0x00000000004011a3 <span class="tag">&lt;<span class="name">+82</span>&gt;</span>:    je     0x4011aa <span class="tag">&lt;<span class="name">phase_4+89</span>&gt;</span></div><div class="line">   0x00000000004011a5 <span class="tag">&lt;<span class="name">+84</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">---Type <span class="tag">&lt;<span class="name">return</span>&gt;</span> to continue, or q <span class="tag">&lt;<span class="name">return</span>&gt;</span> to quit---</div><div class="line">   0x00000000004011aa <span class="tag">&lt;<span class="name">+89</span>&gt;</span>:    mov    0x8(%rsp),%rax</div><div class="line">   0x00000000004011af <span class="tag">&lt;<span class="name">+94</span>&gt;</span>:    xor    %fs:0x28,%rax</div><div class="line">   0x00000000004011b8 <span class="tag">&lt;<span class="name">+103</span>&gt;</span>:   je     0x4011bf <span class="tag">&lt;<span class="name">phase_4+110</span>&gt;</span></div><div class="line">   0x00000000004011ba <span class="tag">&lt;<span class="name">+105</span>&gt;</span>:   callq  0x400b90 <span class="tag">&lt;<span class="name">__stack_chk_fail@plt</span>&gt;</span></div><div class="line">   0x00000000004011bf <span class="tag">&lt;<span class="name">+110</span>&gt;</span>:   add    $0x18,%rsp</div><div class="line">   0x00000000004011c3 <span class="tag">&lt;<span class="name">+114</span>&gt;</span>:   retq</div><div class="line">End of assembler dump.</div></pre></td></tr></table></figure>
+<p>输入格式是两个整数，然后第一个必须小于等于14，第二个必须是27。再把第一个参数传到fun4里面，如果返回值与27相等，就通过，否则爆炸。那么fun4是啥呢？</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div></pre></td><td class="code"><pre><div class="line">Dump of assembler code for function func4:</div><div class="line">   0x000000000040111e <span class="tag">&lt;<span class="name">+0</span>&gt;</span>:     push   %rbx</div><div class="line">   0x000000000040111f <span class="tag">&lt;<span class="name">+1</span>&gt;</span>:     mov    %edx,%eax</div><div class="line">   0x0000000000401121 <span class="tag">&lt;<span class="name">+3</span>&gt;</span>:     sub    %esi,%eax</div><div class="line">   0x0000000000401123 <span class="tag">&lt;<span class="name">+5</span>&gt;</span>:     mov    %eax,%ebx</div><div class="line">   0x0000000000401125 <span class="tag">&lt;<span class="name">+7</span>&gt;</span>:     shr    $0x1f,%ebx</div><div class="line">   0x0000000000401128 <span class="tag">&lt;<span class="name">+10</span>&gt;</span>:    add    %ebx,%eax</div><div class="line">   0x000000000040112a <span class="tag">&lt;<span class="name">+12</span>&gt;</span>:    sar    %eax</div><div class="line">   0x000000000040112c <span class="tag">&lt;<span class="name">+14</span>&gt;</span>:    lea    (%rax,%rsi,1),%ebx</div><div class="line">   0x000000000040112f <span class="tag">&lt;<span class="name">+17</span>&gt;</span>:    cmp    %edi,%ebx</div><div class="line">   0x0000000000401131 <span class="tag">&lt;<span class="name">+19</span>&gt;</span>:    jle    0x40113f <span class="tag">&lt;<span class="name">func4+33</span>&gt;</span></div><div class="line">   0x0000000000401133 <span class="tag">&lt;<span class="name">+21</span>&gt;</span>:    lea    -0x1(%rbx),%edx</div><div class="line">   0x0000000000401136 <span class="tag">&lt;<span class="name">+24</span>&gt;</span>:    callq  0x40111e <span class="tag">&lt;<span class="name">func4</span>&gt;</span></div><div class="line">   0x000000000040113b <span class="tag">&lt;<span class="name">+29</span>&gt;</span>:    add    %ebx,%eax</div><div class="line">   0x000000000040113d <span class="tag">&lt;<span class="name">+31</span>&gt;</span>:    jmp    0x40114f <span class="tag">&lt;<span class="name">func4+49</span>&gt;</span></div><div class="line">   0x000000000040113f <span class="tag">&lt;<span class="name">+33</span>&gt;</span>:    mov    %ebx,%eax</div><div class="line">   0x0000000000401141 <span class="tag">&lt;<span class="name">+35</span>&gt;</span>:    cmp    %edi,%ebx</div><div class="line">   0x0000000000401143 <span class="tag">&lt;<span class="name">+37</span>&gt;</span>:    jge    0x40114f <span class="tag">&lt;<span class="name">func4+49</span>&gt;</span></div><div class="line">   0x0000000000401145 <span class="tag">&lt;<span class="name">+39</span>&gt;</span>:    lea    0x1(%rbx),%esi</div><div class="line">   0x0000000000401148 <span class="tag">&lt;<span class="name">+42</span>&gt;</span>:    callq  0x40111e <span class="tag">&lt;<span class="name">func4</span>&gt;</span></div><div class="line">   0x000000000040114d <span class="tag">&lt;<span class="name">+47</span>&gt;</span>:    add    %ebx,%eax</div><div class="line">   0x000000000040114f <span class="tag">&lt;<span class="name">+49</span>&gt;</span>:    pop    %rbx</div><div class="line">   0x0000000000401150 <span class="tag">&lt;<span class="name">+50</span>&gt;</span>:    retq</div></pre></td></tr></table></figure>
+<p>显然是个递归函数，可以把它转成c语言函数然后遍历一下，经队友提示可以把断点打在第二个explode_bomb函数之前，直接输入a 27，这样就能跳过第一个explode_bomb，单步执行到fun4调用完毕，看一下返回值就行了，得到的结果是9，所以答案是9 27</p>
+<h1 id="phase-5"><a href="#phase-5" class="headerlink" title="phase_5"></a>phase_5</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line">(gdb) disassemble phase_5</div><div class="line">Dump of assembler code for function phase_5:</div><div class="line">   0x00000000004011c4 <span class="tag">&lt;<span class="name">+0</span>&gt;</span>:     push   %rbx</div><div class="line">   0x00000000004011c5 <span class="tag">&lt;<span class="name">+1</span>&gt;</span>:     sub    $0x10,%rsp</div><div class="line">   0x00000000004011c9 <span class="tag">&lt;<span class="name">+5</span>&gt;</span>:     mov    %rdi,%rbx</div><div class="line">   0x00000000004011cc <span class="tag">&lt;<span class="name">+8</span>&gt;</span>:     mov    %fs:0x28,%rax</div><div class="line">   0x00000000004011d5 <span class="tag">&lt;<span class="name">+17</span>&gt;</span>:    mov    %rax,0x8(%rsp)</div><div class="line">   0x00000000004011da <span class="tag">&lt;<span class="name">+22</span>&gt;</span>:    xor    %eax,%eax</div><div class="line">   0x00000000004011dc <span class="tag">&lt;<span class="name">+24</span>&gt;</span>:    callq  0x401454 <span class="tag">&lt;<span class="name">string_length</span>&gt;</span></div><div class="line">   0x00000000004011e1 <span class="tag">&lt;<span class="name">+29</span>&gt;</span>:    cmp    $0x6,%eax</div><div class="line">   0x00000000004011e4 <span class="tag">&lt;<span class="name">+32</span>&gt;</span>:    je     0x4011eb <span class="tag">&lt;<span class="name">phase_5+39</span>&gt;</span></div><div class="line">   0x00000000004011e6 <span class="tag">&lt;<span class="name">+34</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x00000000004011eb <span class="tag">&lt;<span class="name">+39</span>&gt;</span>:    mov    $0x0,%eax</div><div class="line">   0x00000000004011f0 <span class="tag">&lt;<span class="name">+44</span>&gt;</span>:    movzbl (%rbx,%rax,1),%edx</div><div class="line">   0x00000000004011f4 <span class="tag">&lt;<span class="name">+48</span>&gt;</span>:    and    $0xf,%edx</div><div class="line">   0x00000000004011f7 <span class="tag">&lt;<span class="name">+51</span>&gt;</span>:    movzbl 0x402790(%rdx),%edx</div><div class="line">   0x00000000004011fe <span class="tag">&lt;<span class="name">+58</span>&gt;</span>:    mov    %dl,(%rsp,%rax,1)</div><div class="line">   0x0000000000401201 <span class="tag">&lt;<span class="name">+61</span>&gt;</span>:    add    $0x1,%rax</div><div class="line">   0x0000000000401205 <span class="tag">&lt;<span class="name">+65</span>&gt;</span>:    cmp    $0x6,%rax</div><div class="line">   0x0000000000401209 <span class="tag">&lt;<span class="name">+69</span>&gt;</span>:    jne    0x4011f0 <span class="tag">&lt;<span class="name">phase_5+44</span>&gt;</span></div><div class="line">   0x000000000040120b <span class="tag">&lt;<span class="name">+71</span>&gt;</span>:    movb   $0x0,0x6(%rsp)</div><div class="line">   0x0000000000401210 <span class="tag">&lt;<span class="name">+76</span>&gt;</span>:    mov    $0x402747,%esi</div><div class="line">   0x0000000000401215 <span class="tag">&lt;<span class="name">+81</span>&gt;</span>:    mov    %rsp,%rdi</div><div class="line">   0x0000000000401218 <span class="tag">&lt;<span class="name">+84</span>&gt;</span>:    callq  0x401472 <span class="tag">&lt;<span class="name">strings_not_equal</span>&gt;</span></div><div class="line">---Type <span class="tag">&lt;<span class="name">return</span>&gt;</span> to continue, or q <span class="tag">&lt;<span class="name">return</span>&gt;</span> to quit---</div><div class="line">   0x000000000040121d <span class="tag">&lt;<span class="name">+89</span>&gt;</span>:    test   %eax,%eax</div><div class="line">   0x000000000040121f <span class="tag">&lt;<span class="name">+91</span>&gt;</span>:    je     0x401226 <span class="tag">&lt;<span class="name">phase_5+98</span>&gt;</span></div><div class="line">   0x0000000000401221 <span class="tag">&lt;<span class="name">+93</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000401226 <span class="tag">&lt;<span class="name">+98</span>&gt;</span>:    mov    0x8(%rsp),%rax</div><div class="line">   0x000000000040122b <span class="tag">&lt;<span class="name">+103</span>&gt;</span>:   xor    %fs:0x28,%rax</div><div class="line">   0x0000000000401234 <span class="tag">&lt;<span class="name">+112</span>&gt;</span>:   je     0x40123b <span class="tag">&lt;<span class="name">phase_5+119</span>&gt;</span></div><div class="line">   0x0000000000401236 <span class="tag">&lt;<span class="name">+114</span>&gt;</span>:   callq  0x400b90 <span class="tag">&lt;<span class="name">__stack_chk_fail@plt</span>&gt;</span></div><div class="line">   0x000000000040123b <span class="tag">&lt;<span class="name">+119</span>&gt;</span>:   add    $0x10,%rsp</div><div class="line">   0x000000000040123f <span class="tag">&lt;<span class="name">+123</span>&gt;</span>:   pop    %rbx</div><div class="line">   0x0000000000401240 <span class="tag">&lt;<span class="name">+124</span>&gt;</span>:   retq</div><div class="line">End of assembler dump.</div></pre></td></tr></table></figure>
+<p>看到两个奇怪的地址0x402790，打印一下看看</p>
+<p><code>x/s 0x402790</code></p>
+<p><code>0x402790 &lt;array.3601&gt;:  &quot;maduiersnfotvbylSo you think you can stop the bomb with ctrl-c, do you?&quot;</code></p>
+<p><code>x/s 0x402747</code></p>
+<p><code>0x402747:       &quot;devils&quot;</code></p>
+<p>输入格式为1个字符串，长度为6，然后去那句话里面找到这6个字母的偏移，从输入的字符里面依次取低4位与之比较，比如这里的偏移为：2   5   12  4  15  7 ，我对照ascii码表找了一个合格的答案0010-b  0101-e  1100-l  0100-t  1111-o  0111-w ，即beltow，试一下，通过了。</p>
+<h1 id="phase-6"><a href="#phase-6" class="headerlink" title="phase_6"></a>phase_6</h1><figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div></pre></td><td class="code"><pre><div class="line">(gdb) disassemble phase_6</div><div class="line">Dump of assembler code for function phase_6:</div><div class="line">   0x0000000000401241 <span class="tag">&lt;<span class="name">+0</span>&gt;</span>:     push   %r13</div><div class="line">   0x0000000000401243 <span class="tag">&lt;<span class="name">+2</span>&gt;</span>:     push   %r12</div><div class="line">   0x0000000000401245 <span class="tag">&lt;<span class="name">+4</span>&gt;</span>:     push   %rbp</div><div class="line">   0x0000000000401246 <span class="tag">&lt;<span class="name">+5</span>&gt;</span>:     push   %rbx</div><div class="line">   0x0000000000401247 <span class="tag">&lt;<span class="name">+6</span>&gt;</span>:     sub    $0x68,%rsp</div><div class="line">   0x000000000040124b <span class="tag">&lt;<span class="name">+10</span>&gt;</span>:    mov    %fs:0x28,%rax</div><div class="line">   0x0000000000401254 <span class="tag">&lt;<span class="name">+19</span>&gt;</span>:    mov    %rax,0x58(%rsp)</div><div class="line">   0x0000000000401259 <span class="tag">&lt;<span class="name">+24</span>&gt;</span>:    xor    %eax,%eax</div><div class="line">   0x000000000040125b <span class="tag">&lt;<span class="name">+26</span>&gt;</span>:    mov    %rsp,%rsi</div><div class="line">   0x000000000040125e <span class="tag">&lt;<span class="name">+29</span>&gt;</span>:    callq  0x401777 <span class="tag">&lt;<span class="name">read_six_numbers</span>&gt;</span></div><div class="line">   0x0000000000401263 <span class="tag">&lt;<span class="name">+34</span>&gt;</span>:    mov    %rsp,%r12</div><div class="line">   0x0000000000401266 <span class="tag">&lt;<span class="name">+37</span>&gt;</span>:    mov    $0x0,%r13d</div><div class="line">   0x000000000040126c <span class="tag">&lt;<span class="name">+43</span>&gt;</span>:    mov    %r12,%rbp</div><div class="line">   0x000000000040126f <span class="tag">&lt;<span class="name">+46</span>&gt;</span>:    mov    (%r12),%eax</div><div class="line">   0x0000000000401273 <span class="tag">&lt;<span class="name">+50</span>&gt;</span>:    sub    $0x1,%eax</div><div class="line">   0x0000000000401276 <span class="tag">&lt;<span class="name">+53</span>&gt;</span>:    cmp    $0x5,%eax</div><div class="line">   0x0000000000401279 <span class="tag">&lt;<span class="name">+56</span>&gt;</span>:    jbe    0x401280 <span class="tag">&lt;<span class="name">phase_6+63</span>&gt;</span></div><div class="line">   0x000000000040127b <span class="tag">&lt;<span class="name">+58</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000401280 <span class="tag">&lt;<span class="name">+63</span>&gt;</span>:    add    $0x1,%r13d</div><div class="line">   0x0000000000401284 <span class="tag">&lt;<span class="name">+67</span>&gt;</span>:    cmp    $0x6,%r13d</div><div class="line">   0x0000000000401288 <span class="tag">&lt;<span class="name">+71</span>&gt;</span>:    je     0x4012c7 <span class="tag">&lt;<span class="name">phase_6+134</span>&gt;</span></div><div class="line">   0x000000000040128a <span class="tag">&lt;<span class="name">+73</span>&gt;</span>:    mov    %r13d,%ebx</div><div class="line">   0x000000000040128d <span class="tag">&lt;<span class="name">+76</span>&gt;</span>:    movslq %ebx,%rax</div><div class="line">   0x0000000000401290 <span class="tag">&lt;<span class="name">+79</span>&gt;</span>:    mov    (%rsp,%rax,4),%eax</div><div class="line">   0x0000000000401293 <span class="tag">&lt;<span class="name">+82</span>&gt;</span>:    cmp    %eax,0x0(%rbp)</div><div class="line">   0x0000000000401296 <span class="tag">&lt;<span class="name">+85</span>&gt;</span>:    jne    0x40129d <span class="tag">&lt;<span class="name">phase_6+92</span>&gt;</span></div><div class="line">   0x0000000000401298 <span class="tag">&lt;<span class="name">+87</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x000000000040129d <span class="tag">&lt;<span class="name">+92</span>&gt;</span>:    add    $0x1,%ebx</div><div class="line">   0x00000000004012a0 <span class="tag">&lt;<span class="name">+95</span>&gt;</span>:    cmp    $0x5,%ebx</div><div class="line">   0x00000000004012a3 <span class="tag">&lt;<span class="name">+98</span>&gt;</span>:    jle    0x40128d <span class="tag">&lt;<span class="name">phase_6+76</span>&gt;</span></div><div class="line">   0x00000000004012a5 <span class="tag">&lt;<span class="name">+100</span>&gt;</span>:   add    $0x4,%r12</div><div class="line">   0x00000000004012a9 <span class="tag">&lt;<span class="name">+104</span>&gt;</span>:   jmp    0x40126c <span class="tag">&lt;<span class="name">phase_6+43</span>&gt;</span></div><div class="line">   0x00000000004012ab <span class="tag">&lt;<span class="name">+106</span>&gt;</span>:   mov    0x8(%rdx),%rdx</div><div class="line">   0x00000000004012af <span class="tag">&lt;<span class="name">+110</span>&gt;</span>:   add    $0x1,%eax</div><div class="line">   0x00000000004012b2 <span class="tag">&lt;<span class="name">+113</span>&gt;</span>:   cmp    %ecx,%eax</div><div class="line">   0x00000000004012b4 <span class="tag">&lt;<span class="name">+115</span>&gt;</span>:   jne    0x4012ab <span class="tag">&lt;<span class="name">phase_6+106</span>&gt;</span></div><div class="line">   0x00000000004012b6 <span class="tag">&lt;<span class="name">+117</span>&gt;</span>:   mov    %rdx,0x20(%rsp,%rsi,2)</div><div class="line">   0x00000000004012bb <span class="tag">&lt;<span class="name">+122</span>&gt;</span>:   add    $0x4,%rsi</div><div class="line">   0x00000000004012bf <span class="tag">&lt;<span class="name">+126</span>&gt;</span>:   cmp    $0x18,%rsi</div><div class="line">   0x00000000004012c3 <span class="tag">&lt;<span class="name">+130</span>&gt;</span>:   jne    0x4012cc <span class="tag">&lt;<span class="name">phase_6+139</span>&gt;</span></div><div class="line">   0x00000000004012c5 <span class="tag">&lt;<span class="name">+132</span>&gt;</span>:   jmp    0x4012e0 <span class="tag">&lt;<span class="name">phase_6+159</span>&gt;</span></div><div class="line">   0x00000000004012c7 <span class="tag">&lt;<span class="name">+134</span>&gt;</span>:   mov    $0x0,%esi</div><div class="line">   0x00000000004012cc <span class="tag">&lt;<span class="name">+139</span>&gt;</span>:   mov    (%rsp,%rsi,1),%ecx</div><div class="line">   0x00000000004012cf <span class="tag">&lt;<span class="name">+142</span>&gt;</span>:   mov    $0x1,%eax</div><div class="line">   0x00000000004012d4 <span class="tag">&lt;<span class="name">+147</span>&gt;</span>:   mov    $0x604300,%edx</div><div class="line">---Type <span class="tag">&lt;<span class="name">return</span>&gt;</span> to continue, or q <span class="tag">&lt;<span class="name">return</span>&gt;</span> to quit---</div><div class="line">   0x00000000004012d9 <span class="tag">&lt;<span class="name">+152</span>&gt;</span>:   cmp    $0x1,%ecx</div><div class="line">   0x00000000004012dc <span class="tag">&lt;<span class="name">+155</span>&gt;</span>:   jg     0x4012ab <span class="tag">&lt;<span class="name">phase_6+106</span>&gt;</span></div><div class="line">   0x00000000004012de <span class="tag">&lt;<span class="name">+157</span>&gt;</span>:   jmp    0x4012b6 <span class="tag">&lt;<span class="name">phase_6+117</span>&gt;</span></div><div class="line">   0x00000000004012e0 <span class="tag">&lt;<span class="name">+159</span>&gt;</span>:   mov    0x20(%rsp),%rbx</div><div class="line">   0x00000000004012e5 <span class="tag">&lt;<span class="name">+164</span>&gt;</span>:   lea    0x20(%rsp),%rax</div><div class="line">   0x00000000004012ea <span class="tag">&lt;<span class="name">+169</span>&gt;</span>:   lea    0x48(%rsp),%rsi</div><div class="line">   0x00000000004012ef <span class="tag">&lt;<span class="name">+174</span>&gt;</span>:   mov    %rbx,%rcx</div><div class="line">   0x00000000004012f2 <span class="tag">&lt;<span class="name">+177</span>&gt;</span>:   mov    0x8(%rax),%rdx</div><div class="line">   0x00000000004012f6 <span class="tag">&lt;<span class="name">+181</span>&gt;</span>:   mov    %rdx,0x8(%rcx)</div><div class="line">   0x00000000004012fa <span class="tag">&lt;<span class="name">+185</span>&gt;</span>:   add    $0x8,%rax</div><div class="line">   0x00000000004012fe <span class="tag">&lt;<span class="name">+189</span>&gt;</span>:   mov    %rdx,%rcx</div><div class="line">   0x0000000000401301 <span class="tag">&lt;<span class="name">+192</span>&gt;</span>:   cmp    %rsi,%rax</div><div class="line">   0x0000000000401304 <span class="tag">&lt;<span class="name">+195</span>&gt;</span>:   jne    0x4012f2 <span class="tag">&lt;<span class="name">phase_6+177</span>&gt;</span></div><div class="line">   0x0000000000401306 <span class="tag">&lt;<span class="name">+197</span>&gt;</span>:   movq   $0x0,0x8(%rdx)</div><div class="line">   0x000000000040130e <span class="tag">&lt;<span class="name">+205</span>&gt;</span>:   mov    $0x5,%ebp</div><div class="line">   0x0000000000401313 <span class="tag">&lt;<span class="name">+210</span>&gt;</span>:   mov    0x8(%rbx),%rax</div><div class="line">   0x0000000000401317 <span class="tag">&lt;<span class="name">+214</span>&gt;</span>:   mov    (%rax),%eax</div><div class="line">   0x0000000000401319 <span class="tag">&lt;<span class="name">+216</span>&gt;</span>:   cmp    %eax,(%rbx)</div><div class="line">   0x000000000040131b <span class="tag">&lt;<span class="name">+218</span>&gt;</span>:   jge    0x401322 <span class="tag">&lt;<span class="name">phase_6+225</span>&gt;</span></div><div class="line">   0x000000000040131d <span class="tag">&lt;<span class="name">+220</span>&gt;</span>:   callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x0000000000401322 <span class="tag">&lt;<span class="name">+225</span>&gt;</span>:   mov    0x8(%rbx),%rbx</div><div class="line">   0x0000000000401326 <span class="tag">&lt;<span class="name">+229</span>&gt;</span>:   sub    $0x1,%ebp</div><div class="line">   0x0000000000401329 <span class="tag">&lt;<span class="name">+232</span>&gt;</span>:   jne    0x401313 <span class="tag">&lt;<span class="name">phase_6+210</span>&gt;</span></div><div class="line">   0x000000000040132b <span class="tag">&lt;<span class="name">+234</span>&gt;</span>:   mov    0x58(%rsp),%rax</div><div class="line">   0x0000000000401330 <span class="tag">&lt;<span class="name">+239</span>&gt;</span>:   xor    %fs:0x28,%rax</div><div class="line">   0x0000000000401339 <span class="tag">&lt;<span class="name">+248</span>&gt;</span>:   je     0x401340 <span class="tag">&lt;<span class="name">phase_6+255</span>&gt;</span></div><div class="line">   0x000000000040133b <span class="tag">&lt;<span class="name">+250</span>&gt;</span>:   callq  0x400b90 <span class="tag">&lt;<span class="name">__stack_chk_fail@plt</span>&gt;</span></div><div class="line">   0x0000000000401340 <span class="tag">&lt;<span class="name">+255</span>&gt;</span>:   add    $0x68,%rsp</div><div class="line">   0x0000000000401344 <span class="tag">&lt;<span class="name">+259</span>&gt;</span>:   pop    %rbx</div><div class="line">   0x0000000000401345 <span class="tag">&lt;<span class="name">+260</span>&gt;</span>:   pop    %rbp</div><div class="line">   0x0000000000401346 <span class="tag">&lt;<span class="name">+261</span>&gt;</span>:   pop    %r12</div><div class="line">   0x0000000000401348 <span class="tag">&lt;<span class="name">+263</span>&gt;</span>:   pop    %r13</div><div class="line">   0x000000000040134a <span class="tag">&lt;<span class="name">+265</span>&gt;</span>:   retq</div><div class="line">End of assembler dump.</div></pre></td></tr></table></figure>
+<p>代码贼长，看的心累，慢慢看下去会发现是个链表，而且有编号，而且要对其进行升序排列，而输入的格式又恰好是6个整数，显然就是要输入6个结点的序号了。重点是这个地址：0x604300，很突兀，看一下里面是啥（这个结果要输入一个顺序后才能看到</p>
+<p><img src="https://ws1.sinaimg.cn/large/006OSALLly1fm2fm2j6q4j30gr05q0sl.jpg" alt=""></p>
+<p>啊哦，这不就全出来了吗，按照升序排列的话，就是：3 1 6 2 5 4</p>
+<h1 id="secret-phase"><a href="#secret-phase" class="headerlink" title="secret_phase"></a>secret_phase</h1><p>直接搜源码，把里面可疑的地址都打印看一下会发现有一个输入格式是“%d %d %s”，而且找到那个字符串为DrEvil，回忆一下前面那几关，只有第四关的输入格式是%d %d，跟要求的格式的前两个一样，退出重新输入答案，在9 27后面加DrEvil，过了第6关后就进了隐藏关了。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">(gdb) disassemble secret_phase</div><div class="line">Dump of assembler code for function secret_phase:</div><div class="line">   0x0000000000401389 <span class="tag">&lt;<span class="name">+0</span>&gt;</span>:     push   %rbx</div><div class="line">   0x000000000040138a <span class="tag">&lt;<span class="name">+1</span>&gt;</span>:     callq  0x4017b6 <span class="tag">&lt;<span class="name">read_line</span>&gt;</span></div><div class="line">   0x000000000040138f <span class="tag">&lt;<span class="name">+6</span>&gt;</span>:     mov    $0xa,%edx</div><div class="line">   0x0000000000401394 <span class="tag">&lt;<span class="name">+11</span>&gt;</span>:    mov    $0x0,%esi</div><div class="line">   0x0000000000401399 <span class="tag">&lt;<span class="name">+16</span>&gt;</span>:    mov    %rax,%rdi</div><div class="line">   0x000000000040139c <span class="tag">&lt;<span class="name">+19</span>&gt;</span>:    callq  0x400c20 <span class="tag">&lt;<span class="name">strtol@plt</span>&gt;</span></div><div class="line">   0x00000000004013a1 <span class="tag">&lt;<span class="name">+24</span>&gt;</span>:    mov    %rax,%rbx</div><div class="line">   0x00000000004013a4 <span class="tag">&lt;<span class="name">+27</span>&gt;</span>:    lea    -0x1(%rax),%eax</div><div class="line">   0x00000000004013a7 <span class="tag">&lt;<span class="name">+30</span>&gt;</span>:    cmp    $0x3e8,%eax</div><div class="line">   0x00000000004013ac <span class="tag">&lt;<span class="name">+35</span>&gt;</span>:    jbe    0x4013b3 <span class="tag">&lt;<span class="name">secret_phase+42</span>&gt;</span></div><div class="line">   0x00000000004013ae <span class="tag">&lt;<span class="name">+37</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x00000000004013b3 <span class="tag">&lt;<span class="name">+42</span>&gt;</span>:    mov    %ebx,%esi</div><div class="line">   0x00000000004013b5 <span class="tag">&lt;<span class="name">+44</span>&gt;</span>:    mov    $0x604120,%edi</div><div class="line">   0x00000000004013ba <span class="tag">&lt;<span class="name">+49</span>&gt;</span>:    callq  0x40134b <span class="tag">&lt;<span class="name">fun7</span>&gt;</span></div><div class="line">   0x00000000004013bf <span class="tag">&lt;<span class="name">+54</span>&gt;</span>:    test   %eax,%eax</div><div class="line">   0x00000000004013c1 <span class="tag">&lt;<span class="name">+56</span>&gt;</span>:    je     0x4013c8 <span class="tag">&lt;<span class="name">secret_phase+63</span>&gt;</span></div><div class="line">   0x00000000004013c3 <span class="tag">&lt;<span class="name">+58</span>&gt;</span>:    callq  0x401741 <span class="tag">&lt;<span class="name">explode_bomb</span>&gt;</span></div><div class="line">   0x00000000004013c8 <span class="tag">&lt;<span class="name">+63</span>&gt;</span>:    mov    $0x402718,%edi</div><div class="line">   0x00000000004013cd <span class="tag">&lt;<span class="name">+68</span>&gt;</span>:    callq  0x400b70 <span class="tag">&lt;<span class="name">puts@plt</span>&gt;</span></div><div class="line">   0x00000000004013d2 <span class="tag">&lt;<span class="name">+73</span>&gt;</span>:    callq  0x4018dc <span class="tag">&lt;<span class="name">phase_defused</span>&gt;</span></div><div class="line">   0x00000000004013d7 <span class="tag">&lt;<span class="name">+78</span>&gt;</span>:    pop    %rbx</div><div class="line">   0x00000000004013d8 <span class="tag">&lt;<span class="name">+79</span>&gt;</span>:    retq</div></pre></td></tr></table></figure>
+<p>逻辑似乎很简单，它把你的输入转成10进制数，先与1000(0x3e8)比较，如果大于1000直接炸掉，如果不相等，那么把它作为第二个参数传到fun7，如果返回值大于0，爆炸。看一下fun7</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">Dump of assembler code for function fun7:</div><div class="line">   0x000000000040134b <span class="tag">&lt;<span class="name">+0</span>&gt;</span>:     sub    $0x8,%rsp</div><div class="line">   0x000000000040134f <span class="tag">&lt;<span class="name">+4</span>&gt;</span>:     test   %rdi,%rdi</div><div class="line">   0x0000000000401352 <span class="tag">&lt;<span class="name">+7</span>&gt;</span>:     je     0x40137f <span class="tag">&lt;<span class="name">fun7+52</span>&gt;</span></div><div class="line">   0x0000000000401354 <span class="tag">&lt;<span class="name">+9</span>&gt;</span>:     mov    (%rdi),%edx</div><div class="line">   0x0000000000401356 <span class="tag">&lt;<span class="name">+11</span>&gt;</span>:    cmp    %esi,%edx</div><div class="line">   0x0000000000401358 <span class="tag">&lt;<span class="name">+13</span>&gt;</span>:    jle    0x401367 <span class="tag">&lt;<span class="name">fun7+28</span>&gt;</span></div><div class="line">   0x000000000040135a <span class="tag">&lt;<span class="name">+15</span>&gt;</span>:    mov    0x8(%rdi),%rdi</div><div class="line">   0x000000000040135e <span class="tag">&lt;<span class="name">+19</span>&gt;</span>:    callq  0x40134b <span class="tag">&lt;<span class="name">fun7</span>&gt;</span></div><div class="line">   0x0000000000401363 <span class="tag">&lt;<span class="name">+24</span>&gt;</span>:    add    %eax,%eax</div><div class="line">   0x0000000000401365 <span class="tag">&lt;<span class="name">+26</span>&gt;</span>:    jmp    0x401384 <span class="tag">&lt;<span class="name">fun7+57</span>&gt;</span></div><div class="line">   0x0000000000401367 <span class="tag">&lt;<span class="name">+28</span>&gt;</span>:    mov    $0x0,%eax</div><div class="line">   0x000000000040136c <span class="tag">&lt;<span class="name">+33</span>&gt;</span>:    cmp    %esi,%edx</div><div class="line">   0x000000000040136e <span class="tag">&lt;<span class="name">+35</span>&gt;</span>:    je     0x401384 <span class="tag">&lt;<span class="name">fun7+57</span>&gt;</span></div><div class="line">   0x0000000000401370 <span class="tag">&lt;<span class="name">+37</span>&gt;</span>:    mov    0x10(%rdi),%rdi</div><div class="line">   0x0000000000401374 <span class="tag">&lt;<span class="name">+41</span>&gt;</span>:    callq  0x40134b <span class="tag">&lt;<span class="name">fun7</span>&gt;</span></div><div class="line">   0x0000000000401379 <span class="tag">&lt;<span class="name">+46</span>&gt;</span>:    lea    0x1(%rax,%rax,1),%eax</div><div class="line">   0x000000000040137d <span class="tag">&lt;<span class="name">+50</span>&gt;</span>:    jmp    0x401384 <span class="tag">&lt;<span class="name">fun7+57</span>&gt;</span></div><div class="line">   0x000000000040137f <span class="tag">&lt;<span class="name">+52</span>&gt;</span>:    mov    $0xffffffff,%eax</div><div class="line">   0x0000000000401384 <span class="tag">&lt;<span class="name">+57</span>&gt;</span>:    add    $0x8,%rsp</div><div class="line">   0x0000000000401388 <span class="tag">&lt;<span class="name">+61</span>&gt;</span>:    retq</div><div class="line">End of assembler dump.</div></pre></td></tr></table></figure>
+<p>显然是个递归函数，第一个参数显然很可疑，看一下是啥</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">(gdb) x/120 0x604120</div><div class="line">0x604120 <span class="tag">&lt;<span class="name">n1</span>&gt;</span>:  36      0       6308160 0</div><div class="line">0x604130 <span class="tag">&lt;<span class="name">n1+16</span>&gt;</span>:       6308192 0       0       0</div><div class="line">0x604140 <span class="tag">&lt;<span class="name">n21</span>&gt;</span>: 8       0       6308288 0</div><div class="line">0x604150 <span class="tag">&lt;<span class="name">n21+16</span>&gt;</span>:      6308224 0       0       0</div><div class="line">0x604160 <span class="tag">&lt;<span class="name">n22</span>&gt;</span>: 50      0       6308256 0</div><div class="line">0x604170 <span class="tag">&lt;<span class="name">n22+16</span>&gt;</span>:      6308320 0       0       0</div><div class="line">0x604180 <span class="tag">&lt;<span class="name">n32</span>&gt;</span>: 22      0       6308512 0</div><div class="line">0x604190 <span class="tag">&lt;<span class="name">n32+16</span>&gt;</span>:      6308448 0       0       0</div><div class="line">0x6041a0 <span class="tag">&lt;<span class="name">n33</span>&gt;</span>: 45      0       6308352 0</div><div class="line">0x6041b0 <span class="tag">&lt;<span class="name">n33+16</span>&gt;</span>:      6308544 0       0       0</div><div class="line">0x6041c0 <span class="tag">&lt;<span class="name">n31</span>&gt;</span>: 6       0       6308384 0</div><div class="line">0x6041d0 <span class="tag">&lt;<span class="name">n31+16</span>&gt;</span>:      6308480 0       0       0</div><div class="line">0x6041e0 <span class="tag">&lt;<span class="name">n34</span>&gt;</span>: 107     0       6308416 0</div><div class="line">0x6041f0 <span class="tag">&lt;<span class="name">n34+16</span>&gt;</span>:      6308576 0       0       0</div><div class="line">0x604200 <span class="tag">&lt;<span class="name">n45</span>&gt;</span>: 40      0       0       0</div><div class="line">0x604210 <span class="tag">&lt;<span class="name">n45+16</span>&gt;</span>:      0       0       0       0</div><div class="line">0x604220 <span class="tag">&lt;<span class="name">n41</span>&gt;</span>: 1       0       0       0</div><div class="line">0x604230 <span class="tag">&lt;<span class="name">n41+16</span>&gt;</span>:      0       0       0       0</div><div class="line">0x604240 <span class="tag">&lt;<span class="name">n47</span>&gt;</span>: 99      0       0       0</div><div class="line">0x604250 <span class="tag">&lt;<span class="name">n47+16</span>&gt;</span>:      0       0       0       0</div><div class="line">0x604260 <span class="tag">&lt;<span class="name">n44</span>&gt;</span>: 35      0       0       0</div><div class="line">0x604270 <span class="tag">&lt;<span class="name">n44+16</span>&gt;</span>:      0       0       0       0</div><div class="line">0x604280 <span class="tag">&lt;<span class="name">n42</span>&gt;</span>: 7       0       0       0</div><div class="line">0x604290 <span class="tag">&lt;<span class="name">n42+16</span>&gt;</span>:      0       0       0       0</div><div class="line">0x6042a0 <span class="tag">&lt;<span class="name">n43</span>&gt;</span>: 20      0       0       0</div><div class="line">0x6042b0 <span class="tag">&lt;<span class="name">n43+16</span>&gt;</span>:      0       0       0       0</div><div class="line">0x6042c0 <span class="tag">&lt;<span class="name">n46</span>&gt;</span>: 47      0       0       0</div><div class="line">0x6042d0 <span class="tag">&lt;<span class="name">n46+16</span>&gt;</span>:      0       0       0       0</div><div class="line">0x6042e0 <span class="tag">&lt;<span class="name">n48</span>&gt;</span>: 1001    0       0       0</div><div class="line">0x6042f0 <span class="tag">&lt;<span class="name">n48+16</span>&gt;</span>:      0       0       0       0</div></pre></td></tr></table></figure>
+<p>二叉树。。。。。它结点的命名很有规律，直接画出来都行。</p>
+<p><img src="https://ws1.sinaimg.cn/large/006OSALLly1fm2g5nmjbuj30al075a9v.jpg" alt=""></p>
+<p>然后fun7的逻辑可疑整理一下，写成c语言大概是这样的：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">fun7</span><span class="params">(BiTree T,<span class="keyword">int</span> v)</span></span>&#123;<span class="comment">//v是传入的那个整数</span></div><div class="line">	<span class="keyword">int</span> result;</div><div class="line">	<span class="keyword">if</span>(T)&#123;</div><div class="line">		<span class="keyword">if</span>(T-&gt;data &lt;= v)&#123;</div><div class="line">			result = <span class="number">0</span>;</div><div class="line">			<span class="keyword">if</span>(T-&gt;data != v)&#123;</div><div class="line">				result = <span class="number">2</span> * fun7(T-&gt;right,v) + <span class="number">1</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">else</span>&#123;</div><div class="line">			result = <span class="number">2</span> * fun7(T-&gt;left,v);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">else</span>&#123;</div><div class="line">		result = <span class="number">-1</span>;</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> result;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>把那颗二叉树直接保存下来然后爆破一下即可，因为上周刚好写完了树的基本操作，所以自己电脑上有环境直接跑</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; <span class="number">1000</span>;i++)&#123;</div><div class="line">		<span class="keyword">if</span>(!fun7(T,i))&#123;</div><div class="line">			<span class="built_in">printf</span>(<span class="string">"answer: %d "</span>,i);</div><div class="line">		<span class="comment">//	break;</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div></pre></td></tr></table></figure>
+<p>结果竟然只有4个？？？咦，厉害了</p>
+<p><img src="https://ws1.sinaimg.cn/large/006OSALLly1fm2e90fpi3j30fm06ijra.jpg" alt=""></p>
+<p>通关截图：</p>
+<p><img src="https://ws1.sinaimg.cn/large/006OSALLly1fm2ec8pikdj30mo0cvq42.jpg" alt=""></p>
+<h1 id="tips"><a href="#tips" class="headerlink" title="tips"></a>tips</h1><p>总结了一点技巧（骚姿势）：b explode_bomb（这个应该都会）；如果绕不过检测函数，可以选择让它炸一次，然后看返回值；直接把包拖到本地，把检测host和记录答题状态的函数全部nop掉，这样在本地想怎么玩就怎么玩；IDA！！！！！！！（我就借助了IDA，捂脸φ(&gt;ω&lt;<em>) φ(&gt;ω&lt;</em>) </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/bomblab，csapp/" rel="tag"># bomblab，csapp</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/09/Mirages-CTF-writeup/" rel="next" title="Mirages-CTF writeup">
+                <i class="fa fa-chevron-left"></i> Mirages-CTF writeup
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          
+            <img class="site-author-image" itemprop="image"
+              src="https://ws1.sinaimg.cn/large/006OSALLgy1fk3yohuj0ij30v90kuaep.jpg"
+              alt="Primykq" />
+          
+            <p class="site-author-name" itemprop="name">Primykq</p>
+            <p class="site-description motion-element" itemprop="description"></p>
+        </div>
+
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+            
+              <a href="/archives/">
+            
+                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              各路大佬
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://qrzbing.cn" title="qrzbing" target="_blank">qrzbing</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://blog.rexskz.info/" title="Skywalker_Z" target="_blank">Skywalker_Z</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://rayzhao98.top/" title="SkyNet_Z" target="_blank">SkyNet_Z</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://yuwenjie.cc/" title="于老板" target="_blank">于老板</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://showlinkroom.me/" title="l1nk3dHouse" target="_blank">l1nk3dHouse</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.d4rk7r4c3r.cn/" title="d4rk7r4c3r" target="_blank">d4rk7r4c3r</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.nightmare.xin/" title="kurumi" target="_blank">kurumi</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://karlrixon.github.io/" title="karlrixon" target="_blank">karlrixon</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#phase-1"><span class="nav-number">1.</span> <span class="nav-text">phase_1</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#phase-2"><span class="nav-number">2.</span> <span class="nav-text">phase_2</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#phase-3"><span class="nav-number">3.</span> <span class="nav-text">phase_3</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#phase-4"><span class="nav-number">4.</span> <span class="nav-text">phase_4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#phase-5"><span class="nav-number">5.</span> <span class="nav-text">phase_5</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#phase-6"><span class="nav-number">6.</span> <span class="nav-text">phase_6</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#secret-phase"><span class="nav-number">7.</span> <span class="nav-text">secret_phase</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#tips"><span class="nav-number">8.</span> <span class="nav-text">tips</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Primykq</span>
+
+  
+</div>
+
+
+ <!-- <div class="powered-by">由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+  <span class="post-meta-divider">|</span>
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.2</div>
+
+ -->
+        
+<div class="busuanzi-count">
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv">
+      你是本站第
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+      位访客
+    </span>
+  
+
+  
+    <span class="site-pv">
+      本站共点击
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+      次
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.2"></script>
+
+
+
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  <!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/src/love.js"></script>
+</body>
+</html>
