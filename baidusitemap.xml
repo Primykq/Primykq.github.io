@@ -5,14 +5,19 @@
     
   <url>
     <loc>http://primykq.top/2018/03/19/test/</loc>
-    <lastmod>2018-03-19T07:50:39.990Z</lastmod>
+    <lastmod>2018-03-19T07:58:57.625Z</lastmod>
     <data>
         <display>
         <title>test</title>
         <pubTime>2018-03-19T07:49:38.000Z</pubTime>
         
+        <tag>hexo博客迁移</tag>
+         
          
            
+             
+              <breadCrumb title="环境" url="http://yoursite.com/categories/%E7%8E%AF%E5%A2%83/"/>
+          
         </display>
     </data>
     </url>
