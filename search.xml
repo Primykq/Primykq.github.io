@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[博客环境迁移]]></title>
     <url>%2F2018%2F03%2F19%2F%E5%8D%9A%E5%AE%A2%E7%8E%AF%E5%A2%83%E8%BF%81%E7%A7%BB%2F</url>
-    <content type="text"><![CDATA[一开始我也以为这件事情很复杂 就像某乎里边说的这样： 一、关于搭建的流程 \1. 创建仓库，http://CrazyMilk.github.io；\2. 创建两个分支：master 与 hexo；\3. 设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；\4. 使用git clone git@github.com:CrazyMilk/CrazyMilk.github.io.git拷贝仓库；\5. 在本地http://CrazyMilk.github.io文件夹下通过Git bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;\6. 修改_config.yml中的deploy参数，分支应为master；\7. 依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件；\8. 执行hexo g -d生成网站并部署到GitHub上。 这样一来，在GitHub上的http://CrazyMilk.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。完美( •̀ ω •́ )y！ 但我就是傻傻地认为，所有东西不都在本地博客的文件里边么？既然这样，我把git和node.js装好后，整个文件夹迁移过来不就行了？？？ 事实证明我是对的！哈哈哈哈哈哈哈]]></content>
+    <content type="text"><![CDATA[一开始我也以为这件事情很复杂 一开始我去搜了搜教程以为这件事情很复杂 就像某乎里边说的这样： 一、关于搭建的流程 \1. 创建仓库，http://CrazyMilk.github.io；\2. 创建两个分支：master 与 hexo；\3. 设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；\4. 使用git clone git@github.com:CrazyMilk/CrazyMilk.github.io.git拷贝仓库；\5. 在本地http://CrazyMilk.github.io文件夹下通过Git bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;\6. 修改_config.yml中的deploy参数，分支应为master；\7. 依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件；\8. 执行hexo g -d生成网站并部署到GitHub上。 这样一来，在GitHub上的http://CrazyMilk.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。完美( •̀ ω •́ )y！ 但我就是傻傻地认为，所有东西不都在本地博客的文件里边么？既然这样，我把git、node.js、hexo、以及相关依赖装好，配置一个ssh放到github上，然后整个文件夹迁移过来不就行了？？？ 事实证明我是对的！哈哈哈哈哈哈哈]]></content>
       <categories>
         <category>环境</category>
       </categories>
