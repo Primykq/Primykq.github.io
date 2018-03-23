@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[最重要的是什么]]></title>
+    <url>%2F2018%2F03%2F24%2F%E6%9C%80%E9%87%8D%E8%A6%81%E7%9A%84%E6%98%AF%E6%87%92%E4%B8%8E%E4%B8%8D%E6%BB%A1%E8%B6%B3%2F</url>
+    <content type="text"><![CDATA[​ 今天晚上突然就想到了这个问题：对于IT人员来说，什么才是最重要的？ 如果让我回答的话，我的答案是：学会偷懒，以及，从不满足。 ​ 首先，偷懒这一点很好理解，从某种角度来说，人类社会的进步就是为了不断偷懒，懒得走，所以有了交通工具，懒得做体力活，所以有了大机器生产，IT人员也一样，如果遇到某些问题，目前解决方式很繁琐，那么第一反应应该是，在条件允许（时间、精力、金钱等等）和需求足够的情况下，尽可能去优化解决方案，就举个很简单的例子：一开始我搭博客用的是七牛的图床，平心而论还不错，但是，太麻烦了！一篇博文图片比较多的时候体验相当差，于是，我想了两种方案：一是写脚本拖拽图片直接生成markdown图片链接，二是直接换掉图床。这样的情况很多，总之就是，至少在尝试之前，千万不要学会忍受，比如缓慢的下载速度，编辑器的支持不够友好等等等等，千万别忍，忍了你就输了。 ​ 至于从不满足这一点嘛，更容易理解了，计算机这一块本来就广博无比，光是一个小点就足够学习很久很久了，而且技术更新速度极快，这一年学的东西到下一年就以及过时了，除非要转行，不然，安于现状。。。嗯，变相转行。]]></content>
+      <categories>
+        <category>日常</category>
+      </categories>
+      <tags>
+        <tag>思考</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[博客环境迁移]]></title>
     <url>%2F2018%2F03%2F19%2F%E5%8D%9A%E5%AE%A2%E7%8E%AF%E5%A2%83%E8%BF%81%E7%A7%BB%2F</url>
     <content type="text"><![CDATA[一开始我去搜了搜教程以为这件事情很复杂 就像某乎里边说的这样： 一、关于搭建的流程 \1. 创建仓库，http://CrazyMilk.github.io；\2. 创建两个分支：master 与 hexo；\3. 设置hexo为默认分支（因为我们只需要手动管理这个分支上的Hexo网站文件）；\4. 使用git clone git@github.com:CrazyMilk/CrazyMilk.github.io.git拷贝仓库；\5. 在本地http://CrazyMilk.github.io文件夹下通过Git bash依次执行npm install hexo、hexo init、npm install 和 npm install hexo-deployer-git（此时当前分支应显示为hexo）;\6. 修改_config.yml中的deploy参数，分支应为master；\7. 依次执行git add .、git commit -m “…”、git push origin hexo提交网站相关的文件；\8. 执行hexo g -d生成网站并部署到GitHub上。 这样一来，在GitHub上的http://CrazyMilk.github.io仓库就有两个分支，一个hexo分支用来存放网站的原始文件，一个master分支用来存放生成的静态网页。完美( •̀ ω •́ )y！ 但我就是傻傻地认为，所有东西不都在本地博客的文件里边么？既然这样，我把git、node.js、hexo、以及相关依赖装好，配置一个ssh放到github上，然后整个文件夹迁移过来不就行了？？？ 事实证明我是对的！哈哈哈哈哈哈哈]]></content>
