@@ -91,7 +91,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="hexo,https,Cloudflare,google," />
+  <meta name="keywords" content="计算机组成原理," />
 
 
 
@@ -107,24 +107,20 @@
 
 
 
-<meta name="description" content="​    讲讲上https和让谷歌收录个人博客的过程。">
-<meta name="keywords" content="hexo,https,Cloudflare,google">
+<meta name="description" content="​    函数调用栈是一个非常重要的过程，也是整个程序运行的关键，下面简单地说一下这个调用过程。">
+<meta name="keywords" content="计算机组成原理">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo博客加https &amp;&amp; google收录">
-<meta property="og:url" content="http://yoursite.com/2017/10/03/hexo博客加https && google收录/index.html">
+<meta property="og:title" content="c语言函数调用栈">
+<meta property="og:url" content="http://yoursite.com/2018/04/02/c语言函数调用栈/index.html">
 <meta property="og:site_name" content="Primykq-&gt;Blog">
-<meta property="og:description" content="​    讲讲上https和让谷歌收录个人博客的过程。">
+<meta property="og:description" content="​    函数调用栈是一个非常重要的过程，也是整个程序运行的关键，下面简单地说一下这个调用过程。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk58mwxd3bj30k00cv0sp.jpg">
-<meta property="og:image" content="https://ws4.sinaimg.cn/large/6177e8b1gw1fb9tyqyxz7j20nm0a0751.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk59kqv29tj30g40mtdhc.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk59mc7hmmj30ed0lz3za.jpg">
-<meta property="og:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk59q6fap3j30qg0nl77p.jpg">
-<meta property="og:updated_time" content="2017-10-21T16:36:04.000Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006OSALLgy1fpzjal8gnnj30ms0f7dh3.jpg">
+<meta property="og:updated_time" content="2018-04-03T08:30:27.535Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo博客加https &amp;&amp; google收录">
-<meta name="twitter:description" content="​    讲讲上https和让谷歌收录个人博客的过程。">
-<meta name="twitter:image" content="https://ws1.sinaimg.cn/large/006OSALLgy1fk58mwxd3bj30k00cv0sp.jpg">
+<meta name="twitter:title" content="c语言函数调用栈">
+<meta name="twitter:description" content="​    函数调用栈是一个非常重要的过程，也是整个程序运行的关键，下面简单地说一下这个调用过程。">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006OSALLgy1fpzjal8gnnj30ms0f7dh3.jpg">
 
 
 
@@ -154,13 +150,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/10/03/hexo博客加https && google收录/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/04/02/c语言函数调用栈/"/>
 
 
 
 
 
-  <title>hexo博客加https && google收录 | Primykq->Blog</title>
+  <title>c语言函数调用栈 | Primykq->Blog</title>
   
 
 
@@ -331,7 +327,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/03/hexo博客加https && google收录/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/02/c语言函数调用栈/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Primykq">
@@ -348,7 +344,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">hexo博客加https && google收录</h2>
+          <h2 class="post-title" itemprop="name headline">c语言函数调用栈</h2>
         
 
         <div class="post-meta">
@@ -360,8 +356,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-10-03T17:50:26+08:00">
-                2017-10-03
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-02T20:22:44+08:00">
+                2018-04-02
               </time>
             
 
@@ -383,8 +379,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/环境/" itemprop="url" rel="index">
-                    <span itemprop="name">环境</span>
+                  <a href="/categories/开发/" itemprop="url" rel="index">
+                    <span itemprop="name">开发</span>
                   </a>
                 </span>
 
@@ -420,37 +416,14 @@
       
 
       
-        <p>​    讲讲上https和让谷歌收录个人博客的过程。<a id="more"></a></p>
-<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>​    戳友链的时候发现好多博客都上了全站https，而且https已经是大势所趋，特别是谷歌，对https的网站收录极其友好(至于百度，emmmmm，我已经放弃它了)，而谷歌搜索是当今最好用的引擎，可惜在中国大陆无法正常访问，需要<a href="https://baike.baidu.com/item/%E7%BF%BB%E5%A2%99/754773" target="_blank" rel="external">科学上网</a>，方法很多，免费的不太稳有限制而且需要多折腾，花钱的省事而且稳定，在这我安利一下 <a href="https://www.acggate.net/user/login?r=/acgpower" target="_blank" rel="external">ACGPOWER</a>，十分好用，而且只要6块一个月。(PS：自从用过了这个，我的地址栏默认搜索引擎换成了Google。。。妈妈再也不用担心我科学上网不稳了)。好了废话就说到这，下面是正文。</p>
-<h1 id="https"><a href="#https" class="headerlink" title="https"></a>https</h1><p>​    关于https，全称为：Hypertext Transfer Protocol Secure，比http多了个S，顾名思义，多了一层保护，即TLS/SSL协议，早些年，SSL证书基本上是要花大价钱买的，很难看到免费的，而现在随着https越来越普及，免费的SSL证书也很多，可以自行选择适合自己的SSL证书。全站的https网站会将要传递的信息进行加密后传输，可以避免信息窃听、信息篡改、信息劫持等问题。具体原理可以参考<a href="https://segmentfault.com/a/1190000004199917#articleHeader0" target="_blank" rel="external">这里</a>。</p>
-<h1 id="Cloudflare介绍与https正式部署"><a href="#Cloudflare介绍与https正式部署" class="headerlink" title="Cloudflare介绍与https正式部署"></a>Cloudflare介绍与https正式部署</h1><p>​    <a href="https://www.cloudflare.com/" target="_blank" rel="external">Cloudflare</a> 是一家可以给全球用户提供网站访问加速、DNS解析、阻止网站攻击等众多服务的公司，具体介绍自行去官网。那么我要的就是Cloudflare的SSL服务了，方法很简单。大概就是一下几个步骤：(讲真Cloudflare给的引导过程挺清楚的)</p>
-<p>1、去Cloudflare注册，添加自己的个人网站，扫描过程大概1分钟。</p>
-<p>2、验证域名所有权后，等待status变成active状态。</p>
-<p>3、拿到Cloudflare的Domin Name Server后，去域名提供商那修改自己域名的Domin Name Sever。(去那个域名列表那戳管理就行)</p>
-<p>4、改完DNS后点击Crypto，在SSL那选择Flexible，如果自己有证书的话可以选择Full(用github pages的貌似无法再部署SSL)，大概区别如下：</p>
-<p><img src="https://ws1.sinaimg.cn/large/006OSALLgy1fk58mwxd3bj30k00cv0sp.jpg" alt=""></p>
-<p>具体的区别自己戳旁边的链接，都有很详细的介绍，非常良心的一家网站诶。其他的话，开启强制HTTPS以及Automatic HTTPS Rewrites(如果资源路径支持https，那么会自行跳转成https)这两个就可以。</p>
-<p>​    以上步骤全部完成后，如果你没有引用http的资源(即混合引用)，是可以看到小绿锁的。</p>
-<p><img src="https://ws4.sinaimg.cn/large/6177e8b1gw1fb9tyqyxz7j20nm0a0751.jpg" alt=""></p>
-<p>PS:为此，我把图床从七牛搬到了新浪博客。。。。</p>
-<p>PPS：新浪博客的图床真的挺好用的。</p>
-<h1 id="Google收录"><a href="#Google收录" class="headerlink" title="Google收录"></a>Google收录</h1><p>1、首先在根目录下键入以下命令安装sitemap插件</p>
-<p><code>npm install hexo-generator-sitemap --save</code></p>
-<p>2、然后在站点文件(不是主题文件哦)增加以下内容(注意缩进)</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"># 自动生成sitemap</div><div class="line">sitemap: </div><div class="line">  path: sitemap.xml</div></pre></td></tr></table></figure>
-<p>hexo g以下就能在public里面看到sitemap.xml了。</p>
-<p>3、在source下增加robots.txt</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"># hexo robots.txt</div><div class="line">User-agent: *</div><div class="line">Allow: /</div><div class="line">Allow: /archives/</div><div class="line">Allow: /categories/</div><div class="line">Allow: /tags/</div><div class="line"></div><div class="line">Disallow: /vendors/</div><div class="line">Disallow: /js/</div><div class="line">Disallow: /css/</div><div class="line">Disallow: /fonts/</div><div class="line">Disallow: /vendors/</div><div class="line">Disallow: /fancybox/</div><div class="line"></div><div class="line">Sitemap: https://primykq.top/sitemap.xml</div></pre></td></tr></table></figure>
-<p>把网址改成自己的。</p>
-<p>4、进入<a href="Google Search Console">Google Search Console</a>，没有谷歌账号的注册一个。添加网站，把自己的个人网站输进去，这里要验证域名所有权。我选择了文件验证，把下的文件放在站点的source目录下，注意：<strong>不要编译</strong> <strong>不要编译</strong> <strong>不要编译</strong> <strong>直接hexo d</strong> 把这份文件上传到服务器中，编译的话hexo会自动给你加上一大串html代码。</p>
-<p>5、验证完了以后测试一下robots.txt协议。</p>
-<p>6、提交sitemap，输入<code>sitemap.xml</code>就行。 </p>
-<p>7、抓取那一栏可以加上标签栏或者你觉得最容易被搜到的page，不加的话默认抓取首页，填完url后点击抓取，然后就点击“提交至索引”。注意了，这里可能要进行人机验证，我不得不吐槽一下这google的人机验证，比12306的还要骚，一堆图片，让你选有汽车呀路标呀什么的图片，然后，你点中以后，这个图会消失，然后出新的图，如果又有汽车或者路标等目标图片，你需要继续点，一直点到没有指定的图片为止，如果你提交验证后失败，请直接ctrl + r刷新后重来，我感觉后面是个无底洞，反正我在后面没成功过，你感兴趣的话可以试试。上两张图好了。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006OSALLgy1fk59kqv29tj30g40mtdhc.jpg" alt=""></p>
-<p><img src="https://ws1.sinaimg.cn/large/006OSALLgy1fk59mc7hmmj30ed0lz3za.jpg" alt=""></p>
-<p>提交完索引后就大功告成了。大概过了那么一两分钟，我去google搜索那输入了primykq的博客，妈耶，马上就出来了，这收录速度真牛。</p>
-<p><img src="https://ws1.sinaimg.cn/large/006OSALLgy1fk59q6fap3j30qg0nl77p.jpg" alt=""></p>
-<h1 id="多说一句"><a href="#多说一句" class="headerlink" title="多说一句"></a>多说一句</h1><p>​    有人可能会说，咋没有提交到百度的教程，emmmm，百度，我卡死在域名所有权验证那里，怎么都过不去，后来想想，还得双线部署到coding(因为github 禁了百度的爬虫)，暂时懒得折腾了，用了独立域名后访问速度也还过得去，大不了再压缩一下资源文件。(后来才知道，github下的二级域名可以直接强制https，可惜我还是喜欢个人的顶级域名。)</p>
+        <p>​    函数调用栈是一个非常重要的过程，也是整个程序运行的关键，下面简单地说一下这个调用过程。<a id="more"></a></p>
+<h1 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h1><p>​    寄存器是程序运行的重要载体，可以用来存放数据和指令，函数调用过程与其密切相关。首先是几个特殊点的寄存器，<code>%eax</code> ，<code>%ebx</code> ，<code>%ecx</code> ，<code>%edx</code> 各自都能作为独立的16位寄存器，低16位还能再分成8位的寄存器，这应该是为了向下兼容。在汇编语言中，这些通用寄存器通常以%e（AT&amp;T语法）或直接以e（Intel语法）开头来引用，如，<code>mov $5, %eax</code>，或者<code>mov eax, 5</code> ，都表示将立即数赋值给寄存器<code>%eax</code> 。</p>
+<p>​    而x86架构中，<code>EIP</code>是一个比较特殊的寄存器，它被称为指令寄存器，永远指向处理器下一条等待执行的指令地址（有时也用偏移量表示），每次执行完<code>EIP</code>的值就会增加，由于它的特殊性，不能像访问普通寄存器那样访问它，找不到可用来寻址<code>EIP</code>并对其进行读写的操作码（Opcode），<code>EIP</code>可被<code>jmp</code>、<code>call</code> 、<code>ret</code>等指令隐藏式地改变。</p>
+<p>​    另外要注意的是，寄存器是唯一能被所有函数共享的资源，需要保证A函数调用B函数时，B函数不会修改或覆盖A函数稍后会用到的寄存器值，为此，有这么一些规定：寄存器<code>%eax</code>，<code>%ebx</code>，<code>%ecx</code>，为主调函数保存寄存器（caller-saved registers），函数调用时，如果主调函数想要保存这些寄存器的值，必须在调用前显示地将其保存在栈中，然后被调函数就可以覆盖这些寄存器，这样就不会破坏主调函数所需的数据。寄存器<code>%ebx</code>，<code>%esi</code>，<code>%edi</code> 为被调函数保存寄存器（callee-saved registers），即被调函数在覆盖这些寄存器的值时，必须先把寄存器的原值压入栈中保存起来，并在函数返回前恢复其值，因为主调函数也可能会用到这些寄存器。除此之外，被调函数还必须保持寄存器<code>%ebp</code>，<code>%esp</code>，并在函数返回后将其恢复到调用前的值，即必须恢复主调函数的栈帧。</p>
+<h1 id="栈帧"><a href="#栈帧" class="headerlink" title="栈帧"></a>栈帧</h1><p>​    刚刚说到了栈帧（stack frame），栈帧是什么呢？栈帧本质上就是一种栈，只是这种栈专门用于保存函数调用过程中的各种信息。同样有栈顶和栈底，栈底地址最高，x86-32bit架构中，用<code>%ebp</code>指向栈底，即基址指针，<code>%esp</code>指向栈顶，即栈顶指针。函数调用栈时的内存布局：</p>
+<p><img src="http://ww1.sinaimg.cn/large/006OSALLgy1fpzjal8gnnj30ms0f7dh3.jpg" alt="调用栈时的内存布局"></p>
+<p>​    注意这个图基于两个假设：第一，函数返回值不是结构体或联合体，否则的话第一个参数将位于<code>12(%ebp)</code>处；第二，每个参数都是4字节大小。</p>
+<p>​    从这个图也能看出，函数调用时的入栈顺序为：实参（从右到左）-&gt;主调函数的返回地址-&gt;主调函数的帧基指针<code>EBP</code> -&gt;被调函数局部变量1~N。具体来看，主调函数首先将参数按照调用约定依次入栈，然后将指令指针<code>EIP</code>入栈以保存主调函数的返回地址。进入被调函数时，被调函数将主调函数的帧基指针<code>EBP</code>入栈，并将主调函数的栈顶指针<code>ESP</code>值赋给被调函数的<code>EBP</code>（作为被调函数的栈底），接着改变<code>ESP</code>值来为函数局部变量预留空间。此时被调函数帧基指针指向被调函数的栈底。以此地址为基准，向（上）栈底方向可获得主调函数的返回地址和参数值，向（下）栈顶方向可获得被调函数的局部变量值，而该地址又放着上一层主调函数的帧基指针值。本级调用结束后，<code>EBP</code>指针值赋给<code>ESP</code>，使其再次指向被调函数栈底以释放局部变量；再将以压栈的主调函数帧基指针弹出到<code>EBP</code>，并弹出返回地址到<code>EIP</code>。<code>ESP</code>继续上移越过参数，回到调用前的状态，恢复原来主调函数的栈帧，递归便形成了函数调用栈。</p>
 
       
     </div>
@@ -468,13 +441,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/hexo/" rel="tag"># hexo</a>
-          
-            <a href="/tags/https/" rel="tag"># https</a>
-          
-            <a href="/tags/Cloudflare/" rel="tag"># Cloudflare</a>
-          
-            <a href="/tags/google/" rel="tag"># google</a>
+            <a href="/tags/计算机组成原理/" rel="tag"># 计算机组成原理</a>
           
         </div>
       
@@ -487,8 +454,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/29/CTF传送门/" rel="next" title="CTF传送门">
-                <i class="fa fa-chevron-left"></i> CTF传送门
+              <a href="/2018/03/24/最重要的是懒与不满足/" rel="next" title="最重要的是什么">
+                <i class="fa fa-chevron-left"></i> 最重要的是什么
               </a>
             
           </div>
@@ -496,10 +463,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/10/08/第四届世安杯酱油记/" rel="prev" title="第四届世安杯酱油记">
-                第四届世安杯酱油记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -686,7 +649,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#https"><span class="nav-number">2.</span> <span class="nav-text">https</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cloudflare介绍与https正式部署"><span class="nav-number">3.</span> <span class="nav-text">Cloudflare介绍与https正式部署</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Google收录"><span class="nav-number">4.</span> <span class="nav-text">Google收录</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#多说一句"><span class="nav-number">5.</span> <span class="nav-text">多说一句</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#寄存器"><span class="nav-number">1.</span> <span class="nav-text">寄存器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#栈帧"><span class="nav-number">2.</span> <span class="nav-text">栈帧</span></a></li></ol></div>
             
 
           </div>

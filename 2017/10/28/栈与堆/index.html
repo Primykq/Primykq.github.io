@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="Primykq-&gt;Blog">
 <meta property="og:description" content="​    昨天参加了Pwn师傅的入门课，嗯，&amp;lt;（我以为大家都是零基础，结果最后发现只有我才是）.png&amp;gt;，（传图好麻烦，偷点懒。）二进制安全对底层的知识要求还是挺高的，也难怪pwn入门难度是最高的233333。今天稍微学习了一下堆和栈的区别，写点笔记。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-10-29T02:41:22.000Z">
+<meta property="og:updated_time" content="2018-03-31T12:09:41.960Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="栈与堆">
 <meta name="twitter:description" content="​    昨天参加了Pwn师傅的入门课，嗯，&amp;lt;（我以为大家都是零基础，结果最后发现只有我才是）.png&amp;gt;，（传图好麻烦，偷点懒。）二进制安全对底层的知识要求还是挺高的，也难怪pwn入门难度是最高的233333。今天稍微学习了一下堆和栈的区别，写点笔记。">
@@ -427,7 +427,7 @@
 <p>堆：程序员自行分配，并指定大小。c中的malloc ，  c++中的 new</p>
 <h2 id="申请后系统的响应"><a href="#申请后系统的响应" class="headerlink" title="申请后系统的响应"></a>申请后系统的响应</h2><p>栈：只要剩余空间大于申请空间，系统即为其提供相应内存，否则会异常。</p>
 <p>堆：这里又有一个知识点：OS有一个记录空闲内存的链表，收到堆空间申请时会开始遍历这个链表，找到一个空间大于所要申请的空间后便把这个结点从空闲结点链表里面删掉并将这块空间分给程序，而且大多数系统会自动记录这块空间的首地址以便于正确释放这块空间。多余的空间则会返回给空闲链表。</p>
-<h2 id="申请大小的限制"><a href="#申请大小的限制" class="headerlink" title="申请大小的限制"></a>申请大小的限制</h2><p>栈：在win下，栈的地址是往地位扩展的，而且是连续的内存区域，所以栈顶的地址以及栈的最大容量，系统都已经固定好了，无法修改，因此栈能够获得的空间较小。</p>
+<h2 id="申请大小的限制"><a href="#申请大小的限制" class="headerlink" title="申请大小的限制"></a>申请大小的限制</h2><p>栈：在win下，栈的地址是往低地址扩展的，而且是连续的内存区域，所以栈顶的地址以及栈的最大容量，系统都已经固定好了，无法修改，因此栈能够获得的空间较小。</p>
 <p>堆：与栈相反，堆是往高地址扩展的数据结构，不连续，显然，因为这是系统在空闲链表里面找到的内存，然后分给你的，当然是各个地方的空间都有。所以堆获得的空间比较灵活，空间大小也就更大了。</p>
 <h2 id="申请效率"><a href="#申请效率" class="headerlink" title="申请效率"></a>申请效率</h2><p>栈：由系统自动分配，速度比较快，但无法控制。</p>
 <p>堆：自行分配，一般来说速度比栈要慢，而且<strong>很容易产生内存碎片</strong>， 但用起来最方便。</p>
@@ -562,7 +562,7 @@
             
               <a href="/archives/">
             
-                <span class="site-state-item-count">18</span>
+                <span class="site-state-item-count">19</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
