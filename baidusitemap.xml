@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://primykq.top/2018/11/18/https%E5%8E%9F%E7%90%86/</loc>
+    <lastmod>2018-11-18T08:35:44.404Z</lastmod>
+    <data>
+        <display>
+        <title>https原理</title>
+        <pubTime>2018-11-18T06:30:23.000Z</pubTime>
+        
+        <tag>https</tag>
+         
+         
+           
+             
+              <breadCrumb title="开发" url="http://yoursite.com/categories/%E5%BC%80%E5%8F%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://primykq.top/2018/07/19/%E4%B8%80%E4%BA%9B%E6%84%9F%E6%83%B3/</loc>
     <lastmod>2018-08-04T14:38:58.498Z</lastmod>
     <data>
@@ -292,9 +312,9 @@
         <title>hexo博客加https && google收录</title>
         <pubTime>2017-10-03T09:50:26.000Z</pubTime>
         
-        <tag>hexo</tag>
-         
         <tag>https</tag>
+         
+        <tag>hexo</tag>
          
         <tag>Cloudflare</tag>
          
