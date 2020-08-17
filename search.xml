@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[常用git操作]]></title>
+    <url>%2F2020%2F08%2F09%2F%E5%B8%B8%E7%94%A8git%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[​ Git操作是开发日常中最基础的，同时也是最重要的开发工具之一，掌握git是一个开发人员的基本素养，下面记录一下在公司里最常用的Git操作 基础型梦开始的地方： git clone down就完事了 最常见的，也是最基础的： 1234git statusgit add .git commit -m "xxx"git push 这是在个人开发时最常用的三步走命令，git status是用来查看暂时已经更改的文件，git add命令会将改动的文件放入暂存区，git commit会生成一个快照记录，同时会有一个唯一的哈希值来标记这个记录，最后push是将本地分支推送到对应的远程分支（对于开发人员则是本地的feauture分支和远程分支） 每一次开发都是本地新建一个feature分支，随后在自己本地进行开发，开发完成后，在远端建立一个对应的feature分支，开发完成后，推到那个分支上，随后在远端仓库提出合并请求，将远程feature分支与主分支（一般是dev分支）进行合并，然后删掉远程分支，分支相关操作： 123git checkout //切换分支（未commit的代码会一起切过去git branch xx //新建xx分支git remote -v //查看本地分支与远程仓库的对应 签完到的第一件事一般是更新代码： 12git fetchgit merge git fetch命令会将远程分支的代码拉取到本地，git merge会把更新的那部分跟本地进行合并，如果拉取之后有冲突会提示让选择用哪边的代码或者是手动解决 有时候想去看看我旁边的老兄提交了多少代码，一般在dev分支上这么查一下 1git log --author="name" log会查到远程对应分支(一般查dev)的commit信息 1git diff 比对命令，可以比对分支或者是commit之前的区别，会显示到具体某一行哪里不同 进阶型git stash顾名思义，暂存，这个命令最常见于暂时保存手里还没做完的工作，暂存区和工作区的改动都会存起来 1234git stash list 显示保存的进度列表git stash drop 丢弃保存的一个进度，如果有多个，默认丢弃最新的git stash pop 弹出最近的一个进度，顾名思义，出栈，也可以指定弹出某一进度git stash clear 删除保存的所有进度 git rebase1234567891011121314151617181920git rebase &lt;远程仓库名&gt;/&lt;远程分支名&gt;git rebase -i HEAD^n# Rebase 986e234..84c413a onto 986e234 (4 commands)## Commands:# p, pick = use commit# r, reword = use commit, but edit the commit message# e, edit = use commit, but stop for amending# s, squash = use commit, but meld into previous commit# f, fixup = like "squash", but discard this commit's log message# x, exec = run command (the rest of the line) using shell# d, drop = remove commit## These lines can be re-ordered; they are executed from top to bottom.## If you remove a line here THAT COMMIT WILL BE LOST.## However, if you remove everything, the rebase will be aborted.## Note that empty commits are commented out pick：保留该commit（缩写:p） reword：保留该commit，但我需要修改该commit的注释（缩写:r） edit：保留该commit, 但我要停下来修改该提交(不仅仅修改注释)（缩写:e） squash：将该commit和前一个commit合并（缩写:s） fixup：将该commit和前一个commit合并，但我不要保留该提交的注释信息（缩写:f） exec：执行shell命令（缩写:x） drop：我要丢弃该commit（缩写:d) 这个命令上大学的时候从来没用过。。一直到来了公司之后，开始参与公司项目的迭代，才接触到这个命令，简单来说，当自己的某项工作搁置了一段时间，落后远程分支挺多的时候，如果做完了，想把代码推上去，先拉去更新后会有很多的commit，加上自己本地提交的一些commit，直接提交的话远程分支很不整洁，这个时候可以用git rebase命令，把自己做的所有工作整合成一个commit，移到master或者dev分支的最前面，就可以了，但这只能适用于自己的分支，切不可在主干分支上进行这种操作 git revert1git revert commitid || HEAD^n 版本重做，用一个新的commit来回滚之前的commit，即丢弃某一commit或者是某些commit，然后HEAD往前推进，生成新的commit git reset版本回滚，退到的那个版本之后的commit全部消失，如果已经 123456git reset commitid || HEAD^N--soft 回退后a分支修改的代码被保留并标记为add的状态（git status 是绿色的状态）--mixed 重置索引，但不重置工作树，更改后的文件标记为未提交（add）的状态。默认操作。--hard 重置索引和工作树，并且a分支修改的所有文件和中间的提交，没提交的代码都被丢弃了。--merge 和--hard类似，只不过如果在执行reset命令之前你有改动一些文件并且未提交，merge会保留你的这些修改，hard则不会。【注：如果你的这些修改add过或commit过，merge和hard都将删除你的提交】--keep 和--hard类似，执行reset之前改动文件如果是a分支修改了的，会提示你修改了相同的文件，不能合并。如果不是a分支修改的文件，会移除缓存区。git status还是可以看到保持了这些修改。]]></content>
+      <categories>
+        <category>开发</category>
+      </categories>
+      <tags>
+        <tag>git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[腾讯常规批笔试题]]></title>
     <url>%2F2019%2F04%2F11%2F%E8%85%BE%E8%AE%AF%E5%B8%B8%E8%A7%84%E6%89%B9%E7%AC%94%E8%AF%95%E9%A2%98%2F</url>
     <content type="text"><![CDATA[​ 腾讯3月的提前批投简历太慢，电话面试都木有一个，老老实实继续去参加常规批，笔试题目方在这，供参考。(选择题还挺基础的，但是编程题。。。一言难尽) 选择题 TCP与UDP 平衡二叉树 操作系统批处理的调度算法 给出一趟排序后的结果，选出可能的排序方法 C的static 访问一个https网站用到了哪些协议 阅读C++代码(类) 计算机网络子网划分 栈的进出 C++代码哪些行可能会编译错误 实时处理框架Storm技术 Java接口 SQL语句 C++代码输出 堆排序 FIFO缺页中断次数 递归函数的时间复杂度 LRU下一次替换的页 二叉树的先序和中序 Linux查找某文件 选择题虽然比较基础，但是由于全都是不定项，有的题目选项多达5个，如果基础不稳固的话时间耗费很大而且正确率没有保障，基础这一块需要加强。 编程题 输入整数n种不同面值的硬币，假定数量无限，再给一个m值作为上限，要求凑出1到m(包括1和m)之间所有的面值，需要的最少硬币数是多少，如果不存在输出-1。时间限制我模糊记得C/C++是3万多毫秒？n范围是1-100，m是1-1亿。 给一个仅仅包含0和1的字符串，如果有相邻的两个字符是01或者10，则将这两个消除，最后，输出最终的字符串最短长度。(没怎么看不记得限制条件了) 穿越怪兽谷，再怪兽谷依次会遇到N只怪兽，会给出每只怪兽的武力值和贿赂这只怪兽的金币数，贿赂了某只怪兽，该怪兽就会护送我们继续前进，如果不贿赂某只怪兽，该怪兽武力值大于护送我们的怪兽武力值之和，那我们就会被怪兽打。要想成功穿越怪兽谷还不被怪兽打，最少需要准备多少金币。 (编程题后期有时间争取补上去。。。) 原链接]]></content>
@@ -9,17 +20,6 @@
       </categories>
       <tags>
         <tag>笔试</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[硬币问题]]></title>
-    <url>%2F2019%2F04%2F06%2F%E7%A1%AC%E5%B8%81%E9%97%AE%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[​ 被腾讯的在线笔试题折腾的不轻，这里写一下第一题：动态规划之硬币问题。 ​ 题目是这样的：给出n种面值的硬币，和一个数值m，每种面值的硬币数量不限，要求从数值1到m(包括1和m)，都能用n种面值的硬币凑出来，求出最少的硬币数。输入的第一行为m和n，接下来的n行为n种面值的硬币。示例如下： 输入： 18 4 1 2 5 10 (这里为了方便我就不换行了) 输出： 5 解释：要保证1-18都能凑出来，发现必须要有两枚面值为2的硬币，比如14，就需要一枚面值为10的硬币和两枚面值为2的硬币，其他的各要一枚就行了，所以是5个硬币。 ​ 小插曲：我本以为符合了就开始动博客，结果并不能通过所有测试。。。先挖个坑鸽在这。]]></content>
-      <categories>
-        <category>开发</category>
-      </categories>
-      <tags>
-        <tag>动态规划</tag>
       </tags>
   </entry>
   <entry>
@@ -75,17 +75,6 @@
       </categories>
       <tags>
         <tag>计算机组成原理</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[分数转小数]]></title>
-    <url>%2F2018%2F04%2F14%2F%E5%88%86%E6%95%B0%E8%BD%AC%E5%B0%8F%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[​ 参加了学校的程设比赛，虽然脑子没有全程闲着但是输出为零这个真不假，全靠队友带。但这个数学题是@qrzbing给了我思路然后我去写，结果，写挂了。。。思路是没错的，然而我对细节的处理不够到位，导致这个题到最后都没能调出来，真的可惜。比赛完后去搜索了一下别人的解法，比对并记录一下。 ​ 题目就不贴了，懒得拍照上传（不仅是英文的，还一堆废话），大概要求输入是一个整数T，代表数据组数，后面的T行每行一个整数n和m，表示n除以m，输出为小数，比如这样： 输入：4 2 3 1 2 22 7 7 12 输出：0.(6) 0.5 3.(142857) 0.58(3) ​ 队友给了我思路，小数部分的求法其实就是余数乘以10再不断除以m得到商以及下一个余数，如果余数开始相等，说明再一次进入了循环，所以全程都不需要用浮点数的。我的想法很简单直接，就是用两个数组分别去保存商和余数，通过判断余数是否有和前面的余数相同来判断是否进入了循环结构，然后打印商的那个数组就好了，理论上可行，但是在判断开始循环的位置时出现了问题，怎么打印都不对，具体错在哪也不是很清楚了，因为被队友魔改了一波，细节处理那段代码以及可以说不是我写的代码了。 ​ 看了github上的某段代码后，感觉自己对数据的处理能力真的好差啊啊啊啊啊啊啊。 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253#include&lt;iostream&gt;using namespace std;int main() &#123; int t;//组数 cin &gt;&gt; t; while ( t-- ) &#123; int n, m;//n是被除数，m是除数 cin &gt;&gt; n &gt;&gt; m; int k, j, i = 1, flag = 0, l = 0, a[1001] = &#123;n&#125;, lab = 0, b[1001]; if ( n &gt; m ) &#123; cout &lt;&lt; a[0] / m;//大于1先输出整数部分 a[0] %= m;//a[0]换成模 &#125; else &#123; cout &lt;&lt; 0; &#125; cout &lt;&lt; "."; while ( 1 ) &#123; k = a[i-1] * 10 / m;//k就是商，也就是小数位，最后要输出的东西 a[i] = a[i-1] * 10 % m;//更新模 b[l++] = k;//记录小数位 if ( a[i] == 0 ) &#123;//表示可以除尽的情况，比如1/2 lab = 2;//对这种情况标记 break; &#125; for ( j = 0; j &lt; i; j++ ) &#123; if ( a[j] == a[i] ) &#123;//这里是去找余数相同的位置了，也就是循环开始的地方 lab = 1; flag = j;//用flag标记这个下标 break; &#125; &#125; if ( lab == 1 || lab == 2 ) &#123; break; &#125; i++; &#125; for ( i = 0; i &lt; l; i++ ) &#123; if ( flag == i &amp;&amp; lab == 1 ) &#123;//到了循环标记位加括号 cout &lt;&lt; "("; &#125; cout &lt;&lt; b[i]; &#125; if ( lab == 1 ) &#123; cout &lt;&lt; ")\n"; &#125; else &#123; cout &lt;&lt; "\n"; &#125; &#125; return 0;&#125; ​ 仔细研究了这段代码后发现，我就是错在开始循环的时候忘记去判断了！！！我TM！！！ 好吧我还是太菜了，打扰了。看来程设比赛的基本套路也是需要练的，顺便还想吐槽的就是为什么一个队只给一台电脑啊。。。再顺便吐槽一下校赛的运维，恶恶魔魔麻麻秘密摸咪咪 ！！！我后期一定好好学一下数论，至少得会基本的东西。]]></content>
-      <categories>
-        <category>日常</category>
-      </categories>
-      <tags>
-        <tag>算法</tag>
       </tags>
   </entry>
   <entry>
@@ -175,20 +164,6 @@
       </categories>
       <tags>
         <tag>CTF</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[hexo博客加https && google收录]]></title>
-    <url>%2F2017%2F10%2F03%2Fhexo%E5%8D%9A%E5%AE%A2%E5%8A%A0https%20%26%26%20google%E6%94%B6%E5%BD%95%2F</url>
-    <content type="text"><![CDATA[​ 讲讲上https和让谷歌收录个人博客的过程。 前言​ 戳友链的时候发现好多博客都上了全站https，而且https已经是大势所趋，特别是谷歌，对https的网站收录极其友好(至于百度，emmmmm，我已经放弃它了)，而谷歌搜索是当今最好用的引擎，可惜在中国大陆无法正常访问，需要科学上网，方法很多，免费的不太稳有限制而且需要多折腾，花钱的省事而且稳定，在这我安利一下 ACGPOWER，十分好用，而且只要6块一个月。(PS：自从用过了这个，我的地址栏默认搜索引擎换成了Google。。。妈妈再也不用担心我科学上网不稳了)。好了废话就说到这，下面是正文。 https​ 关于https，全称为：Hypertext Transfer Protocol Secure，比http多了个S，顾名思义，多了一层保护，即TLS/SSL协议，早些年，SSL证书基本上是要花大价钱买的，很难看到免费的，而现在随着https越来越普及，免费的SSL证书也很多，可以自行选择适合自己的SSL证书。全站的https网站会将要传递的信息进行加密后传输，可以避免信息窃听、信息篡改、信息劫持等问题。具体原理可以参考这里。 Cloudflare介绍与https正式部署​ Cloudflare 是一家可以给全球用户提供网站访问加速、DNS解析、阻止网站攻击等众多服务的公司，具体介绍自行去官网。那么我要的就是Cloudflare的SSL服务了，方法很简单。大概就是一下几个步骤：(讲真Cloudflare给的引导过程挺清楚的) 1、去Cloudflare注册，添加自己的个人网站，扫描过程大概1分钟。 2、验证域名所有权后，等待status变成active状态。 3、拿到Cloudflare的Domin Name Server后，去域名提供商那修改自己域名的Domin Name Sever。(去那个域名列表那戳管理就行) 4、改完DNS后点击Crypto，在SSL那选择Flexible，如果自己有证书的话可以选择Full(用github pages的貌似无法再部署SSL)，大概区别如下： 具体的区别自己戳旁边的链接，都有很详细的介绍，非常良心的一家网站诶。其他的话，开启强制HTTPS以及Automatic HTTPS Rewrites(如果资源路径支持https，那么会自行跳转成https)这两个就可以。 ​ 以上步骤全部完成后，如果你没有引用http的资源(即混合引用)，是可以看到小绿锁的。 PS:为此，我把图床从七牛搬到了新浪博客。。。。 PPS：新浪博客的图床真的挺好用的。 Google收录1、首先在根目录下键入以下命令安装sitemap插件 npm install hexo-generator-sitemap --save 2、然后在站点文件(不是主题文件哦)增加以下内容(注意缩进) 123# 自动生成sitemapsitemap: path: sitemap.xml hexo g以下就能在public里面看到sitemap.xml了。 3、在source下增加robots.txt 123456789101112131415# hexo robots.txtUser-agent: *Allow: /Allow: /archives/Allow: /categories/Allow: /tags/Disallow: /vendors/Disallow: /js/Disallow: /css/Disallow: /fonts/Disallow: /vendors/Disallow: /fancybox/Sitemap: https://primykq.top/sitemap.xml 把网址改成自己的。 4、进入Google Search Console，没有谷歌账号的注册一个。添加网站，把自己的个人网站输进去，这里要验证域名所有权。我选择了文件验证，把下的文件放在站点的source目录下，注意：不要编译 不要编译 不要编译 直接hexo d 把这份文件上传到服务器中，编译的话hexo会自动给你加上一大串html代码。 5、验证完了以后测试一下robots.txt协议。 6、提交sitemap，输入sitemap.xml就行。 7、抓取那一栏可以加上标签栏或者你觉得最容易被搜到的page，不加的话默认抓取首页，填完url后点击抓取，然后就点击“提交至索引”。注意了，这里可能要进行人机验证，我不得不吐槽一下这google的人机验证，比12306的还要骚，一堆图片，让你选有汽车呀路标呀什么的图片，然后，你点中以后，这个图会消失，然后出新的图，如果又有汽车或者路标等目标图片，你需要继续点，一直点到没有指定的图片为止，如果你提交验证后失败，请直接ctrl + r刷新后重来，我感觉后面是个无底洞，反正我在后面没成功过，你感兴趣的话可以试试。上两张图好了。 提交完索引后就大功告成了。大概过了那么一两分钟，我去google搜索那输入了primykq的博客，妈耶，马上就出来了，这收录速度真牛。 多说一句​ 有人可能会说，咋没有提交到百度的教程，emmmm，百度，我卡死在域名所有权验证那里，怎么都过不去，后来想想，还得双线部署到coding(因为github 禁了百度的爬虫)，暂时懒得折腾了，用了独立域名后访问速度也还过得去，大不了再压缩一下资源文件。(后来才知道，github下的二级域名可以直接强制https，可惜我还是喜欢个人的顶级域名。)]]></content>
-      <categories>
-        <category>环境</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>https</tag>
-        <tag>Cloudflare</tag>
-        <tag>google</tag>
       </tags>
   </entry>
   <entry>
