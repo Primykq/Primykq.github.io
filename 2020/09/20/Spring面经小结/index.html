@@ -91,7 +91,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="计算机组成原理," />
+  <meta name="keywords" content="Spring," />
 
 
 
@@ -107,20 +107,18 @@
 
 
 
-<meta name="description" content="​    函数调用栈是一个非常重要的过程，也是整个程序运行的关键，下面简单地说一下这个调用过程。">
-<meta name="keywords" content="计算机组成原理">
+<meta name="description" content="​    前段时间的认定让我觉得开始总结知识点迫在眉睫，先从Spring开始吧">
+<meta name="keywords" content="Spring">
 <meta property="og:type" content="article">
-<meta property="og:title" content="c语言函数调用栈">
-<meta property="og:url" content="http://yoursite.com/2018/04/02/c语言函数调用栈/index.html">
+<meta property="og:title" content="Spring面经小结">
+<meta property="og:url" content="http://yoursite.com/2020/09/20/Spring面经小结/index.html">
 <meta property="og:site_name" content="Primykq-&gt;Blog">
-<meta property="og:description" content="​    函数调用栈是一个非常重要的过程，也是整个程序运行的关键，下面简单地说一下这个调用过程。">
+<meta property="og:description" content="​    前段时间的认定让我觉得开始总结知识点迫在眉睫，先从Spring开始吧">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://ww1.sinaimg.cn/large/006OSALLgy1fpzjal8gnnj30ms0f7dh3.jpg">
-<meta property="og:updated_time" content="2018-04-03T08:41:23.204Z">
+<meta property="og:updated_time" content="2020-09-20T14:54:07.457Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="c语言函数调用栈">
-<meta name="twitter:description" content="​    函数调用栈是一个非常重要的过程，也是整个程序运行的关键，下面简单地说一下这个调用过程。">
-<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006OSALLgy1fpzjal8gnnj30ms0f7dh3.jpg">
+<meta name="twitter:title" content="Spring面经小结">
+<meta name="twitter:description" content="​    前段时间的认定让我觉得开始总结知识点迫在眉睫，先从Spring开始吧">
 
 
 
@@ -150,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/04/02/c语言函数调用栈/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/09/20/Spring面经小结/"/>
 
 
 
 
 
-  <title>c语言函数调用栈 | Primykq->Blog</title>
+  <title>Spring面经小结 | Primykq->Blog</title>
   
 
 
@@ -327,7 +325,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/04/02/c语言函数调用栈/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/20/Spring面经小结/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Primykq">
@@ -344,7 +342,7 @@
 
         
         
-          <h2 class="post-title" itemprop="name headline">c语言函数调用栈</h2>
+          <h2 class="post-title" itemprop="name headline">Spring面经小结</h2>
         
 
         <div class="post-meta">
@@ -356,8 +354,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-02T20:22:44+08:00">
-                2018-04-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-09-20T20:54:08+08:00">
+                2020-09-20
               </time>
             
 
@@ -396,7 +394,7 @@
 
           
           
-             <span id="/2018/04/02/c语言函数调用栈/" class="leancloud_visitors" data-flag-title="c语言函数调用栈">
+             <span id="/2020/09/20/Spring面经小结/" class="leancloud_visitors" data-flag-title="Spring面经小结">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -427,14 +425,55 @@
       
 
       
-        <p>​    函数调用栈是一个非常重要的过程，也是整个程序运行的关键，下面简单地说一下这个调用过程。<a id="more"></a></p>
-<h1 id="寄存器"><a href="#寄存器" class="headerlink" title="寄存器"></a>寄存器</h1><p>​    寄存器是程序运行的重要载体，可以用来存放数据和指令，函数调用过程与其密切相关。首先是几个特殊点的寄存器：%eax ，%ebx ，%ecx ，%edx， 各自都能作为独立的16位寄存器，低16位还能再分成8位的寄存器，这应该是为了向下兼容。在汇编语言中，这些通用寄存器通常以%e（AT&amp;T语法）或直接以e（Intel语法）开头来引用，如，<code>mov $5, %eax</code>，或者<code>mov eax, 5</code> ，都表示将立即数赋值给寄存器%eax 。</p>
-<p>​    而x86架构中，EIP是一个比较特殊的寄存器，它被称为指令寄存器，永远指向处理器下一条等待执行的指令地址（有时也用偏移量表示），每次执行完EIP的值就会增加，由于它的特殊性，不能像访问普通寄存器那样访问它，找不到可用来寻址EIP并对其进行读写的操作码（Opcode），EIP可被jmp、call 、ret等指令隐藏式地改变。</p>
-<p>​    另外要注意的是，寄存器是唯一能被所有函数共享的资源，需要保证A函数调用B函数时，B函数不会修改或覆盖A函数稍后会用到的寄存器值，为此，有这么一些规定：寄存器%eax，%ebx，%ecx，为主调函数保存寄存器（caller-saved registers），函数调用时，如果主调函数想要保存这些寄存器的值，必须在调用前显示地将其保存在栈中，然后被调函数就可以覆盖这些寄存器，这样就不会破坏主调函数所需的数据。寄存器%ebx，%esi，%edi 为被调函数保存寄存器（callee-saved registers），即被调函数在覆盖这些寄存器的值时，必须先把寄存器的原值压入栈中保存起来，并在函数返回前恢复其值，因为主调函数也可能会用到这些寄存器。除此之外，被调函数还必须保持寄存器%ebp，%esp，并在函数返回后将其恢复到调用前的值，即必须恢复主调函数的栈帧。</p>
-<h1 id="栈帧"><a href="#栈帧" class="headerlink" title="栈帧"></a>栈帧</h1><p>​    刚刚说到了栈帧（stack frame），栈帧是什么呢？栈帧本质上就是一种栈，只是这种栈专门用于保存函数调用过程中的各种信息。同样有栈顶和栈底，栈底地址最高，x86-32bit架构中，用%ebp指向栈底，即基址指针，%esp指向栈顶，即栈顶指针。函数调用栈时的内存布局：</p>
-<p><img src="http://ww1.sinaimg.cn/large/006OSALLgy1fpzjal8gnnj30ms0f7dh3.jpg" alt="调用栈时的内存布局"></p>
-<p>​    注意这个图基于两个假设：第一，函数返回值不是结构体或联合体，否则的话第一个参数将位于<code>12(%ebp)</code>处；第二，每个参数都是4字节大小。</p>
-<p>​    从这个图也能看出，函数调用时的入栈顺序为：实参（从右到左）-&gt;主调函数的返回地址-&gt;主调函数的帧基指针EBP -&gt;被调函数局部变量1~N。具体来看，主调函数首先将参数按照调用约定依次入栈，然后将指令指针EIP入栈以保存主调函数的返回地址。进入被调函数时，被调函数将主调函数的帧基指针EBP入栈，并将主调函数的栈顶指针ESP值赋给被调函数的EBP（作为被调函数的栈底），接着改变ESP值来为函数局部变量预留空间。此时被调函数帧基指针指向被调函数的栈底。以此地址为基准，向（上）栈底方向可获得主调函数的返回地址和参数值，向（下）栈顶方向可获得被调函数的局部变量值，而该地址又放着上一层主调函数的帧基指针值。本级调用结束后，EBP指针值赋给ESP，使其再次指向被调函数栈底以释放局部变量；再将以压栈的主调函数帧基指针弹出到EBP，并弹出返回地址到EIP。ESP继续上移越过参数，回到调用前的状态，恢复原来主调函数的栈帧，递归便形成了函数调用栈。</p>
+        <p>​    前段时间的认定让我觉得开始总结知识点迫在眉睫，先从Spring开始吧<a id="more"></a>，注意，这里的Spring 就是指Spring framework，为了方便，就写成了Spring，整个Spring生态相当庞大，详情可见<a href="spring.io">Spring官网</a></p>
+<h1 id="Spring基础"><a href="#Spring基础" class="headerlink" title="Spring基础"></a>Spring基础</h1><h2 id="Spring的基本概念及其特点"><a href="#Spring的基本概念及其特点" class="headerlink" title="Spring的基本概念及其特点"></a>Spring的基本概念及其特点</h2><ol>
+<li>Spring是一个<strong>轻量级</strong>Java开发框架</li>
+<li>Spring的设计理念：在JavaEE开发中，支持POJO和JavaBean开发方式，使得应用面向接口开发，尽可能利用OO的设计思想</li>
+<li>Spring框架的核心：IoC和AOP。通过IoC容器管理POJO对象以及对象之间的耦合关系；通过AOP以动态非侵入的方式增强服务</li>
+</ol>
+<h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ol>
+<li>耦合度很低</li>
+<li>AOP功能强大，面向切面编程，便于对程序进行监控、拦截等</li>
+<li>声明式事务支持，只要配置即可完成对事务的管理</li>
+<li>测试方便，已经支持Junit4</li>
+<li>便于集成各种优秀的框架，比如Struts、Hibernate、MyBatis等</li>
+<li>封装强大，使得JavaEE API的使用难度大大降低</li>
+</ol>
+<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3><ol>
+<li>入门难度不低（至少给我的感觉是这样的</li>
+<li>Spring的目标是实现轻量开发，但数量上并不少</li>
+<li>Spring比较依赖反射，而反射的性能一般</li>
+</ol>
+<h2 id="Spring的模块构成"><a href="#Spring的模块构成" class="headerlink" title="Spring的模块构成"></a>Spring的模块构成</h2><p>主要是七大模块：核心容器（Core Container）、AOP（ASPECT Oriented Programming）和设备支持（Instrmentation）、数据访问与集成（Data Access/Integeration）、Web、Messaging、Test</p>
+<ol>
+<li>Spring Core：个人认为最基础也是最重要的部分，包括IoC(Inversion of Control)和DI(Dependency Injection)</li>
+<li>Spring beans：提供了BeanFactory，工厂模式的经典实现，被Spring管理的对象统称为Bean</li>
+<li>Spring context：基于core封装包封装的context，提供了一种框架式的对象访问方法</li>
+<li>Spring jdbc：JDBC抽象层，用于简化JDBC的繁琐操作</li>
+<li>Spring AOP：提供面向切面的编程实现</li>
+<li>Spring Web：提供了针对Web开发的集成特性</li>
+<li>Sping test：支持用JUnit或者TestNG对Spring组件进行单元测试和集成测试</li>
+</ol>
+<h2 id="Spring框架中都用到了哪些设计模式"><a href="#Spring框架中都用到了哪些设计模式" class="headerlink" title="Spring框架中都用到了哪些设计模式"></a>Spring框架中都用到了哪些设计模式</h2><ol>
+<li>工厂模式：BeanFactory即为简单工厂模式的体现，用于创造对象的实例</li>
+<li>单例模式：Bean默认单例模式</li>
+<li>代理模式：Spring的AOP用的是JDK的动态代理和CGLIB字节码生成技术</li>
+<li>模板方法：提高代码复用率，如：RestTemplate、RedisTemplate</li>
+<li>观察者模式：定义一种一对多的依赖关系，当一个对象的状态发生改变时，所有依赖于它的对象都会得到通知并更新，比如Spring种listener的实现——ApplicationListener</li>
+</ol>
+<h2 id="Spring框架中有哪些不同类型的事件"><a href="#Spring框架中有哪些不同类型的事件" class="headerlink" title="Spring框架中有哪些不同类型的事件"></a>Spring框架中有哪些不同类型的事件</h2><p>Spring提供了以下5种标准的事件：</p>
+<ol>
+<li>上下文更新事件：ConfigurableApplicationContext .refresh()</li>
+<li>上下文开始事件：ConfigurableApplicationContext .start()</li>
+<li>上下文停止事件：ConfigurableApplicationContext .stop()</li>
+<li>上下文关闭事件：ApplicationContext被关闭时触发，且关闭时所有的单例Bean都被销毁</li>
+<li>请求处理事件：Web应用中，当一个http请求结束触发该事件，如果一个bean实现了ApplicationListener接口，当一个ApplicationEvent被发布以后，bean会自动被通知</li>
+</ol>
+<h1 id="Spring控制反转-IoC"><a href="#Spring控制反转-IoC" class="headerlink" title="Spring控制反转(IoC)"></a>Spring控制反转(IoC)</h1><ol>
+<li>IoC是什么？IoC将传统上由程序代码直接操控的对象的调用权较给容器，通过容器来实现对象组件的装配和管理，“控制反转”的概念就是对组件对象的控制权的转移，从程序本代码本身转移到了外部容器IoC负责创建对象，管理对象（通过依赖注入(DI)，装配对象，配置对象，并且管理这些对象的整个生命周期</li>
+<li>IoC有什么作用</li>
+</ol>
+<p>。。。未完待续= =内容好多阿</p>
 
       
     </div>
@@ -452,7 +491,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/计算机组成原理/" rel="tag"># 计算机组成原理</a>
+            <a href="/tags/Spring/" rel="tag"># Spring</a>
           
         </div>
       
@@ -465,8 +504,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/03/19/博客环境迁移/" rel="next" title="博客环境迁移">
-                <i class="fa fa-chevron-left"></i> 博客环境迁移
+              <a href="/2020/09/05/elasticsearch安装及x-pack校验/" rel="next" title="elasticsearch安装及x-pack校验">
+                <i class="fa fa-chevron-left"></i> elasticsearch安装及x-pack校验
               </a>
             
           </div>
@@ -474,10 +513,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/04/04/Win10-Ubuntu双系统/" rel="prev" title="Win10-Ubuntu双系统">
-                Win10-Ubuntu双系统 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -636,7 +671,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#寄存器"><span class="nav-number">1.</span> <span class="nav-text">寄存器</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#栈帧"><span class="nav-number">2.</span> <span class="nav-text">栈帧</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring基础"><span class="nav-number">1.</span> <span class="nav-text">Spring基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring的基本概念及其特点"><span class="nav-number">1.1.</span> <span class="nav-text">Spring的基本概念及其特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">1.1.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-number">1.1.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring的模块构成"><span class="nav-number">1.2.</span> <span class="nav-text">Spring的模块构成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架中都用到了哪些设计模式"><span class="nav-number">1.3.</span> <span class="nav-text">Spring框架中都用到了哪些设计模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架中有哪些不同类型的事件"><span class="nav-number">1.4.</span> <span class="nav-text">Spring框架中有哪些不同类型的事件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring控制反转-IoC"><span class="nav-number">2.</span> <span class="nav-text">Spring控制反转(IoC)</span></a></li></ol></div>
             
 
           </div>
