@@ -115,7 +115,7 @@
 <meta property="og:site_name" content="Primykq-&gt;Blog">
 <meta property="og:description" content="​    前段时间的认定让我觉得开始总结知识点迫在眉睫，先从Spring开始吧">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2020-09-20T14:54:07.457Z">
+<meta property="og:updated_time" content="2020-09-22T16:53:18.852Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Spring面经小结">
 <meta name="twitter:description" content="​    前段时间的认定让我觉得开始总结知识点迫在眉睫，先从Spring开始吧">
@@ -447,7 +447,7 @@
 <h2 id="Spring的模块构成"><a href="#Spring的模块构成" class="headerlink" title="Spring的模块构成"></a>Spring的模块构成</h2><p>主要是七大模块：核心容器（Core Container）、AOP（ASPECT Oriented Programming）和设备支持（Instrmentation）、数据访问与集成（Data Access/Integeration）、Web、Messaging、Test</p>
 <ol>
 <li>Spring Core：个人认为最基础也是最重要的部分，包括IoC(Inversion of Control)和DI(Dependency Injection)</li>
-<li>Spring beans：提供了BeanFactory，工厂模式的经典实现，被Spring管理的对象统称为Bean</li>
+<li>Spring Beans：提供了BeanFactory，工厂模式的经典实现，被Spring管理的对象统称为Bean</li>
 <li>Spring context：基于core封装包封装的context，提供了一种框架式的对象访问方法</li>
 <li>Spring jdbc：JDBC抽象层，用于简化JDBC的繁琐操作</li>
 <li>Spring AOP：提供面向切面的编程实现</li>
@@ -467,13 +467,85 @@
 <li>上下文开始事件：ConfigurableApplicationContext .start()</li>
 <li>上下文停止事件：ConfigurableApplicationContext .stop()</li>
 <li>上下文关闭事件：ApplicationContext被关闭时触发，且关闭时所有的单例Bean都被销毁</li>
-<li>请求处理事件：Web应用中，当一个http请求结束触发该事件，如果一个bean实现了ApplicationListener接口，当一个ApplicationEvent被发布以后，bean会自动被通知</li>
+<li>请求处理事件：Web应用中，当一个http请求结束触发该事件，如果一个Bean实现了ApplicationListener接口，当一个ApplicationEvent被发布以后，Bean会自动被通知</li>
 </ol>
-<h1 id="Spring控制反转-IoC"><a href="#Spring控制反转-IoC" class="headerlink" title="Spring控制反转(IoC)"></a>Spring控制反转(IoC)</h1><ol>
-<li>IoC是什么？IoC将传统上由程序代码直接操控的对象的调用权较给容器，通过容器来实现对象组件的装配和管理，“控制反转”的概念就是对组件对象的控制权的转移，从程序本代码本身转移到了外部容器IoC负责创建对象，管理对象（通过依赖注入(DI)，装配对象，配置对象，并且管理这些对象的整个生命周期</li>
-<li>IoC有什么作用</li>
+<h1 id="Spring控制反转-IoC"><a href="#Spring控制反转-IoC" class="headerlink" title="Spring控制反转(IoC)"></a>Spring控制反转(IoC)</h1><h2 id="IoC是什么？"><a href="#IoC是什么？" class="headerlink" title="IoC是什么？"></a>IoC是什么？</h2><p>IoC将传统上由程序代码直接操控的对象的调用权较给容器，通过容器来实现对象组件的装配和管理，“控制反转”的概念就是对组件对象的控制权的转移，从程序本代码本身转移到了外部容器IoC负责创建对象，管理对象（通过依赖注入(DI)，装配对象，配置对象，并且管理这些对象的整个生命周期</p>
+<h2 id="IoC有什么作用"><a href="#IoC有什么作用" class="headerlink" title="IoC有什么作用"></a>IoC有什么作用</h2><ol>
+<li>管理对象的创建和依赖关系的维护</li>
+<li>代理，不用程序员关心类的产生</li>
 </ol>
-<p>。。。未完待续= =内容好多阿</p>
+<h2 id="IoC优点"><a href="#IoC优点" class="headerlink" title="IoC优点"></a>IoC优点</h2><ol>
+<li>降低应用代码量</li>
+<li>便于单元测试</li>
+<li>侵入性小，松散耦合得以实现</li>
+<li>IoC容器支持加载服务时的饿汉式初始化和懒加载</li>
+</ol>
+<h2 id="IoC的实现机制"><a href="#IoC的实现机制" class="headerlink" title="IoC的实现机制"></a>IoC的实现机制</h2><p>工厂模式加反射机制</p>
+<h2 id="Spring-IoC支持什么功能"><a href="#Spring-IoC支持什么功能" class="headerlink" title="Spring IoC支持什么功能"></a>Spring IoC支持什么功能</h2><ol>
+<li>依赖注入</li>
+<li>依赖检查</li>
+<li>自动装配</li>
+<li>支持集合</li>
+<li>指定初始化方法和销毁方法</li>
+<li>支持回调某些方法</li>
+</ol>
+<h2 id="什么是依赖注入"><a href="#什么是依赖注入" class="headerlink" title="什么是依赖注入"></a>什么是依赖注入</h2><p>主要实现方式：依赖注入和依赖查找</p>
+<p>由容器动态地将某种依赖关系的目标对象实例注入到应用系统中的各个关联的组件之中</p>
+<h2 id="依赖注入的基本原则"><a href="#依赖注入的基本原则" class="headerlink" title="依赖注入的基本原则"></a>依赖注入的基本原则</h2><p>应用组件不应该负责查找自愿或者其他依赖的协作对象。配置对象的工作应该由IoC容器负责，“查找资源”的逻辑应该从应用组件的代码中抽取出来，交给IoC容器负责</p>
+<h2 id="依赖注入的优势"><a href="#依赖注入的优势" class="headerlink" title="依赖注入的优势"></a>依赖注入的优势</h2><p>容器全权负责查询，受管组件只需要暴露JavaBean的setter方法或者带参数的构造器或者接口，使容器可以在初始化时组装对象的依赖关系，跟依赖查找相比，主要优势为：</p>
+<ol>
+<li>查找定位操作与应用代码完全无关</li>
+<li>不依赖于容器的API</li>
+<li>不需要特殊接口，绝大多数对象可以做到完全不依赖容器</li>
+</ol>
+<h2 id="有哪些不同类型的依赖注入实现方式"><a href="#有哪些不同类型的依赖注入实现方式" class="headerlink" title="有哪些不同类型的依赖注入实现方式"></a>有哪些不同类型的依赖注入实现方式</h2><p>接口注入（Interface Injection），Setter方法注入（Setter Injection）和构造器注入（Constructor Injection）三种方式</p>
+<ol>
+<li>接口注入的灵活性和易用性比较差，从Spring4开始已被废弃</li>
+<li>构造器依赖注入：通过容器触发一个类的构造器来实现</li>
+<li>Setter方法注入：Setter方法注入是容器通过调用无参构造器或无参static工厂方法实例化Bean之后，调用该Bean的setter方法</li>
+</ol>
+<h1 id="SpringBeans"><a href="#SpringBeans" class="headerlink" title="SpringBeans"></a>SpringBeans</h1><h2 id="什么是SpringBeans"><a href="#什么是SpringBeans" class="headerlink" title="什么是SpringBeans"></a>什么是SpringBeans</h2><p>Spring Beans是那些形成Spring应用的主干的Java对象，被IoC容器初始化、装配、管理，一个Spring Bean的定义包含容器必知的所有配置元数据，包括如何创建一个Bean，它的生命周期详情及它的依赖</p>
+<h2 id="给Spring容器提供配置元数据的方式"><a href="#给Spring容器提供配置元数据的方式" class="headerlink" title="给Spring容器提供配置元数据的方式"></a>给Spring容器提供配置元数据的方式</h2><ol>
+<li>XML配置文件</li>
+<li>基于注解的配置</li>
+<li>基于Java的配置</li>
+</ol>
+<h2 id="Spring基于xml注入Bean的几种方式"><a href="#Spring基于xml注入Bean的几种方式" class="headerlink" title="Spring基于xml注入Bean的几种方式"></a>Spring基于xml注入Bean的几种方式</h2><ol>
+<li>Set方法注入</li>
+<li>构造器注入：A.通过index设置参数位置；B.通过type设置参数类型</li>
+<li>静态工厂注入</li>
+<li>实例工厂</li>
+</ol>
+<h2 id="Spring支持的几种Bean的作用域"><a href="#Spring支持的几种Bean的作用域" class="headerlink" title="Spring支持的几种Bean的作用域"></a>Spring支持的几种Bean的作用域</h2><p>通过Bean定义中的scope属性来定义Bean的作用域</p>
+<ol>
+<li>singleton：Bean在每个IoC容器中只有一个实例</li>
+<li>prototype：一个Bean的定义可以有多个实例</li>
+<li>request：每次http请求都会创建一个Bean，仅在web的Spring ApplicationContext情形下有效</li>
+<li>session：在HTTP Session中，一个Bean定义对应一个实例，仅在基于web的Spring ApplicationContext情形下有效</li>
+<li>global-session：全局的HTTP Session</li>
+</ol>
+<h2 id="Spring框架中的单例Bean是线程安全的吗"><a href="#Spring框架中的单例Bean是线程安全的吗" class="headerlink" title="Spring框架中的单例Bean是线程安全的吗"></a>Spring框架中的单例Bean是线程安全的吗</h2><p>答案：不是</p>
+<p>Spring中的Bean默认都是单例模式，Spring框架并没有对单例Bean进行多线程的封装处理，Bean状态改变时需要开发者自行去保证线程安全</p>
+<h2 id="Spring如何处理线程并发问题"><a href="#Spring如何处理线程并发问题" class="headerlink" title="Spring如何处理线程并发问题"></a>Spring如何处理线程并发问题</h2><p>只有无状态的Bean才可以在多线程环境下共享，对一些Bean中非线程安全状态财用ThreadLocal进行处理，以解决线程安全问题</p>
+<h2 id="Spring中Bean的生命周期"><a href="#Spring中Bean的生命周期" class="headerlink" title="Spring中Bean的生命周期"></a>Spring中Bean的生命周期</h2><p>图，待补充</p>
+<h2 id="Bean重要的生命周期方法，是否可重载"><a href="#Bean重要的生命周期方法，是否可重载" class="headerlink" title="Bean重要的生命周期方法，是否可重载"></a>Bean重要的生命周期方法，是否可重载</h2><p>setup：容器加载Bean的时候被调用</p>
+<p>teardown，容器卸载类的时候被调用</p>
+<h2 id="Spring的内部Bean"><a href="#Spring的内部Bean" class="headerlink" title="Spring的内部Bean"></a>Spring的内部Bean</h2><p>在Spring中，当一个Bean仅被用于作另一个bean的属性时，它能被声明为一个内部Bean，内部Bean可以用setter方法注入，通常是匿名的，Scope一般是prototype</p>
+<h2 id="Bean的自动装配"><a href="#Bean的自动装配" class="headerlink" title="Bean的自动装配"></a>Bean的自动装配</h2><p>在配置文件中设定好Bean的依赖关系，随后Spring容器能够自动装配相互合作的Bean</p>
+<h2 id="Spring自动装配Bean的方式"><a href="#Spring自动装配Bean的方式" class="headerlink" title="Spring自动装配Bean的方式"></a>Spring自动装配Bean的方式</h2><ol>
+<li>no：默认不进行自动装配，手动设置ref属性来装配Bean</li>
+<li>byName：通过Bean的名字来进行自动装配</li>
+<li>byType：通过参数的数据类型来自动装配</li>
+<li>constructor：利用构造函数进行装配，构造函数的参数通过byType进行装配</li>
+<li>autodetect：自动探测，如果有构造方法则通过construct的方式自动装配，否则使用byType的方式自动装配</li>
+</ol>
+<h2 id="使用-Autowired注解自动装配的过程"><a href="#使用-Autowired注解自动装配的过程" class="headerlink" title="使用@Autowired注解自动装配的过程"></a>使用@Autowired注解自动装配的过程</h2><ol>
+<li>开琪注解，必须先在Spring配置文件进行配置</li>
+<li>扫描查询：启动Spring IoC时，容器自动装载了一个AutowiredAnnotationBeanPostProcessor后置处理器，扫描到@Autowirid、@Resource或者@Inject时，会在IoC容器自动查询需要的bean，并装配给该对象的属性，在容器中首先查询对应类型的Bean：</li>
+</ol>
+<p>如果查询结果刚好为一个，则装配给注解指定的数据</p>
+<p>如果不止一个，根据名称来查找</p>
+<p>如果为空，抛出异常，解决方法可以令required = false</p>
 
       
     </div>
@@ -671,7 +743,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring基础"><span class="nav-number">1.</span> <span class="nav-text">Spring基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring的基本概念及其特点"><span class="nav-number">1.1.</span> <span class="nav-text">Spring的基本概念及其特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">1.1.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-number">1.1.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring的模块构成"><span class="nav-number">1.2.</span> <span class="nav-text">Spring的模块构成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架中都用到了哪些设计模式"><span class="nav-number">1.3.</span> <span class="nav-text">Spring框架中都用到了哪些设计模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架中有哪些不同类型的事件"><span class="nav-number">1.4.</span> <span class="nav-text">Spring框架中有哪些不同类型的事件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring控制反转-IoC"><span class="nav-number">2.</span> <span class="nav-text">Spring控制反转(IoC)</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring基础"><span class="nav-number">1.</span> <span class="nav-text">Spring基础</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring的基本概念及其特点"><span class="nav-number">1.1.</span> <span class="nav-text">Spring的基本概念及其特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">1.1.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-number">1.1.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring的模块构成"><span class="nav-number">1.2.</span> <span class="nav-text">Spring的模块构成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架中都用到了哪些设计模式"><span class="nav-number">1.3.</span> <span class="nav-text">Spring框架中都用到了哪些设计模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架中有哪些不同类型的事件"><span class="nav-number">1.4.</span> <span class="nav-text">Spring框架中有哪些不同类型的事件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Spring控制反转-IoC"><span class="nav-number">2.</span> <span class="nav-text">Spring控制反转(IoC)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#IoC是什么？"><span class="nav-number">2.1.</span> <span class="nav-text">IoC是什么？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IoC有什么作用"><span class="nav-number">2.2.</span> <span class="nav-text">IoC有什么作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IoC优点"><span class="nav-number">2.3.</span> <span class="nav-text">IoC优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#IoC的实现机制"><span class="nav-number">2.4.</span> <span class="nav-text">IoC的实现机制</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring-IoC支持什么功能"><span class="nav-number">2.5.</span> <span class="nav-text">Spring IoC支持什么功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是依赖注入"><span class="nav-number">2.6.</span> <span class="nav-text">什么是依赖注入</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖注入的基本原则"><span class="nav-number">2.7.</span> <span class="nav-text">依赖注入的基本原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#依赖注入的优势"><span class="nav-number">2.8.</span> <span class="nav-text">依赖注入的优势</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有哪些不同类型的依赖注入实现方式"><span class="nav-number">2.9.</span> <span class="nav-text">有哪些不同类型的依赖注入实现方式</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#SpringBeans"><span class="nav-number">3.</span> <span class="nav-text">SpringBeans</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是SpringBeans"><span class="nav-number">3.1.</span> <span class="nav-text">什么是SpringBeans</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#给Spring容器提供配置元数据的方式"><span class="nav-number">3.2.</span> <span class="nav-text">给Spring容器提供配置元数据的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring基于xml注入Bean的几种方式"><span class="nav-number">3.3.</span> <span class="nav-text">Spring基于xml注入Bean的几种方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring支持的几种Bean的作用域"><span class="nav-number">3.4.</span> <span class="nav-text">Spring支持的几种Bean的作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring框架中的单例Bean是线程安全的吗"><span class="nav-number">3.5.</span> <span class="nav-text">Spring框架中的单例Bean是线程安全的吗</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring如何处理线程并发问题"><span class="nav-number">3.6.</span> <span class="nav-text">Spring如何处理线程并发问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring中Bean的生命周期"><span class="nav-number">3.7.</span> <span class="nav-text">Spring中Bean的生命周期</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bean重要的生命周期方法，是否可重载"><span class="nav-number">3.8.</span> <span class="nav-text">Bean重要的生命周期方法，是否可重载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring的内部Bean"><span class="nav-number">3.9.</span> <span class="nav-text">Spring的内部Bean</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Bean的自动装配"><span class="nav-number">3.10.</span> <span class="nav-text">Bean的自动装配</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Spring自动装配Bean的方式"><span class="nav-number">3.11.</span> <span class="nav-text">Spring自动装配Bean的方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用-Autowired注解自动装配的过程"><span class="nav-number">3.12.</span> <span class="nav-text">使用@Autowired注解自动装配的过程</span></a></li></ol></li></ol></div>
             
 
           </div>
